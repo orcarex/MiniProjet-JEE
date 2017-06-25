@@ -1,4 +1,5 @@
-
+<%@page language="Java" pageEncoding="utf-8" %>
+<%@page contentType="text/html;charset=utf-8" %>
 <%@page import="java.util.Calendar"%>
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
@@ -13,7 +14,7 @@
         {
     %>
     <div class="login">
-        <p style="padding: 5px;"> Veuillez se Connecter...</p>
+        <p style="padding: 5px;"> 請連接...</p>
     </div>
     
     <% } %>
@@ -119,7 +120,7 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b> � <%= nbTotalePages %></span>
+                <b class="blue"><%= pageCourante %></b> à <%= nbTotalePages %></span>
                 
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">
