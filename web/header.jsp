@@ -66,7 +66,8 @@ for(LignePanier lp : panier.getLignesPanier())
         <ul>
             <li> <a href="index.jsp">首頁</a></li>
             <li> <a href="produits.jsp">Nos Produits</a></li>
-            <li> <a href="#">測試選項</a></li>
+            <li> <a href="#">測試選項01</a></li>
+		<li> <a href="#">測試選項02</a></li>
             <li> <a href="mon_compte.jsp">Mon Compte</a></li>
           <li> <a href="contactez-nous.jsp">Contactez Nous</a></li>
           <li class="search">
