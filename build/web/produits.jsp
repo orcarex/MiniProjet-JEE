@@ -1,4 +1,5 @@
-
+<%@page language="Java" pageEncoding="utf-8" %>
+<%@page contentType="text/html;charset=utf-8" %>
 <%@page import="java.util.Calendar"%>
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
@@ -9,7 +10,7 @@
     
     
       <div class="bredCrum" style="margin-bottom:38px;">
-        <h4><a href="index.html">Accueil</a>   >>   <a href="#" class="select">Nos Produits</a> </h4>
+        <h4><a href="index.html"> 首頁 </a>   >>   <a href="#" class="select"> 產品介紹 </a> </h4>
       </div>
     
     <% 
@@ -112,7 +113,7 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b> � <%= nbTotalePages %></span>
+                <b class="blue"><%= pageCourante %></b> à <%= nbTotalePages %></span>
                 
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">

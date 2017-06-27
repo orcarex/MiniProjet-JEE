@@ -1,3 +1,5 @@
+<%@page language="Java" pageEncoding="utf-8" %>
+<%@page contentType="text/html;charset=utf-8" %>
 <%@page import="java.util.Calendar"%>
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
@@ -20,7 +22,7 @@
 <div class="RightSide">     
 
     <div class="bredCrum">
-        <h4><a href="index.html">Accueil</a>   >>   <a href="#" class="select"> <%= article.getLibelle() %></a></h4> 
+        <h4><a href="index.html">首頁</a>   >>   <a href="#" class="select"> <%= article.getLibelle() %></a></h4> 
     </div>
     <div class="productDetial">
         <div class="mainThumb"><img src="<%= article.getImg()%>" alt="" width="471" height="260"/></div>
@@ -37,9 +39,9 @@
         </div>
     </div>
     <div class="detailInfo">
-        <h2>Details de l'article : </h2>
+        <h2>產品詳情 : </h2>
         <p> <%= article.getDesc() %> </p>
-        <p class="add">Ce produit est ajoutee le <%= article.getDateAjout()  %></p>
+        <p class="add">添加產品 <%= article.getDateAjout()  %></p>
     </div>
 
     <div class="clr"></div>
@@ -48,7 +50,7 @@
         
         <div class="pagingInfo">
             <img src="images/plus.gif" alt=""/>
-            <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>">Ajouter au Panier</a>
+            <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>">加入購物車</a>
         </div>
         
         <div class="clr"></div> 

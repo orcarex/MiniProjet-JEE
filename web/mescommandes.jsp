@@ -1,4 +1,5 @@
-
+<%@page language="Java" pageEncoding="utf-8" %>
+<%@page contentType="text/html;charset=utf-8" %>
 <%@page import="entities.LigneCommande"%>
 <%@page import="dao.LigneCommandeDao"%>
 <%@page import="dao.CommandeDao"%>
@@ -31,7 +32,7 @@
 
 <div class="RightSide">
     <div class="bredCrum">
-        <h4><a href="index.html">Accueil</a>   >>  <a href="#" class="select"> Mes Commandes   </a> </h4>
+        <h4><a href="index.html">首頁</a>   >>  <a href="#" class="select"> 我的訂單 </a> </h4>
     </div>    
 
 

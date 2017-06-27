@@ -55,7 +55,7 @@ for(LignePanier lp : panier.getLignesPanier())
 
 %>
 
-        <li class="cart"><a href="panier.jsp">Panier d'Achat</a></li>
+        <li class="cart"><a href="panier.jsp">購物車</a></li>
         <li class="cart-value">
             <span class="blue"><a href="panier.jsp"><%= panier.getNumberArticle() %> produits</a></span> | <span>$<%= prixT %> </span></li>
       </ul>
@@ -66,8 +66,8 @@ for(LignePanier lp : panier.getLignesPanier())
         <ul>
             <li> <a href="index.jsp">首頁</a></li>
             <li> <a href="produits.jsp">我們的產品</a></li>
-            <li> <a href="mon_compte.jsp">Mon Compte</a></li>
-          <li> <a href="contactez-nous.jsp">Contactez Nous</a></li>
+            <li> <a href="mon_compte.jsp">會員專區</a></li>
+          <li> <a href="contactez-nous.jsp">聯繫我們</a></li>
           <li class="search">
               <form action="produits.jsp" method="GET">
                 <input type="image" class="action" src="images/search-action.jpg" />
@@ -112,16 +112,16 @@ for(LignePanier lp : panier.getLignesPanier())
                   <p style="margin-top: -15px; margin-left: -10px ">Bienvenu <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
               <ul class="cat-link" >
                   <li>
-                      <a href="mon_compte.jsp"> Mon Compte </a>
+                      <a href="mon_compte.jsp"> 我的帳戶 </a>
                   </li>
                   <li>
-                      <a href="panier.jsp"> Panier </a>
+                      <a href="panier.jsp"> 購物車 </a>
                   </li>
                   <li>
-                      <a href="mescommandes.jsp"> Mes Commandes </a>
+                      <a href="mescommandes.jsp"> 我的訂單 </a>
                   </li>
                   <li>
-                      <a href="DeconnexionServlet"> Deconnexion.. </a>
+                      <a href="DeconnexionServlet"> 註銷會員.. </a>
                   </li>
                   </ul>
 

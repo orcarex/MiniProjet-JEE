@@ -1,4 +1,6 @@
  <!-- slideshow start -->
+ <%@page language="Java" pageEncoding="utf-8" %>
+ <%@page contentType="text/html;charset=utf-8" %>
       <div id="slideshow">
         <ul id="slides">
           
@@ -7,15 +9,15 @@
               <a href="#">
                   <img src="js/images/E-commerce.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">E-Commerce MiniProjet..</a> 
-                  Mini projet E-Commerce, r�aliser par Islem Ay�ch & Walid Sakhana</span>
+                  <a href="#" class="title">Single Hot Auntie Shop</a> 
+                  R20 限時特價熱賣中!!!</span>
           </li>
           <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 3;">
               <a href="#">
                   <img src="js/images/java-logo.png" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">Java Entreprise Edition</a> 
-                  Ce projet est r�alis� avec en JEE..</span>
+                  <a href="#" class="title">Single Hot Auntie Shop</a> 
+                  岡本 超薄 0.000001cm大日本帝國空運來台 要買要快!</span>
           </li>
           
           
@@ -23,15 +25,15 @@
               <a href="#">
                   <img src="js/images/E-commerce.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">E-Commerce MiniProjet..</a> 
-                  Mini projet E-Commerce, r�aliser par Islem Ay�ch & Walid Sakhana</span>
+                  <a href="#" class="title">Single Hot Auntie Shop</a> 
+                  </span>
           </li>
           <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 3;">
               <a href="#">
                   <img src="js/images/java-logo.png" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
                   <a href="#" class="title">Java Entreprise Edition</a> 
-                  Ce projet est r�alis� avec en JEE..</span>
+                  Ce projet est réalisé avec en JEE..</span>
           </li>
           
           
