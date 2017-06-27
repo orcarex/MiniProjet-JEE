@@ -64,6 +64,7 @@ for(LignePanier lp : panier.getLignesPanier())
     <div id="Nav">
       <div class="NavBody">
         <ul>
+		 <li> <a href="index.jsp">測試一下</a></li>
             <li> <a href="index.jsp">首頁</a></li>
             <li> <a href="produits.jsp">我們的產品</a></li>
             <li> <a href="mon_compte.jsp">Mon Compte</a></li>
