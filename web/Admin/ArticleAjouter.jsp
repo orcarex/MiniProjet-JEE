@@ -7,7 +7,7 @@
 
 <%@include file="_header.jsp" %>
 
-<!-- start content-outer -->
+<!-- start content-outer --> <!-- start content-outer --> 
 <div id="content-outer">
 <!-- start content -->
 <div id="content">
