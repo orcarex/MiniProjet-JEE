@@ -102,6 +102,7 @@ $(function() {
 {
 
 // initialise the "Select date" link
+//henry 處理日期選取的js區塊
 $('#date-pick')
 	.datePicker(
 		// associate the link with a date picker

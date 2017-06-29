@@ -2,8 +2,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
+    //henry 判斷是否登入 (session是否有user值)
         if(session.getAttribute("user") != null)
         {
+            //henry登入後直接跳轉到產品列表頁 
             response.sendRedirect("ProduitListe.jsp");
         }
 %>
@@ -17,15 +19,20 @@
 <title>Internet Dreams</title>
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="default" />
 <!--  jquery core -->
+<!--henry 引入 jquery-->
 <script src="js/jquery/jquery-1.4.1.min.js" type="text/javascript"></script>
 
 <!-- Custom jquery scripts -->
+<!--henry 引入 自訂義 custom_jquery.js-->
 <script src="js/jquery/custom_jquery.js" type="text/javascript"></script>
 
 <!-- MUST BE THE LAST SCRIPT IN <HEAD></HEAD></HEAD> png fix -->
+<!--henry 引入 pngFix框架 jquery.pngFix.js對IE6的PNG圖片處理插件-->
 <script src="js/jquery/jquery.pngFix.pack.js" type="text/javascript"></script>
 <script type="text/javascript">
+<!--henry 頁面載入完成後-->
 $(document).ready(function(){
+//執行pngFix()
 $(document).pngFix( );
 });
 </script>
@@ -49,6 +56,7 @@ $(document).pngFix( );
 	<div class="clear"></div>
 	
 	<!--  start loginbox ................................................................................. -->
+        <!--henry 表單送出後給 LoginServlet處理類處理 路徑對應可參考 專案中web.xml檔-->
         <form method="GET" action="../LoginServelet">
         <div id="loginbox">
 	
