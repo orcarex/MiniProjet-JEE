@@ -43,6 +43,7 @@
                             
                             <!--  start message-green -->
                             <%
+                                //henry 新增產品成功則顯示下方區塊代碼 會以橫幅 綠色 Bar形式顯示
                                 if(request.getParameter("add") != null && request.getParameter("add").equals("success"))
                                 {
                             %>
@@ -59,6 +60,7 @@
                                 
                                 <!--  start message-Red -->
                             <%
+                                 //henry 新增產品失敗則顯示下方區塊代碼 會以橫幅 紅色 Bar形式顯示
                                 if(request.getParameter("add") != null &&request.getParameter("add").equals("fail"))
                                 {
                             %>
@@ -93,6 +95,7 @@
 				
                                 
                                 <% 
+                                    //henry 更新並顯示產品列表
                                     ArticleDao dao = new ArticleDao();
                                     
                                     Vector<Article> list = dao.findAll();

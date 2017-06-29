@@ -1,6 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!--henry 引入客戶類-->
 <%@page import="entities.Client"%>
+<!--henry 引入客戶控制類-->
 <%@page import="dao.ClientDao"%>
 <% 
+    //henry 判斷是否登入
         if(session.getAttribute("user") == null)
         {
             response.sendRedirect("login.jsp");
@@ -23,7 +27,7 @@
             f = new Client();
         
 %>
-
+<!-- henry引入 _header.jsp檔 -->
 <%@include file="_header.jsp" %>
 
 <!-- start content-outer -->
@@ -53,26 +57,28 @@
 	<tr valign="top">
 	<td>
 	
-	
+                <!--henry 客戶欄位表單標題-->
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no"> - </div>
-			<div class="step-dark-left"><a href="">D�tails du Client</a></div>
+			<div class="step-dark-left"><a href="">Détails du Client</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="step-no-off"> # </div>
-			<div class="step-light-left">Veillez saisir les d�tails </div>
+			<div class="step-light-left">Veillez saisir les détails </div>
 			<div class="step-light-right">&nbsp;</div>
 			
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
+                 <!--henry 表單送出後給 ModifierClientServlet處理類處理 路徑對應可參考 專案中web.xml檔中servlet與url對應-->
                 <form method="GET" action="../ModifierClientServlet">
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
+                    <!--henry 判斷會員狀態-->
                     <% int etat=f.getEtat();
                             String etatf="";   
                         if(etat==0)
-                            etatf="Bloqu�";
+                            etatf="Bloqué";
                         else
                              etatf="Actif";
                     %>

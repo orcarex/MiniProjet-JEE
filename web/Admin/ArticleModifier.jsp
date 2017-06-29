@@ -1,6 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!--henry 引入產品控制類-->
 <%@page import="dao.ArticleDao"%>
+<!--henry 引入產品類-->
 <%@page import="entities.Article"%>
 <% 
+    //henry 判斷是否登入
         if(session.getAttribute("user") == null)
         {
             response.sendRedirect("login.jsp");
@@ -24,7 +28,7 @@
         
 %>
 
-
+<!--henry 引入_header.jsp-->
 <%@include file="_header.jsp" %>
 
 <!-- start content-outer -->
@@ -54,20 +58,21 @@
 	<tr valign="top">
 	<td>
 	
-	
+	<!--henry 產品各欄位-->
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no"> - </div>
-			<div class="step-dark-left"><a href="">D�tails d'un article</a></div>
+			<div class="step-dark-left"><a href="">Détails d'un article</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="step-no-off"> # </div>
-			<div class="step-light-left">Veillez saisir les d�tails </div>
+			<div class="step-light-left">Veillez saisir les détails </div>
 			<div class="step-light-right">&nbsp;</div>
 			
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
+                 <!--henry 表單送出後給 ModifierArticleServlet處理類處理 路徑對應可參考 專案中web.xml檔中servlet與url對應-->
                 <form method="GET" action="../ModifierArticleServlet">
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 		<!--
@@ -110,7 +115,7 @@
 			</td>-->
 		</tr>
                 <tr>
-			<th valign="top">Quantit�</th>
+			<th valign="top">Quantité</th>
                         <td><input name="quantite" value="<%= f.getQte() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>

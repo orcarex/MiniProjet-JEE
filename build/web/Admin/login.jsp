@@ -56,7 +56,7 @@ $(document).pngFix( );
 	<div class="clear"></div>
 	
 	<!--  start loginbox ................................................................................. -->
-        <!--henry 表單送出後給 LoginServlet處理類處理 路徑對應可參考 專案中web.xml檔-->
+        <!--henry 表單送出後給 LoginServlet處理類處理 路徑對應可參考 專案中web.xml檔中servlet與url對應-->
         <form method="GET" action="../LoginServelet">
         <div id="loginbox">
 	
