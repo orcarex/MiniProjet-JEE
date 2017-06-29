@@ -1,14 +1,16 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
 <%@page import="dao.ArticleDao"%>
 <% 
+    //henry 判斷是否登入 否則跳轉到 login.jsp頁面
         if(session.getAttribute("user") == null)
         {
             response.sendRedirect("login.jsp");
         }
 %>
 
-
+<!--henry 引入 header.jsp-->
 <%@include file="_header.jsp" %>
 
 <!-- start content-outer ........................................................................................................................START -->
@@ -47,7 +49,7 @@
 				<div id="message-green">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="green-left">Mise a jour effectu� avec succes ! :D <a href="FilmAjouter.jsp">Ajouter un Film ? </a></td>
+                                    <td class="green-left">Mise a jour effectu� avec succes ! :D <a href="FilmAjouter.jsp">Ajouter un Film ? </a></td>
 					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
 				</tr>
 				</table>
@@ -63,7 +65,7 @@
 				<div id="message-red">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez r�essayer !</a></td>
+                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez r�essayer !</a></td>
 					<td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
 				</tr>
 				</table>

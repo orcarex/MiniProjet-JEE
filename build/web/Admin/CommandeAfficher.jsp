@@ -1,5 +1,4 @@
-<%@page language="Java" pageEncoding="utf-8" %>
-<%@page contentType="text/html;charset=utf-8" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.LigneCommande"%>
 <%@page import="dao.LigneCommandeDao"%>
 <%@page import="entities.Client"%>

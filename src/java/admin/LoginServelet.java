@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author islem
  */
+//henry 後台登入管理 servlet 類 
 public class LoginServelet extends HttpServlet {
 
     /**
@@ -38,7 +39,7 @@ public class LoginServelet extends HttpServlet {
         {
             
             HttpSession session = request.getSession();
-                
+                //henry 判斷是否登入並有名為user的session值
             if(session.getAttribute("user") != null)
             {
                     response.sendRedirect("Admin/ProduitListe.jsp");

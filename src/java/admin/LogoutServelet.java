@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author islem
  */
+//henry 後台登出 servlet類 
 public class LogoutServelet extends HttpServlet {
 
     /**
