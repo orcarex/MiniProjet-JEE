@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package dao;
-
+//henry 引入產品類
 import entities.Article;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,11 +15,12 @@ import java.util.Vector;
  *
  * @author Walid
  */
+//henry 產品控制器類
 public class ArticleDao
 {
-
+    //henry 建立連線實體
     Connection con = DBConnexion.getInstance();
-
+    //henry 新增產品(方法) 傳入產品實體
     public boolean add(Article a)
     {
         try
@@ -44,7 +45,7 @@ public class ArticleDao
 
         return false;
     }
-
+    //henry 移除產品(方法) 傳入產品實體
     public boolean remove(int idArticle)
     {
         try
@@ -67,7 +68,7 @@ public class ArticleDao
 
         return false;
     }
-
+    //henry 修改產品(方法) 傳入產品實體
     public boolean update(Article a)
     {
         try
@@ -97,7 +98,7 @@ public class ArticleDao
 
         return false;
     }
-
+    //henry 查找特定產品(方法) 傳入id參數
     public Article findByID(int id)
     {
         String req = "SELECT* " + " FROM article " + " WHERE idArticle = " + id;
@@ -126,7 +127,7 @@ public class ArticleDao
 
         return null;
     }
-
+    //henry 搜尋所有產品(方法) 並回傳 Vector資料型態 不帶參數
     public Vector<Article> findAll()
     {
         String req = "SELECT* " + " FROM article ";
@@ -163,7 +164,7 @@ public class ArticleDao
         return null;
     }
 
-    
+    //henry 搜尋所有產品(方法) 並回傳 Vector資料型態  搜尋功能使用 (帶入搜尋關鍵字)
     public Vector<Article> findAll(String key)
     {
         String req = "SELECT* " + " FROM article WHERE libelle like '%"+key+"%'";
@@ -200,7 +201,7 @@ public class ArticleDao
         return null;
     }
 
-
+    //henry 搜尋產品(隨機) 帶入隨機數值
      public Vector<Article> findRandom(int nbMax)
     {
         String req = "SELECT* " + " FROM article ORDER BY RAND() LIMIT " + nbMax;

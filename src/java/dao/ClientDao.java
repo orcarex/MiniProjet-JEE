@@ -15,11 +15,12 @@ import java.util.Vector;
  *
  * @author Walid
  */
+//henry 會員類
 public class ClientDao
 {
-
+    //henry 建立連線實體
     Connection con = DBConnexion.getInstance();
-
+    //henry 新增會員(方法)
     public boolean add(Client a)
     {
         try
@@ -44,7 +45,7 @@ public class ClientDao
 
         return false;
     }
-
+    //henry 移除會員(帶帳號參數)
     public boolean remove(String login)
     {
         try
@@ -67,7 +68,7 @@ public class ClientDao
 
         return false;
     }
-
+    //henry 更新會員 (傳入會員實體)
     public boolean update(Client a)
     {
         try
@@ -97,7 +98,7 @@ public class ClientDao
 
         return false;
     }
-
+    //查找會員 (傳入帳號與密碼參數為查找條件)
     public Client findByAuthentification(String log, String pass)
     {
         String req = "SELECT* " + " FROM client " + " WHERE login = '" + log + "' AND mdp = '" + pass + "';";
@@ -125,7 +126,7 @@ public class ClientDao
 
         return null;
     }
-
+    //henry 查詢所有會員 並回傳Vector資料型態 
     public Vector<Client> findAll()
     {
         String req = "SELECT* " + " FROM client ";
@@ -159,7 +160,7 @@ public class ClientDao
 
         return null;
     }
-
+    //henry 更新會員帳號(傳入帳號資料參數)
     public boolean bloquer(String login)
     {
         try
@@ -185,7 +186,7 @@ public class ClientDao
 
         return false;
     }
-
+    //henry 修改會員表個欄位值 並回傳成功會失敗
     public boolean modifier(Client a)
     {
         try
@@ -217,7 +218,7 @@ public class ClientDao
     }
 
     
-    
+    //henry查找 會員 (依照傳入的登入帳號參數做查找)
         public Client findByLogin(String log)
     {
         String req = "SELECT* " + " FROM client " + " WHERE login = '" + log + "';";
