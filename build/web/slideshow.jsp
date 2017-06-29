@@ -1,6 +1,7 @@
  <!-- slideshow start -->
  <%@page language="Java" pageEncoding="utf-8" %>
  <%@page contentType="text/html;charset=utf-8" %>
+ <!--henry 首頁幻燈片-->
       <div id="slideshow">
         <ul id="slides">
           

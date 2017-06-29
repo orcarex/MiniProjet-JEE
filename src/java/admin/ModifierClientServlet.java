@@ -5,8 +5,9 @@
  */
 
 package admin;
-
+//henry 引入 會員控制類
 import dao.ClientDao;
+//henry 引入會員類
 import entities.Client;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 後台更新會員類
 public class ModifierClientServlet extends HttpServlet {
 
     /**
@@ -36,13 +38,14 @@ public class ModifierClientServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
          try
         {
+            //henry 接收 request 各參數
             String nom = request.getParameter("nom");
             String prenom = request.getParameter("prenom");
             String login = request.getParameter("login");
             String mdp = request.getParameter("mdp");
             String etat=request.getParameter("etat");
             int etatf=0;
-            if(etat.equals("Bloqué"))
+            if(etat.equals(""))
                 etatf=0;
             else
                 etatf=1;
@@ -63,10 +66,12 @@ public class ModifierClientServlet extends HttpServlet {
             
             if(dao.modifier(ar))
             {
+                //henry更新成功後跳轉
                 System.out.println("sucess");
                 response.sendRedirect("Admin/CompteListe.jsp?add=success");
             }else
             {
+                //henry更新失敗後跳轉
                 System.out.println("fail");
                 response.sendRedirect("Admin/CompteListe.jsp?add=fail");
             }

@@ -1,26 +1,30 @@
 <%@page language="Java" pageEncoding="utf-8" %>
 <%@page contentType="text/html;charset=utf-8" %>
 <%@page import="java.util.Calendar"%>
+<!--henry 引入 產品類-->
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
+<!--henry 引入 產品控制類->
 <%@page import="dao.ArticleDao"%>
+<!--henry 引入 header.jsp-->
 <%@include file="header.jsp" %>
 
 
 <div class="RightSide">
     
     <%
+        //henry 如request中con參數為null 則顯示 
         if(request.getParameter("con") != null)
         {
     %>
     <div class="login">
-        <p style="padding: 5px;"> 請連接...</p>
+        <p style="padding: 5px;"> 請登入會員帳號密碼...</p>
     </div>
     
     <% } %>
     
     
-    
+    <!--henry 引入 幻燈片 slideshow ->
     <%@include file="slideshow.jsp" %>
     
     
@@ -29,6 +33,7 @@
       </div>
     
     <% 
+        //henry 產品分頁
             int NB_PRODUIT_PAGE = 6 ;
             
             int pageCourante = 1;
@@ -38,10 +43,11 @@
             }
             
             ArticleDao dao = new ArticleDao();
+            //henry取得所有產品
             Vector<Article> articles = dao.findAll();
-            
+            //henry 定義總頁數
             int nbTotalePages = articles.size() / NB_PRODUIT_PAGE + 1;
-            
+            //henry 初始頁
             int init = ((pageCourante - 1) * NB_PRODUIT_PAGE);
             
             String cls = "";
@@ -116,7 +122,7 @@ t++ ;
 init += 3 ;
 }%>        
         <!-- FIN BOUCLE !! -->
-      
+      <!--henry 分頁狀態顯示 上一頁  下一頁-->
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
@@ -140,5 +146,5 @@ init += 3 ;
     </div>
 
 
-
+<!--henry 引入 底部footer.jsp-->
 <%@include file="footer.jsp" %>

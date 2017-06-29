@@ -1,11 +1,16 @@
 <%@page language="Java" pageEncoding="utf-8" %>
 <%@page contentType="text/html;charset=utf-8" %>
+<!--henry 購物車類-->
 <%@page import="panier.LignePanier"%>
+<!--henry 引入購物車與產品中間控制類-->
 <%@page import="panier.Panier"%>
 <%@page import="java.util.Calendar"%>
+<!--henry 引入產品類-->
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
+<!--henry 引入產品控制類-->
 <%@page import="dao.ArticleDao"%>
+<!--henry 引入header.jsp頁-->
 <%@include file="header.jsp" %>
 
 
@@ -29,7 +34,7 @@
 
 <%
 int i = 0 ;
-
+//henry 取得購物車資料將資料賦值給lp並迴圈跑出對應產品各明細
 for(LignePanier lp : panier.getLignesPanier())
 {
     i++;
@@ -39,23 +44,27 @@ for(LignePanier lp : panier.getLignesPanier())
             <ul>
                 <li class="number"> <%= i %>. </li>
                 <li class="thumbMail">
+                    <!--henry 取得並顯示產品圖片-->
                     <a href="#"><img width="82" height="60" src="<%= lp.getArticle().getImg() %>" alt=""/></a>
                 </li>							
                 
                 <li class="proName">
+                     <!--henry 取得並顯示產品名稱-->
                     <a href="#"><%= lp.getArticle().getLibelle()%></a>
                 </li>
-                
+                 <!--henry 取得並顯示產品價格-->
                 <li class="priceHead">$<%= lp.getArticle().getPrix()%></li>
                 
                 <li class="quanitity">
                     <div class="icons">
+                         <!--henry 取得產品id並拼接成超動態連結-->
                         <a href="PanierServlet?op=add&sender=panier.jsp&id=<%= lp.getArticle().getIdArticle() %>" title="plus-pro"><img src="images/plus-pro.gif" alt="plus-pro"/></a>
                         <a href="PanierServlet?op=sous&sender=panier.jsp&id=<%= lp.getArticle().getIdArticle() %>" title="minus-pro"><img src="images/minus-pro.gif" alt="minus-pro"/></a>
                     </div>
+                     <!--henry 取得並顯示購物車中產品數量-->
                     <div class="box"><%= lp.getQuantite() %></div>
                 </li>
-                
+                     <!--henry 取得並顯示購物車中產品價格-->
                 <li class="total">$<%= lp.getArticle().getPrix()* lp.getQuantite() %>
                     <span><a href="PanierServlet?op=rem&sender=panier.jsp&id=<%= lp.getArticle().getIdArticle() %>" title="Remove"><img src="images/cross.gif" alt="Remove"/></a></span>
                 </li>

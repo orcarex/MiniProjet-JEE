@@ -36,6 +36,7 @@ public class LogoutServelet extends HttpServlet {
         HttpSession session = request.getSession();
         //henry 把名為user的session 設為null 
         session.setAttribute("user", null);
+        //henry 跳轉回管理後台登入頁面
         response.sendRedirect("Admin/login.jsp");
     }
 

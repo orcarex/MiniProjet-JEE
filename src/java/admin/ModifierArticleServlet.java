@@ -5,7 +5,7 @@
  */
 
 package admin;
-
+//henry 引入產品控制類
 import dao.ArticleDao;
 import entities.Article;
 import java.io.IOException;
@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 後台管理 商品更新控制 servlet 類 
 public class ModifierArticleServlet extends HttpServlet {
 
     /**
@@ -36,6 +37,7 @@ public class ModifierArticleServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try
         {
+            //henry 接收 request 各個參數
             String libelle = request.getParameter("libelle");
             double prix = Double.parseDouble(request.getParameter("prix"));
             int quantite = Integer.parseInt(request.getParameter("quantite"));
@@ -48,19 +50,21 @@ public class ModifierArticleServlet extends HttpServlet {
             
             String img = request.getParameter("urlImage");
             String desc = request.getParameter("desc");
-            
+            //henry 年齡西元格式化
             int age = 2014 - a ;
             
             int id = Integer.parseInt(request.getParameter("id"));
-            
+            //建立新產品實體(帶入參數)
             Article ar = new Article(id, libelle, desc, prix, img, quantite, dt);
             ArticleDao dao = new ArticleDao();
             
             if(dao.update(ar))
             {
+                //henry 更新成功跳轉頁面
                 response.sendRedirect("Admin/ProduitListe.jsp?add=success");
             }else
             {
+                //henry 更新失敗跳轉頁面
                 response.sendRedirect("Admin/ProduitListe.jsp?add=fail");
             }
             
