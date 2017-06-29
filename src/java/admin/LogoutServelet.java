@@ -32,8 +32,9 @@ public class LogoutServelet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+        //henry 新增一個session 並將取得request中的session賦值給該session
         HttpSession session = request.getSession();
+        //henry 把名為user的session 設為null 
         session.setAttribute("user", null);
         response.sendRedirect("Admin/login.jsp");
     }

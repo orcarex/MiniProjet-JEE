@@ -5,7 +5,7 @@
  */
 
 package admin;
-
+//henry 引入會員類
 import dao.ClientDao;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 判斷登入管理後台 servlet類 
 public class BloquerClientServlet extends HttpServlet {
 
     /**
@@ -32,24 +33,28 @@ public class BloquerClientServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        //henry 如沒有 user的session (後台管理帳號)
        if(request.getSession().getAttribute("user") == null)
         {
+            //henry 跳轉到後臺登入頁面
             response.sendRedirect("Admin/login.jsp");
             return ;
         }
             
-        
+        //henry 接收request的參數login
         String login =request.getParameter("login");
-
+        
         ClientDao dao = new ClientDao();
 
-
-
+            
+        //henry 如登入
         if(dao.bloquer(login))
         {
+            //henry 跳轉到 後台的CompteListe.jsp 並帶add參數 值為success
             response.sendRedirect("Admin/CompteListe.jsp?add=success");
         }else
         {
+            //henry 跳轉到 後台的CompteListe.jsp 並帶add參數 值為fail
             response.sendRedirect("Admin/CompteListe.jsp?add=fail");
         }
         
