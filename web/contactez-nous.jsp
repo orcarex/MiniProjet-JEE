@@ -10,10 +10,10 @@
 
 <!--henry 本頁面功能尚未程式化 僅有靜態呈現-->
 <div class="RightSide">
-    <div class="bredCrum">
-        <h4><a href="index.html"> 123首頁</a>   >>   <a href="#" class="select">聯繫我們 </a> </h4>
-    </div>
-    
+    <div class="bredCrum">-
+        <h4><a href="index.html"> 首頁</a>   >>   <a href="#" class="select">聯繫我們 </a> </h4>
+      </div>
+   
     
     
         

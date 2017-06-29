@@ -38,20 +38,20 @@
 
 
     <table  style="border-style:solid  ;width: 100%; text-align: center">
-        
+        <!--Vince 不知道無效 有效什麼-->
         <%
             for(Commande c : cmd)
             {
                 String etat = "En Attente";
                 if(c.getEtat() == 1)
-                    etat = "Valide";
+                    etat = "有效";
                 if(c.getEtat() == 2)
-                    etat = "Refuse";
+                    etat = "無效";
                 
         %>
         <tr style="text-align: left">
             <td colspan="2" style="background-color: #E6E6E6; font-size: larger; color: #000000">
-                <b>Commande Numero : </b><%= c.getIdCommande() %> <b> cree le </b><%= c.getDateCmd() %>  
+                <b>訂單編號 : </b><%= c.getIdCommande() %> <b> 建立日期 </b><%= c.getDateCmd() %>  
             </td>
         
             <td colspan="1" style="background-color: #E6E6E6; font-size: larger; color: #000000; color: green">
@@ -95,7 +95,7 @@
         
         <tr>
             <td colspan="5" style="text-align: right; padding-right: 20px; font-size: 20px;border-style: dashed; border-width: 1px">
-               Prix Totale : <%= c.getPrixTotale() %>
+              總價格 : <%= c.getPrixTotale() %>
             </td>
             
         </tr>

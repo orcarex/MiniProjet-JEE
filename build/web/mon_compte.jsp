@@ -54,10 +54,10 @@ if(client == null)
             
             <tr>
                 <td>
-                    <input type="submit" value="Modifier">
+                    <input type="submit" value="變更">
                 </td>
                 <td>
-                    <input type="reset" value="Annuler">
+                    <input type="reset" value="取消">
                 </td>
             </tr>
             

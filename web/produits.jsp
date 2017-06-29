@@ -118,7 +118,7 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b> à <%= nbTotalePages %></span>
+                <b class="blue"><%= pageCourante %></b>  <%= nbTotalePages %></span>
                 
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">

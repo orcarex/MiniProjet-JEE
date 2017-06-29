@@ -12,7 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>E-Commerce Islem & Walid Shop</title>
+<title>Single Hot Auntie Shop </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
@@ -64,7 +64,7 @@ for(LignePanier lp : panier.getLignesPanier())
         <li class="cart-value">
             <span class="blue"><a href="panier.jsp">
                     <!--henry 取得並顯示購物車產品數量 panier.getNumberArticle() -->
-                    <%= panier.getNumberArticle() %> produits</a></span> | <span>$<%= prixT %> </span></li>
+                    <%= panier.getNumberArticle() %> 項產品</a></span> | <span>$<%= prixT %> </span></li>
       </ul>
     </div>
     <!-- end div #TopContent -->
@@ -101,14 +101,14 @@ for(LignePanier lp : panier.getLignesPanier())
               <form method="GET" action="ConnexionServlet">
               <ul class="cat-link" style="margin-top:-20px">
                   <li>
-                      Login : <input type="text" name="login" style=" width:100%" />
+                      帳號 : <input type="text" name="login" style=" width:100%" />
                   </li>
                   <li>
-                      Mdp : 	<input type="password" name="mdp" style="width:100%" />
+                      密碼 : 	<input type="password" name="mdp" style="width:100%" />
                   </li>
                   </ul>
-                  <a href="#" style="margin:5px"> S'inscrire..</a>
-                 <input style="margin-left:20px;margin-right:-20px;" type="submit" value="Valider" />
+                  <a href="#" style="margin:5px"> 忘記密碼...</a>
+                 <input style="margin-left:20px;margin-right:-20px;" type="submit" value="登入" />
                       </form>
 
               </div>
@@ -116,10 +116,10 @@ for(LignePanier lp : panier.getLignesPanier())
         <% }else{ %>
         <!-- henry 如果已登入就顯示下方區塊 -->
             <div class="leftBox">
-                <h3>Bienvenu</h3>
+                <h3>哩厚~</h3>
               <div class="leftBoxBody">
                   <!-- henry 顯示登入帳號的名字 ((Client)session.getAttribute("client")).getNom()  -->
-                  <p style="margin-top: -15px; margin-left: -10px ">Bienvenu <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
+                  <p style="margin-top: -15px; margin-left: -10px ">哩厚~ <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
               <ul class="cat-link" >
                   <li>
                       <a href="mon_compte.jsp"> 我的帳戶 </a>
@@ -143,7 +143,7 @@ for(LignePanier lp : panier.getLignesPanier())
       
       
       <div class="leftBox">
-        <h3>Produits Aléatoires</h3>
+        <h3>隨機產品</h3>
         <div class="leftBoxBody">
           <ul class="sellerlist">
             <%

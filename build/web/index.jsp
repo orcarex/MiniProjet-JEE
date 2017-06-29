@@ -24,13 +24,13 @@
     <% } %>
     
     
-    <!--henry 引入 幻燈片 slideshow ->
+    <!--henry 引入 幻燈片 slideshow -->
     <%@include file="slideshow.jsp" %>
     
     
-      <div class="bredCrum" style="margin-bottom:38px;">
-        <h4>Nos derniers Produits..</h4>
-      </div>
+      <!--<div class="bredCrum" style="margin-bottom:38px;">-->
+        <h4>最新產品..</h4>
+      <!--</div>-->
     
     <% 
         //henry 產品分頁
@@ -126,7 +126,7 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b> à <%= nbTotalePages %></span>
+                <b class="blue"><%= pageCourante %></b> 2 <%= nbTotalePages %></span>
                 
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">
