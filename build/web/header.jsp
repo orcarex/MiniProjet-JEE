@@ -1,6 +1,8 @@
 <%@page language="Java" pageEncoding="utf-8" %>
 <%@page contentType="text/html;charset=utf-8" %>
+<!--henry 引入商品類-->
 <%@page import="entities.Article"%>
+<!--henry 引入商品控制類-->
 <%@page import="dao.ArticleDao"%>
 <%@page import="panier.LignePanier"%>
 <%@page import="panier.Panier"%>
@@ -33,6 +35,7 @@
   <div id="Top">
     <div id="Logo">
       <h1><a href="index.jsp">
+              <!--henry 網站LOGO圖片引入-->
               <img height="79" src="images/logo-big-shopping.png" alt="OXO" /></a>
       </h1>
     </div>
@@ -40,16 +43,18 @@
     <div id="TopContent">
       <ul>
 <% 
+    //henry 判斷是否已存在 購物車的session 沒有就建立購物車session
 if(session.getAttribute("panier") == null )
 {
     session.setAttribute("panier", new Panier());
 }
-
+ //henry 取得購物車session中的資料
 Panier panier = (Panier)session.getAttribute("panier");
-
+//henry 宣告 總價變數 prixT
 double prixT = 0 ;
-
+//henry 宣告一變數 lp 並將 panier.getLignesPanier() 回傳的購物車資料賦予給lp
 for(LignePanier lp : panier.getLignesPanier())
+    //henry 計算總價 pritX 購物車產品數量乘上產品單價
     prixT += lp.getQuantite()*lp.getArticle().getPrix();
 
 
@@ -57,7 +62,9 @@ for(LignePanier lp : panier.getLignesPanier())
 
         <li class="cart"><a href="panier.jsp">購物車</a></li>
         <li class="cart-value">
-            <span class="blue"><a href="panier.jsp"><%= panier.getNumberArticle() %> produits</a></span> | <span>$<%= prixT %> </span></li>
+            <span class="blue"><a href="panier.jsp">
+                    <!--henry 取得並顯示購物車產品數量 panier.getNumberArticle() -->
+                    <%= panier.getNumberArticle() %> produits</a></span> | <span>$<%= prixT %> </span></li>
       </ul>
     </div>
     <!-- end div #TopContent -->
@@ -86,6 +93,7 @@ for(LignePanier lp : panier.getLignesPanier())
     <div class="LeftSide">
         
         <!-- Connexion DIV -->
+        <!-- henry 判斷是否已登入帳號(會員)如果未登入就顯示下方區塊 -->
         <% if(session.getAttribute("client") == null){ %>
             <div class="leftBox">
               <h3>Connexion</h3>
@@ -106,9 +114,11 @@ for(LignePanier lp : panier.getLignesPanier())
               </div>
             </div>
         <% }else{ %>
+        <!-- henry 如果已登入就顯示下方區塊 -->
             <div class="leftBox">
                 <h3>Bienvenu</h3>
               <div class="leftBoxBody">
+                  <!-- henry 顯示登入帳號的名字 ((Client)session.getAttribute("client")).getNom()  -->
                   <p style="margin-top: -15px; margin-left: -10px ">Bienvenu <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
               <ul class="cat-link" >
                   <li>
@@ -137,6 +147,7 @@ for(LignePanier lp : panier.getLignesPanier())
         <div class="leftBoxBody">
           <ul class="sellerlist">
             <%
+                //henry 隨機產生並顯示四個產品
                 ArticleDao daoo = new ArticleDao();
                 int ii = 0;
                 for(Article a : daoo.findRandom(4))
@@ -144,6 +155,7 @@ for(LignePanier lp : panier.getLignesPanier())
                     ii++;
             %>
                 <li><span><%= ii %>.</span>
+                    <!-- henry 取得產品資料各欄位值並插入html -->
                     <p><a href="article.jsp?id=<%= a.getIdArticle() %>"><%= a.getLibelle() + " <br> <b>" + a.getPrix() + "$</b>" %></a></p>
                     <div class="clr"></div>
                 </li>

@@ -1,11 +1,14 @@
 <%@page language="Java" pageEncoding="utf-8" %>
 <%@page contentType="text/html;charset=utf-8" %>
 <%@page import="java.util.Calendar"%>
+<!--henry 引入商品類-->
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
+<!--henry 引入商品控制類-->
 <%@page import="dao.ArticleDao"%>
 <%@include file="header.jsp" %>
 
+<!--henry 本頁面功能尚未程式化 僅有靜態呈現-->
 <div class="RightSide">
     <div class="bredCrum">
         <h4><a href="index.html"> 123首頁</a>   >>   <a href="#" class="select">聯繫我們 </a> </h4>
@@ -35,5 +38,5 @@
     
     
 </div>
-
+<!--henry 引入footer頁面-->
 <%@include file="footer.jsp" %>
