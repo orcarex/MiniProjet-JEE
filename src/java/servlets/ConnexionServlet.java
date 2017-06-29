@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Walid
  */
+//henry 登入處理 servlet類
 public class ConnexionServlet extends HttpServlet
 {
 
@@ -34,6 +35,7 @@ public class ConnexionServlet extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        //henry 取得登入帳號密碼
         String login = request.getParameter("login");
         String mdp = request.getParameter("mdp");
         
@@ -42,9 +44,11 @@ public class ConnexionServlet extends HttpServlet
         
         if(c == null)
         {
+            //henry 登入成功後
             response.sendRedirect("index.jsp");
         }else
         {
+             //henry 登入失敗後
             request.getSession().setAttribute("client", c);
             response.sendRedirect("index.jsp");
         }

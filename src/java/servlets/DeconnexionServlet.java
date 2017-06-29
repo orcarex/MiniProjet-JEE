@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Walid
  */
+//henry 登出動作處理 servlet類
 public class DeconnexionServlet extends HttpServlet
 {
 
@@ -32,6 +33,7 @@ public class DeconnexionServlet extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        //henry 將該會員登出並跳轉到首頁
         request.getSession().setAttribute("client", null);
         response.sendRedirect("index.jsp");
     }

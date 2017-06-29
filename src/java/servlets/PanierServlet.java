@@ -5,8 +5,9 @@
  */
 
 package servlets;
-
+//henry 引入 產品控制類
 import dao.ArticleDao;
+//henry 引入產品類
 import entities.Article;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,12 +15,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+//henry 引入購物車控制類
 import panier.Panier;
 
 /**
  *
  * @author Walid
  */
+//henry 前台 購物車 servlet 類 
 public class PanierServlet extends HttpServlet
 {
 
@@ -39,30 +42,31 @@ public class PanierServlet extends HttpServlet
             request.getSession().setAttribute("panier", new Panier());
         
         Panier p = (Panier)request.getSession().getAttribute("panier");
-            
+       //henry 建立產品控制器實體  
         ArticleDao dao = new ArticleDao();
+        //henry依據id查找產品
         int id = Integer.parseInt(request.getParameter("id"));
         Article a = dao.findByID(id);
-        
+        //henry 判斷 op參數(動作) 如為空則..........
         if(request.getParameter("op") == null || a == null)
         {
             response.sendRedirect(request.getParameter("sender") + "?id="+id+"&failed");
             return ;
         }
         
-        
+        //henry 把存在購物車中的特定產品增加數量
         if(request.getParameter("op").equals("add"))
         {
             p.addArticle(a);
             response.sendRedirect(request.getParameter("sender") + "?id="+id+"&succes");
         }
-        
+        //henry 把存在購物車中的特定產品減少數量
         if(request.getParameter("op").equals("sous"))
         {
             p.sousArticle(a);
             response.sendRedirect(request.getParameter("sender") + "?id="+id+"&succes");
         }
-        
+        //henry 把存在購物車中的特定產品移除
         if(request.getParameter("op").equals("rem"))
         {
             p.removeArticle(a);
