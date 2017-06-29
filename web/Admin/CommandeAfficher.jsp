@@ -1,4 +1,5 @@
-
+<%@page language="Java" pageEncoding="utf-8" %>
+<%@page contentType="text/html;charset=utf-8" %>
 <%@page import="entities.LigneCommande"%>
 <%@page import="dao.LigneCommandeDao"%>
 <%@page import="entities.Client"%>
@@ -24,7 +25,7 @@
 
         <!--  start page-heading -->
         <div id="page-heading">
-            <h1>Details de la Commande de <%= request.getParameter("login") %></h1>
+            <h1> 詳細訊息 <%= request.getParameter("login") %></h1>
         </div>
         <!-- end page-heading -->
 
@@ -53,7 +54,7 @@
                             <div id="message-green">
                                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td class="green-left">Mise a jour effectu� avec succes ! :D </td>
+                                        <td class="green-left">更新成功 ! :D </td>
                                         <td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
                                     </tr>
                                 </table>
@@ -69,7 +70,7 @@
                             <div id="message-red">
                                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez r�essayer !</a></td>
+                                        <td class="red-left">錯誤. <a href="FilmAjouter.jsp">請再試一次 !</a></td>
                                         <td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
                                     </tr>
                                 </table>

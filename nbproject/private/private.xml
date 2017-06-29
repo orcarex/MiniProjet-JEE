@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/project/MiniProjet-JEE/web/produits.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/admin/AjouterArticleServlet.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/Admin/ArticleAjouter.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/Admin/login.jsp</file>
+            <file>file:/D:/project/MiniProjet-JEE/web/Admin/CommandeAfficher.jsp</file>
+            <file>file:/D:/project/MiniProjet-JEE/web/Admin/CompteListe.jsp</file>
+            <file>file:/D:/project/MiniProjet-JEE/web/mon_compte.jsp</file>
+            <file>file:/D:/project/MiniProjet-JEE/web/Admin/CommandeListe.jsp</file>
             <file>file:/D:/project/MiniProjet-JEE/web/index.jsp</file>
         </group>
     </open-files>
