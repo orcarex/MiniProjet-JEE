@@ -64,16 +64,16 @@ $(document).pngFix( );
 	<div id="login-inner">
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
-			<th>Login </th>
+			<th>帳號</th>
                         <td><input name="login" type="text"  class="login-inp" /></td>
 		</tr>
 		<tr>
-			<th>Mot de passe </th>
+			<th>密碼</th>
                         <td><input name="pass" type="password" value="************"  onfocus="this.value=''" class="login-inp" /></td>
 		</tr>
 		<tr>
 			<th></th>
-			<td valign="top"><input type="checkbox" class="checkbox-size" id="login-check" /><label for="login-check">Se rappeler de moi</label></td>
+			<td valign="top"><input type="checkbox" class="checkbox-size" id="login-check" /><label for="login-check">記住帳號</label></td>
 		</tr>
 		<tr>
 			<th></th>
@@ -83,7 +83,7 @@ $(document).pngFix( );
 	</div>
  	<!--  end login-inner -->
 	<div class="clear"></div>
-	<a href="" class="forgot-pwd">Mot de passe oubliÃ© ? </a>
+	<a href="" class="forgot-pwd">忘記密碼 ? </a>
  </div>
             </form>
  <!--  end loginbox -->
