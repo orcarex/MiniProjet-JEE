@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.Client"%>
 <%@page import="java.util.Vector"%>
 <%@page import="dao.ClientDao"%>
@@ -19,7 +20,7 @@
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Clients</h1>
+		<h1>會員</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -48,7 +49,7 @@
 				<div id="message-green">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="green-left">Mise a jour effectu� avec succes ! :D </td>
+                                    <td class="green-left">Mise a jour effectué avec succes ! :D </td>
 					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
 				</tr>
 				</table>
@@ -64,7 +65,7 @@
 				<div id="message-red">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez r�essayer !</a></td>
+                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">請重新輸入 !</a></td>
 					<td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
 				</tr>
 				</table>
@@ -80,14 +81,14 @@
                                     <th  class="table-header-check"><a id="toggle-all" ></a></th>
 					
                                        
-					<th class="table-header-repeat line-left"><a >nom</a></th>
-					<th style="width: 120px" class="table-header-repeat line-left"><a >prenom</a></th>
-					<th style="width: 120px"  class="table-header-repeat line-left"><a >login</a></th>
-					<th style="width: 120px"  class="table-header-repeat line-left"><a >mot de passe</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >date de naissance</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >Etat</a></th>
+					<th class="table-header-repeat line-left"><a >姓氏</a></th>
+					<th style="width: 120px" class="table-header-repeat line-left"><a >名子</a></th>
+					<th style="width: 120px"  class="table-header-repeat line-left"><a >帳號</a></th>
+					<th style="width: 120px"  class="table-header-repeat line-left"><a >密碼</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >出生日期</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >狀態</a></th>
                                         
-                                        <th style="width: 90px" class="table-header-options line-left"><a >Options</a></th>
+                                        <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>
 				</tr>
 				
                                 
@@ -100,7 +101,7 @@
                                     for(int i = 0; i< list.size(); i++)
                                     {
                                         if(list.get(i).getEtat()==0)
-                                            etat="Bloqu�";
+                                            etat="Bloqué";
                                         else
                                             etat="Actif";
                                 %>
@@ -116,9 +117,9 @@
                                         <td><%= list.get(i).getDtNaissance() %> </td>
                                         <td><%= etat %></td>
 					<td class="options-width">
-                                            <a href="ClientModifier.jsp?login=<%= list.get(i).getLogin() %>" title="Modifier" class="icon-1 info-tooltip"></a>
-                                            <a href="../BloquerClientServlet?login=<%= list.get(i).getLogin() %>" title="Bloquer" class="icon-2 info-tooltip"></a>
-                                            <a href="../SupprimerClientServlet?login=<%= list.get(i).getLogin() %>" title="Supprimer" class="icon-2 info-tooltip"></a>
+                                            <a href="ClientModifier.jsp?login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
+                                            <a href="../BloquerClientServlet?login=<%= list.get(i).getLogin() %>" title="區塊" class="icon-2 info-tooltip"></a>
+                                            <a href="../SupprimerClientServlet?login=<%= list.get(i).getLogin() %>" title="清除" class="icon-2 info-tooltip"></a>
 					</td>
                                 				
                                 </tr>

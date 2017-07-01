@@ -20,7 +20,7 @@
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Article</h1>
+		<h1>商品明細</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -81,16 +81,16 @@
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
                                     <th  class="table-header-check"><a id="toggle-all" ></a></th>
-					<th style="width: 50px" class="table-header-repeat line-left "><a>ID</a>	</th>
+					<th style="width: 50px" class="table-header-repeat line-left "><a>編號</a>	</th>
                                         <th style="max-width: 100px; width: 100px"  class="table-header-repeat line-left">
-                                            <a >Img</a>
+                                            <a >商品圖片</a>
                                         </th>
-					<th class="table-header-repeat line-left"><a >libelle</a></th>
-					<th style="width: 120px" class="table-header-repeat line-left"><a >Date ajout</a></th>
-					<th style="width: 120px"  class="table-header-repeat line-left"><a >quantte</a></th>
-					<th style="width: 120px"  class="table-header-repeat line-left"><a >prix</a></th>
+					<th class="table-header-repeat line-left"><a >商品說明</a></th>
+					<th style="width: 120px" class="table-header-repeat line-left"><a >上傳日期</a></th>
+					<th style="width: 120px"  class="table-header-repeat line-left"><a >庫存數量</a></th>
+					<th style="width: 120px"  class="table-header-repeat line-left"><a >價格</a></th>
                                         
-                                        <th style="width: 90px" class="table-header-options line-left"><a >Options</a></th>
+                                        <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>
 				</tr>
 				
                                 
@@ -119,8 +119,8 @@
 					<td><%= list.get(i).getPrix() %> </td>
                                         
 					<td class="options-width">
-                                            <a href="ArticleModifier.jsp?id=<%= list.get(i).getIdArticle() %>" title="Modifier" class="icon-1 info-tooltip"></a>
-                                            <a href="../SupprimerArticleServlet?id=<%= list.get(i).getIdArticle() %>" title="Supprimer" class="icon-2 info-tooltip"></a>
+                                            <a href="ArticleModifier.jsp?id=<%= list.get(i).getIdArticle() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
+                                            <a href="../SupprimerArticleServlet?id=<%= list.get(i).getIdArticle() %>" title="清除" class="icon-2 info-tooltip"></a>
 					</td>
                                 				
                                 </tr>

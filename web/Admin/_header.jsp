@@ -193,17 +193,17 @@ $(document).pngFix( );
 	<div id="top-search">
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
-                    <td><input name="search" type="text" placeholder="Rechercher.." class="top-search-inp" /></td>
+                    <td><input name="search" type="text" placeholder="search.." class="top-search-inp" /></td>
 		<td>
 		<select name="choix" class="styledselect">
-			<option  value="Films">Articles</option>
-			<option value="Acteurs">Comptes</option>
-			<option   value="Actualites">Commandes</option>
+			<option  value="Films">商品</option>
+			<option value="Acteurs">帳號</option>
+			<option   value="Actualites">管理員</option>
 			
 		</select> 
 		</td>
 		<td>
-                    <input type="button" style="padding: 0px;width: 65px;height: 30px;border-style: none ;background-image: url(images/shared/top_search_btn.gif)" src=""  />
+                    <input type="button" style="padding: 0px;width: 65px;height: 30px;border-style: none ;background-image: url(images/shared/top_search_btn_1.gif)" src=""  />
 		</td>
 		</tr>
 		</table>
@@ -232,13 +232,13 @@ $(document).pngFix( );
                         <a href="moncompte.jsp">  
 			<div class="showhide-account">
                             
-                                <img src="images/shared/nav/nav_myaccount.gif" width="93" height="14" alt="" />
+                                <img src="images/shared/nav/nav_myaccount_1.gif" width="93" height="14" alt="" />
                             
                         </div>
                         </a>
 			<div class="nav-divider">&nbsp;</div>
                         
-			<a href="../LogoutServelet" id="logout"><img src="images/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+			<a href="../LogoutServelet" id="logout"><img src="images/shared/nav/nav_logout_1.gif" width="64" height="14" alt="" /></a>
                         
 			<div class="clear">&nbsp;</div>
 		
@@ -274,12 +274,12 @@ $(document).pngFix( );
 		
 		<div class="nav-divider">&nbsp;</div>
 		                    
-                <ul class="select"><li><a href="ProduitListe.jsp"><b>Articles</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                <ul class="select"><li><a href="ProduitListe.jsp"><b>商品</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
 			<ul class="sub">
-                            <li><a href="ProduitListe.jsp">Liste des Articles</a></li>
-                            <li><a href="ArticleAjouter.jsp">Ajouter un Article</a></li>
+                            <li><a href="ProduitListe.jsp">商品項目及清單</a></li>
+                            <li><a href="ArticleAjouter.jsp">增加商品</a></li>
 				
 			</ul>
 		</div>
@@ -289,11 +289,11 @@ $(document).pngFix( );
 		
 		<div class="nav-divider">&nbsp;</div>
 		
-                <ul class="select"><li><a href="CompteListe.jsp"><b>Comptes</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                <ul class="select"><li><a href="CompteListe.jsp"><b>帳號</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
 			<ul class="sub">
-                            <li><a href="CompteListe.jsp">Liste des comptes</a></li>
+                            <li><a href="CompteListe.jsp">帳號管理</a></li>
 			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
@@ -302,11 +302,11 @@ $(document).pngFix( );
 		
 		<div class="nav-divider">&nbsp;</div>
 		
-                <ul class="select"><li><a href="CommandeListe.jsp"><b>Commandes</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                <ul class="select"><li><a href="CommandeListe.jsp"><b>管理員</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
 			<ul class="sub">
-				<li><a href="CommandeListe.jsp">Liste des commande</a></li>
+				<li><a href="CommandeListe.jsp">管理員帳號</a></li>
 				
 			</ul>
 		</div>

@@ -37,7 +37,7 @@
 <div id="content">
 
 
-<div id="page-heading"><h1>Ajout d'un article</h1></div>
+<div id="page-heading"><h1>增加商品</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -62,10 +62,10 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no"> - </div>
-			<div class="step-dark-left"><a href="">Détails d'un article</a></div>
+			<div class="step-dark-left"><a href="">產品說明</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="step-no-off"> # </div>
-			<div class="step-light-left">Veillez saisir les détails </div>
+			<div class="step-light-left">請填寫詳細內容 </div>
 			<div class="step-light-right">&nbsp;</div>
 			
 		</div>
@@ -84,7 +84,7 @@
                 -->
                 
                 <tr>
-			<th valign="top">ID</th>
+			<th valign="top">編號</th>
                         <td>
                             <input type="text" name="id" required  value="<%= f.getIdArticle() %>" class="inp-form" style=";text-align: center;border-width: thin;border-radius:4px  ;background-image: none;background-color:  #ececec" readonly />
                         </td>
@@ -96,7 +96,7 @@
 		</tr>
                 
 		<tr>
-			<th valign="top">Libelle</th>
+			<th valign="top">名稱</th>
                         <td><input name="libelle" value="<%= f.getLibelle() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -106,7 +106,7 @@
 		</tr>
                 
 		<tr>
-			<th valign="top">Prix</th>
+			<th valign="top">價格</th>
                         <td><input name="prix" value="<%= f.getPrix() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -115,7 +115,7 @@
 			</td>-->
 		</tr>
                 <tr>
-			<th valign="top">Quantité</th>
+			<th valign="top">數量</th>
                         <td><input name="quantite" value="<%= f.getQte() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -128,7 +128,7 @@
 		
                 
 		<tr>
-		<th valign="top">Date :</th>
+		<th valign="top">上傳日期 :</th>
 		<td class="noheight">
 		
 			<table border="0" cellpadding="0" cellspacing="0">
@@ -209,7 +209,7 @@
 		<td></td>
 	</tr>
 	<tr>
-		<th valign="top">Description</th>
+		<th valign="top">商品介紹及描述:</th>
                 <td><textarea name="desc" rows="" cols="" class="form-textarea">
                         <%= f.getDesc() %>
                     </textarea></td>
@@ -231,7 +231,7 @@
 	</tr>
         -->
 	<tr>
-	<th>URL Image :</th>
+	<th>圖片上傳 :</th>
         <td>
             <input name="urlImage" value="<%= f.getImg() %>" placeholder="" type="text" class=""  style="border-style: inset; width: 318px; height: 20px;"/>
         </td>

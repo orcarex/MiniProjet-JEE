@@ -91,9 +91,9 @@
 
 
 
-                                        <th style="width: 120px" class="table-header-repeat line-left"><a >libelle</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >prix unitaire</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >nombre</a></th>
+                                        <th style="width: 120px" class="table-header-repeat line-left"><a >管理員說明</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >數量</a></th>
 
                                     </tr>
 
@@ -137,7 +137,7 @@
                                     
                                         <form id="mainform" method="GET"  action="../ValiderCommandeServelet">
                                         <input name="id" type="hidden" value="<%= id %>"/>
-                                        <input type="submit" value="" class="form-submit" style="text-align: center" />
+                                        <input type="submit" value="提交" class="form-submit" style="text-align: center" />
                                         </form>
                                         
                                         <form id="mainform" method="GET"  action="../RefuserCommandeServlet">

@@ -15,7 +15,7 @@
 <div id="content">
 
 
-<div id="page-heading"><h1>Ajout d'un Article</h1></div>
+<div id="page-heading"><h1>增加商品</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -40,10 +40,10 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no"> - </div>
-			<div class="step-dark-left"><a href="">Détails d'un article</a></div>
+			<div class="step-dark-left"><a href="">商品說明</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="step-no-off"> # </div>
-			<div class="step-light-left">Veillez saisir les détails </div>
+			<div class="step-light-left">請填寫詳細內容 </div>
 			<div class="step-light-right">&nbsp;</div>
 			
 		</div>
@@ -61,7 +61,7 @@
 		</tr>
                 -->
 		<tr>
-			<th valign="top">libelle</th>
+			<th valign="top">名稱</th>
                         <td><input name="libelle" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -71,7 +71,7 @@
                             <td></td>
 		</tr>
                 <tr>
-			<th valign="top">Prix</th>
+			<th valign="top">價格</th>
                         <td><input name="prix" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -81,7 +81,7 @@
                          <td></td>
 		</tr>
 		 <tr>
-			<th valign="top">Quantite</th>
+			<th valign="top">數量</th>
                         <td><input name="quantite" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -95,7 +95,7 @@
 		
 		
 		<tr>
-		<th valign="top">Date :</th>
+		<th valign="top">日期 :</th>
 		<td class="noheight">
 		
 			<table border="0" cellpadding="0" cellspacing="0">
@@ -180,7 +180,7 @@
         
         
 	<tr>
-	<th>URL Image :</th>
+	<th>圖片上傳 :</th>
         <td><input name="urlImage" placeholder="" type="text" class=""  style="border-style: inset; width: 318px; height: 20px;"/></td>
 	<td>
 	
@@ -188,7 +188,7 @@
 	</tr>
 	
         <tr>
-	<th>Description :</th>
+	<th>商品介紹及描述 :</th>
         <td>
             <textarea name="desc" rows="" cols="" class="form-textarea"> </textarea>
         </td>

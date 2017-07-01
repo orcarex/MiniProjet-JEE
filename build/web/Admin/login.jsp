@@ -76,8 +76,8 @@ $(document).pngFix( );
 			<td valign="top"><input type="checkbox" class="checkbox-size" id="login-check" /><label for="login-check">記住帳號</label></td>
 		</tr>
 		<tr>
-			<th></th>
-                        <td><input type="submit" class="submit-login" /></td>
+			<th></th> <!--  class="submit-login" -->
+                        <td><input type="submit" value="登入" /></td>
 		</tr>
 		</table>
 	</div>
@@ -90,23 +90,23 @@ $(document).pngFix( );
  
 	<!--  start forgotbox ................................................................................... -->
 	<div id="forgotbox">
-		<div id="forgotbox-text">Please send us your email and we'll reset your password.</div>
+		<div id="forgotbox-text">請輸入您的電子信箱，我們將重新發送密碼至您的信箱</div>
 		<!--  start forgot-inner -->
 		<div id="forgot-inner">
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
-			<th>Email address:</th>
+			<th>電子信箱地址:</th>
 			<td><input type="text" value=""   class="login-inp" /></td>
 		</tr>
 		<tr>
-			<th> </th>
-			<td><input type="button" class="submit-login"  /></td>
+			<th> </th><!-- type="button" class="submit-login" -->
+			<td><input type="button" value="發送"  /></td>
 		</tr>
 		</table>
 		</div>
 		<!--  end forgot-inner -->
 		<div class="clear"></div>
-		<a href="" class="back-login">Back to login</a>
+		<a href="" class="back-login">返回登入頁面</a>
 	</div>
 	<!--  end forgotbox -->
 

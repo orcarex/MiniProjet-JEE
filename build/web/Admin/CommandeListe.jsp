@@ -1,4 +1,4 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.Commande"%>
 <%@page import="java.util.Vector"%>
 <%@page import="dao.CommandeDao"%>
@@ -19,7 +19,7 @@
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Commandes</h1>
+		<h1>管理員</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -64,7 +64,7 @@
 				<div id="message-red">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez r�essayer !</a></td>
+                                    <td class="red-left">Error. <a href="FilmAjouter.jsp">Veillez réessayer !</a></td>
 					<td class="red-right"><a class="close-red"><img src="images/table/icon_close_red.gif"   alt="" /></a></td>
 				</tr>
 				</table>
@@ -80,11 +80,11 @@
                                     <th  class="table-header-check"><a id="toggle-all" ></a></th>
 					
                                        
-					<th class="table-header-repeat line-left"><a >Login</a></th>
-					 <th style="width: 120px"  class="table-header-repeat line-left"><a >date</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >Prix total</a></th>
+					<th class="table-header-repeat line-left"><a >登入管理員</a></th>
+					 <th style="width: 120px"  class="table-header-repeat line-left"><a >登入日期</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
                                         
-                                        <th style="width: 90px" class="table-header-options line-left"><a >Options</a></th>
+                                        <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>
 				</tr>
 				
                                 
@@ -106,8 +106,8 @@
                                         <td><%= list.get(i).getDateCmd() %></td>
                                         <td><%= list.get(i).getPrixTotale() %></td>
 					<td class="options-width">
-                                            <a href="CommandeAfficher.jsp?id=<%= list.get(i).getIdCommande() %>&login=<%= list.get(i).getLogin() %>" title="Details" class="icon-1 info-tooltip"></a>
-                                            <a href="../SuuprimeCommandeServelet?id=<%= list.get(i).getIdCommande() %>" title="Supprimer" class="icon-2 info-tooltip"></a>
+                                            <a href="CommandeAfficher.jsp?id=<%= list.get(i).getIdCommande() %>&login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
+                                            <a href="../SuuprimeCommandeServelet?id=<%= list.get(i).getIdCommande() %>" title="清除使用者" class="icon-2 info-tooltip"></a>
                                             </td>
                                 				
                                 </tr>
