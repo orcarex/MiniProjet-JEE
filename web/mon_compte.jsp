@@ -22,7 +22,7 @@ if(client == null)
     <div class="RightSide" >
     
         <div class="bredCrum">
-            <h4><a href="index.html">首頁</a>   >>   <a href="#" class="select">我的帳戶 </a> </h4>
+            <h4><a href="index.html">首頁123456</a>   >>   <a href="#" class="select">我的帳戶 </a> </h4>
         </div>
         <form action="CompteServlet" method="GET" >
             
