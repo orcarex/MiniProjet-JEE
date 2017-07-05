@@ -73,7 +73,7 @@ public class ArticleDao
     {
         try
         {
-            String req = "UPDATE `wshopdb`.`article` "
+            String req = "UPDATE `article` "
                     + "SET `libelle`='" + a.getLibelle() + "', "
                     + "`desc`='" + a.getDesc() + "', "
                     + "`prix`='" + a.getPrix() + "', "

@@ -17,7 +17,7 @@ public class DBConnexion
             //henry 引入 mysql 的jdbc 之Driver類
             Class.forName("com.mysql.jdbc.Driver");
             //henry 建立連線 並給予 連線字串參數 伺服器位置,資料庫名稱,mysql帳號,密碼 等參數
-            con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/wshop","root","root");
+            con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost/wshopdb","root","root");
         }
         catch(ClassNotFoundException e)
         {
