@@ -101,6 +101,27 @@ INSERT INTO `commande` VALUES (1002,'ali','2015-01-01 20:21:47',93,1),(1003,'ali
 UNLOCK TABLES;
 
 --
+-- 表的结构 `msg`
+--
+
+CREATE TABLE IF NOT EXISTS `msg` (
+  `msgGuestId` int(11) NOT NULL AUTO_INCREMENT,
+  `msgGuestName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `guestGuestEmail` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `guestGuestMsgContent` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`msgGuestId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `msg`
+--
+
+INSERT INTO `msg` (`msgGuestId`, `msgGuestName`, `guestGuestEmail`, `guestGuestMsgContent`) VALUES
+(1, '小華', 'litlehua@gmail.com', '你好  貴網站 不錯喔  讚!!'),
+(2, '胡正東', 'caerh@gmail.com', '沒事路過進來看看  ^^');
+
+
+--
 -- Table structure for table `ligne_commande`
 --
 
@@ -117,6 +138,8 @@ CREATE TABLE `ligne_commande` (
   CONSTRAINT `idCmd` FOREIGN KEY (`idcmd`) REFERENCES `commande` (`idcommande`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
 
 --
 -- Dumping data for table `ligne_commande`
