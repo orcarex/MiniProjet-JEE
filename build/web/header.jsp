@@ -96,8 +96,9 @@ for(LignePanier lp : panier.getLignesPanier())
         <!-- henry 判斷是否已登入帳號(會員)如果未登入就顯示下方區塊 -->
         <% if(session.getAttribute("client") == null){ %>
             <div class="leftBox">
-              <h3>Connexion</h3>
-              <div class="leftBoxBody">
+               <h3>member login</h3>
+               
+               <div class="leftBoxBody">
               <form method="GET" action="ConnexionServlet">
               <ul class="cat-link" style="margin-top:-20px">
                   <li>
