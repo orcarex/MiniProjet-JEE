@@ -5,8 +5,9 @@
  */
 
 package admin;
-//henry 引入產品控制類
+//henry 引入產品控制器類
 import dao.MsgDao;
+//henry 引入產品類
 import entities.Msg;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
-//henry 後台管理 商品更新控制 servlet 類 
-public class ModifierMsgServlet extends HttpServlet {
+//henry後臺管理servelet (產品新增)  
+public class AddMsgServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,36 +33,37 @@ public class ModifierMsgServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    //henry 預設請求處理方法
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        
         try
-        {
-            //henry 接收 request 各個參數
-            int msgGuestId = Integer.parseInt(request.getParameter("msgGuestId"));
+        {   
+            //henry 取得接收request到的各參數 並分別給予變數
             String msgGuestName = request.getParameter("msgGuestName");
             String guestGuestEmail = request.getParameter("guestGuestEmail");
             String guestGuestMsgContent = request.getParameter("guestGuestMsgContent");
-
-            //建立新產品實體(帶入參數)
-            Msg m = new Msg(msgGuestId, msgGuestName, guestGuestEmail, guestGuestMsgContent);
+          
+        
+            //henry 建立產品實體
+            Msg act = new Msg(msgGuestName, guestGuestEmail, guestGuestMsgContent);
             MsgDao dao = new MsgDao();
-            
-            if(dao.update(m))
+            //執行新增產品
+            if(dao.add(act))
             {
-                //henry 更新成功跳轉頁面
-                response.sendRedirect("Admin/MsgList.jsp?add=success");
+                //如新增成功則跳轉成功頁面
+                response.sendRedirect("http://localhost:8080/MiniProjet-JEE/contactez-nous.jsp?MsgAddStatus=success");
             }else
             {
-                //henry 更新失敗跳轉頁面
-                response.sendRedirect("Admin/MsgList.jsp?add=fail");
+                //如新增成功則跳轉失敗頁面
+                response.sendRedirect("http://localhost:8080/MiniProjet-JEE/contactez-nous.jsp?MsgAddStatus=failed");
             }
             
         }catch( Exception ex)
         {
-            response.sendRedirect("Admin/MsgList.jsp?add=fail");
+            //henry 如捕獲異常則跳轉到錯誤頁面
+            response.sendRedirect("http://localhost:8080/MiniProjet-JEE/");
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

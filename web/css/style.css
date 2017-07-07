@@ -526,3 +526,7 @@ img {
 .login{
 width: 100% ; height: 30px;background-color: beige; margin: 5px 0px; border-radius: 5px ;vertical-align: central;
 }
+
+.success_msg{
+    color: red;
+}

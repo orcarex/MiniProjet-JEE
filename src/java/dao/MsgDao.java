@@ -23,7 +23,17 @@ public class MsgDao {
     {
         try
         {
-    
+              String req = "INSERT INTO msg(`msgGuestId`, `msgGuestName`, `guestGuestEmail`, `guestGuestMsgContent`)"
+                    + " VALUES (NULL, '" +m.getMsgGuestName() + "', '" + m.getGuestGuestEmail()+ "', '" + m.getGuestGuestMsgContent()+ "');";
+
+            Statement st = con.createStatement();
+
+            int rs = st.executeUpdate(req);
+
+            if (rs > 0)
+            {
+                return true;
+            }
 
         } catch (Exception e1)
         {
@@ -118,6 +128,29 @@ public class MsgDao {
         } catch (Exception e1)
         {
             // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+
+        return false;
+    }
+      //henry 移除留言(方法) 傳入產品實體
+    public boolean remove(int msgGuestId)
+    {
+        try
+        {
+            String req = "DELETE FROM msg " + "WHERE msgGuestId = " + msgGuestId;
+
+            Statement st = con.createStatement();
+
+            int rs = st.executeUpdate(req);
+
+            if (rs > 0)
+            {
+                return true;
+            }
+
+        } catch (Exception e1)
+        {
             e1.printStackTrace();
         }
 

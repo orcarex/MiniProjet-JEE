@@ -5,12 +5,10 @@
  */
 
 package admin;
-//henry 引入產品控制類
+
 import dao.MsgDao;
-import entities.Msg;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
-//henry 後台管理 商品更新控制 servlet 類 
-public class ModifierMsgServlet extends HttpServlet {
+public class DeleteMsgServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,30 +31,23 @@ public class ModifierMsgServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try
+        if(request.getSession().getAttribute("user") == null)
         {
-            //henry 接收 request 各個參數
-            int msgGuestId = Integer.parseInt(request.getParameter("msgGuestId"));
-            String msgGuestName = request.getParameter("msgGuestName");
-            String guestGuestEmail = request.getParameter("guestGuestEmail");
-            String guestGuestMsgContent = request.getParameter("guestGuestMsgContent");
+            response.sendRedirect("Admin/login.jsp");
+            return ;
+        }
+            
+        
+        int msgGuestId = Integer.parseInt(request.getParameter("msgGuestId"));
 
-            //建立新產品實體(帶入參數)
-            Msg m = new Msg(msgGuestId, msgGuestName, guestGuestEmail, guestGuestMsgContent);
-            MsgDao dao = new MsgDao();
-            
-            if(dao.update(m))
-            {
-                //henry 更新成功跳轉頁面
-                response.sendRedirect("Admin/MsgList.jsp?add=success");
-            }else
-            {
-                //henry 更新失敗跳轉頁面
-                response.sendRedirect("Admin/MsgList.jsp?add=fail");
-            }
-            
-        }catch( Exception ex)
+        MsgDao dao = new MsgDao();
+
+
+
+        if(dao.remove(msgGuestId))
+        {
+            response.sendRedirect("Admin/MsgList.jsp?add=success");
+        }else
         {
             response.sendRedirect("Admin/MsgList.jsp?add=fail");
         }

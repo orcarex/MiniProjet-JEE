@@ -115,9 +115,8 @@
 					<td><%= list.get(i).getGuestGuestMsgContent() %> </td>
                                        
 					<td class="options-width">
-                                            <a href="MsgModifier.jsp?id=<%= list.get(i).getMsgGuestId() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
-<!--                                            <a href="../BloquerClientServlet?login=<%= list.get(i).getMsgGuestId()%>" title="區塊" class="icon-2 info-tooltip"></a>
-                                            <a href="../SupprimerClientServlet?login=<%= list.get(i).getMsgGuestId() %>" title="清除" class="icon-2 info-tooltip"></a>-->
+                                            <a href="MsgModifier.jsp?msgGuestId=<%= list.get(i).getMsgGuestId() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
+                                            <a href="../DeleteMsgServlet?msgGuestId=<%= list.get(i).getMsgGuestId() %>" title="詳細訊息" class="icon-2 info-tooltip"></a>
 					</td>
                                 				
                                 </tr>

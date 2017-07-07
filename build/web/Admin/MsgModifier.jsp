@@ -9,19 +9,19 @@
         {
             response.sendRedirect("login.jsp");
         }
-        int id = 0;
+        int msgGuestId = 0;
         
         try
         {
             
-            id = Integer.parseInt(request.getParameter("id"));
+            msgGuestId = Integer.parseInt(request.getParameter("msgGuestId"));
         
         }catch(Exception ex){
             
         }
         
         
-        Msg f = (new MsgDao()).findByID(id);
+        Msg f = (new MsgDao()).findByID(msgGuestId);
         
         if(f == null)
             f = new Msg();

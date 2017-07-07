@@ -9,6 +9,7 @@ package entities;
  *
  * @author h
  */
+//henry 訪客留言類
 public class Msg {
     int msgGuestId;
     String msgGuestName;
@@ -20,6 +21,12 @@ public class Msg {
     }
     public Msg(int msgGuestId, String msgGuestName, String guestGuestEmail, String guestGuestMsgContent) {
         this.msgGuestId = msgGuestId;
+        this.msgGuestName = msgGuestName;
+        this.guestGuestEmail = guestGuestEmail;
+        this.guestGuestMsgContent = guestGuestMsgContent;
+    }
+    //henry 新增訪客留言
+    public Msg( String msgGuestName, String guestGuestEmail, String guestGuestMsgContent) {
         this.msgGuestName = msgGuestName;
         this.guestGuestEmail = guestGuestEmail;
         this.guestGuestMsgContent = guestGuestMsgContent;
