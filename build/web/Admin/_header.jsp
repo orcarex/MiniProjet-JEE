@@ -230,11 +230,11 @@ $(document).pngFix( );
 		
 			<div class="nav-divider">&nbsp;</div>
                         <a href="moncompte.jsp">  
-			<div class="showhide-account">
+<!--			<div class="showhide-account">
                             
                                 <img src="images/shared/nav/nav_myaccount_1.gif" width="93" height="14" alt="" />
                             
-                        </div>
+                        </div>-->
                         </a>
 			<div class="nav-divider">&nbsp;</div>
                         

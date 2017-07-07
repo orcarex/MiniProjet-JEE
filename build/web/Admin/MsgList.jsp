@@ -49,7 +49,7 @@
 				<div id="message-green">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="green-left">Mise a jour effectué avec succes ! :D </td>
+                                    <td class="green-left">修改成功 ! :D </td>
 					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
 				</tr>
 				</table>
