@@ -299,7 +299,18 @@ $(document).pngFix( );
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
+		       <div class="nav-divider">&nbsp;</div>
 		
+                <ul class="select"><li><a href="MsgList.jsp"><b>訪客留言</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<div class="select_sub">
+			<ul class="sub">
+                            <li><a href="MsgList.jsp">留言管理</a></li>
+			</ul>
+		</div>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		</ul>
 		<div class="nav-divider">&nbsp;</div>
 		
                 <ul class="select"><li><a href="CommandeListe.jsp"><b>管理員</b><!--[if IE 7]><!--></a><!--<![endif]-->

@@ -60,6 +60,10 @@
         <servlet-name>ModifierArticleServlet</servlet-name>
         <servlet-class>admin.ModifierArticleServlet</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>ModifierMsgServlet</servlet-name>
+        <servlet-class>admin.ModifierMsgServlet</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>AjouterArticleServlet</servlet-name>
         <servlet-class>admin.AjouterArticleServlet</servlet-class>
@@ -104,6 +108,11 @@
         <servlet-name>ModifierArticleServlet</servlet-name>
         <url-pattern>/ModifierArticleServlet</url-pattern>
     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>ModifierMsgServlet</servlet-name>
+        <url-pattern>/ModifierMsgServlet</url-pattern>
+    </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>AjouterArticleServlet</servlet-name>
         <url-pattern>/AjouterArticleServlet</url-pattern>
