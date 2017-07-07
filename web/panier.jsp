@@ -18,7 +18,7 @@
 <div class="RightSide">     
 
     <div class="bredCrum">
-        <h4><a href="index.html">首頁</a>   >>  <a href="#" class="select">你的購物車 </a> </h4>
+        <ｐ><a href="index.html">首頁</a>   >>  <a href="#" class="select">你的購物車 </a> </ｐ>
     </div>
     <div class="cartDetail">
         <div class="headings">

@@ -143,7 +143,7 @@ for(LignePanier lp : panier.getLignesPanier())
       
       
       <div class="leftBox">
-        <h3>隨機產品</h3>
+        <p>隨機產品</p>
         <div class="leftBoxBody">
           <ul class="sellerlist">
             <%

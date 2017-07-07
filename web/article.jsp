@@ -25,9 +25,9 @@
 <div class="RightSide">     
 <!--目前位置顯示 bar 俗稱麵包屑-->
     <div class="bredCrum">
-        <h4><a href="index.html">首頁</a>   >>   
+        <p><a href="index.html">首頁</a>   >>   
             <!--取出並顯示產品名稱 article.getLibelle()-->
-            <a href="#" class="select"> <%= article.getLibelle() %></a></h4> 
+            <a href="#" class="select"> <%= article.getLibelle() %></a></p> 
     </div>
     <!--產品詳情區域-->    
     <div class="productDetial">
@@ -41,6 +41,7 @@
             <div class="thumb"><img src="images/product-small.gif" alt=""/></div>
             -->
             <div class="cartBtn fl">
+                <!--vince 看不懂的連結-->
                 <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>" title="ADD to Cart" class="addToCart"></a>
             </div>
             <div class="clr"></div>	
@@ -48,11 +49,11 @@
     </div>
            <!--產品資訊-->    
     <div class="detailInfo">
-        <h2>產品詳情 : </h2>
+        <p>產品詳情 : </p>
         <!--取得產品描述(欄位)的值 article.getDesc()-->    
         <p> <%= article.getDesc() %> </p>
         <!--取得產品新增時間(欄位)的值 article.getDateAjout()-->    
-        <p class="add">添加產品 <%= article.getDateAjout()  %></p>
+        <p class="add">產品上架日期 <%= article.getDateAjout()  %></p>
     </div>
 
     <div class="clr"></div>
