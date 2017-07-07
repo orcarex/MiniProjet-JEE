@@ -12,7 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Single Hot Auntie Shop </title>
+<title>各種品牌手機全新上架 </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.3.2.js"></script>

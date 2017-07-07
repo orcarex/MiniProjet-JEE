@@ -8,33 +8,33 @@
             
             <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 4;">
               <a href="#">
-                  <img src="js/images/E-commerce.jpg" alt="" width="693" height="256" />
+                  <img src="js/images/slide01.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">Single Hot Auntie Shop</a> 
+                  <a href="#" class="title">搶先開賣</a> 
                   R20 限時特價熱賣中!!!</span>
           </li>
           <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 3;">
               <a href="#">
-                  <img src="js/images/java-logo.png" alt="" width="693" height="256" />
+                  <img src="js/images/slide02.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">Single Hot Auntie Shop</a> 
-                  岡本 超薄 0.000001cm大日本帝國空運來台 要買要快!</span>
+                  <a href="#" class="title">時尚潮機</a> 
+                 全球首賣!!要買要快!</span>
           </li>
           
           
           <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 4;">
               <a href="#">
-                  <img src="js/images/E-commerce.jpg" alt="" width="693" height="256" />
+                  <img src="js/images/slide03.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">Single Hot Auntie Shop</a> 
+                  <a href="#" class="title">全新機型</a> 
                   </span>
           </li>
           <li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 3;">
               <a href="#">
-                  <img src="js/images/java-logo.png" alt="" width="693" height="256" />
+                  <img src="js/images/slide04.jpg" alt="" width="693" height="256" />
               </a><span class="slide_caption"> 
-                  <a href="#" class="title">Java Entreprise Edition</a> 
-                  Ce projet est réalisé avec en JEE..</span>
+                  <a href="#" class="title">HTC 新機上市</a> 
+                  限量供應</span>
           </li>
           
           
