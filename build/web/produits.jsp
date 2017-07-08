@@ -17,7 +17,7 @@
       </div>
     
     <% 
-            int NB_PRODUIT_PAGE = 9 ;
+            int NB_PRODUIT_PAGE = 6 ;
             
             int pageCourante = 1;
             if(request.getParameter("page") != null)
@@ -75,10 +75,12 @@ while(t < NB_PRODUIT_PAGE/3 )
                     cls+= "last ";
 
                 }
-
-                if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
+                if(articles.get(i).getDateAjout()!=null)    //vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
                 {
+                    if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
+                    {
                     cls+= "new ";
+                    }
                 }
         %>
  
@@ -89,12 +91,15 @@ while(t < NB_PRODUIT_PAGE/3 )
                       <img width="203" height="186" src="<%= articles.get(i).getImg() %>" alt="" />
                   </a>
 <%
-if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
+if(articles.get(i).getDateAjout()!=null)    //vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
 {
+    if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
+    {
 %>
                 <div class="new"></div>
                 
-<%}%>
+   <%}
+}%>
             </div>
             <div class="catDetail">
               <h4><a href="article.jsp?id=<%= articles.get(i).getIdArticle() %>"><%= articles.get(i).getLibelle() %> </a></h4>
@@ -118,15 +123,24 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b>  <%= nbTotalePages %></span>
-                
+                <!--vince 頁數顯示方法先改成這樣喔!有更好的方式可以直接改喔!-->
+                <b>
+                    <%
+                    for(int i=1;i<=articles.size()/ NB_PRODUIT_PAGE;i++)
+                    {    
+                        if(i==pageCourante){%> <a style="color:blue" href="?page=<%= pageCourante %>"><%= pageCourante %> </a><%}
+                        else{%><a href="?page=<%= i %>"> <%=i%> </a><%}
+                    }
+                    %>
+                </b>
+            </span>
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">
                     <a href="?page=<%= pageCourante - 1 %>"><img src="images/back.gif" alt="" /></a>
                 </span>
                  <% } %>   
                  
-                  <% if(!(pageCourante >= nbTotalePages) ){ %>
+                  <% if((pageCourante>=1&& pageCourante<articles.size() / NB_PRODUIT_PAGE)){ %>
                 <span class="next">
                     <a href="?page=<%= pageCourante + 1 %>"><img src="images/next.gif" alt="" /></a>
                 </span>

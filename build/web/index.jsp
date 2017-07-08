@@ -30,11 +30,12 @@
     
       <!--<div class="bredCrum" style="margin-bottom:38px;">-->
         <p>最新產品..</p>
+        
       <!--</div>-->
     
     <% 
         //henry 產品分頁
-            int NB_PRODUIT_PAGE = 6 ;
+            int NB_PRODUIT_PAGE = 3 ;//vince 產品要每幾項產品為一頁
             
             int pageCourante = 1;
             if(request.getParameter("page") != null)
@@ -57,11 +58,9 @@
           %>
     
     <!-- DEBUT  BOUCLE !! -->
-    
-    
         
 <% 
-while(t < 2 )
+while(t  < NB_PRODUIT_PAGE/3 )
 {
 %>
       <div class="catrow">
@@ -83,10 +82,11 @@ while(t < 2 )
                     cls+= "last ";
 
                 }
-
-                if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
-                {
+                if(articles.get(i).getDateAjout()!=null){//vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
+                    if(articles.get(i).getDateAjout().getYear()+1900 >= 2017)
+                    {
                     cls+= "new ";
+                    }
                 }
         %>
  
@@ -97,8 +97,10 @@ while(t < 2 )
                       <img width="203" height="186" src="<%= articles.get(i).getImg() %>" alt="" />
                   </a>
 <%
-if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
-{
+    if(articles.get(i).getDateAjout()!=null)    //vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
+    {
+        if(articles.get(i).getDateAjout().getYear()+1900 >= 2017)
+        {
 %>
                 <div class="new"></div>
                 
@@ -110,7 +112,8 @@ if(articles.get(i).getDateAjout().getYear()+1900 >= 2014)
             </div>
               
           </li>
-          <% } %>
+          <% }
+    } %>
         
         </ul>
               
@@ -126,19 +129,29 @@ init += 3 ;
       <div class="paging">
         <div class="pagingDiv">
             <span class="label">Page 
-                <b class="blue"><%= pageCourante %></b> 2 <%= nbTotalePages %></span>
-                
-                <% if(!(pageCourante <= 1) ){ %>
+                <!--vince 首頁顯示頁數方法先改成這樣喔!有更好的方式可以直接改喔!像是用slideshow那樣更好-->
+                <b>
+                    <%if(true){
+                    for(int i=1;i<=articles.size()/ NB_PRODUIT_PAGE;i++)
+                    {    
+                        if(i==pageCourante){%> <a style="color:blue" href="?page=<%= pageCourante %>"><%= i %> </a><%}
+                        else{%><a href="?page=<%= i %>"> <%=i%> </a><%}
+                    }
+                    %>
+                </b>
+            </span>
+                <% if(pageCourante<=nbTotalePages&& pageCourante!=1){ %>    <!--vince 原始碼!(pageCourante <= 1)-->
                 <span class="back">
                     <a href="?page=<%= pageCourante - 1 %>"><img src="images/back.gif" alt="" /></a>
                 </span>
                  <% } %>   
                  
-                  <% if(!(pageCourante >= nbTotalePages) ){ %>
+                  <% if(pageCourante>=1&& pageCourante<articles.size() / NB_PRODUIT_PAGE){ %>      <!--vince 原始碼 !(pageCourante >= nbTotalePages) -->
                 <span class="next">
                     <a href="?page=<%= pageCourante + 1 %>"><img src="images/next.gif" alt="" /></a>
                 </span>
                 <% } %>
+               <% } %>
         </div>
                 
         <div class="clr"></div>
