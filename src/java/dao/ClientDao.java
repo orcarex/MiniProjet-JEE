@@ -25,7 +25,7 @@ public class ClientDao
     {
         try
         {
-            String req = "INSERT INTO `wshopdb`.`client` (`login`, `mdp`, `nom`, `prenom`, `dtnaissance`)"
+            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`, `dtnaissance`)"
                     + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + a.getDtNaissance() + "');";
 
             Statement st = con.createStatement();
@@ -73,7 +73,7 @@ public class ClientDao
     {
         try
         {
-            String req = "UPDATE `wshopdb`.`client` "
+            String req = "UPDATE `wshop`.`client` "
                     + "SET `mdp`='" + a.getMdp() + "', "
                     + "`nom`='" + a.getNom() + "', "
                     + "`prenom`='" + a.getPrenom() + "' "
@@ -191,7 +191,7 @@ public class ClientDao
     {
         try
         {
-            String req = "UPDATE `wshopdb`.`client` SET "
+            String req = "UPDATE `wshop`.`client` SET "
                     + "`mdp`='" + a.getMdp() + "', "
                     + "`nom`='" + a.getNom() + "', "
                     + "`prenom`='" + a.getPrenom() + "', "

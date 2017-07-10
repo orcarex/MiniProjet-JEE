@@ -24,7 +24,7 @@ public class CommandeDao
     {
         try
         {
-            String req = "INSERT INTO `wshopdb`.`commande` (`login`, `prixtotale`) "
+            String req = "INSERT INTO `wshop`.`commande` (`login`, `prixtotale`) "
                     + "VALUES ('"+a.getLogin()+"', '"+a.getPrixTotale()+"');";
 
             Statement st = con.createStatement();
@@ -72,7 +72,7 @@ public class CommandeDao
     {
         try
         {
-            String req = "UPDATE `wshopdb`.`commande` SET "
+            String req = "UPDATE `wshop`.`commande` SET "
                     + "`etat`='1' "
                     + "WHERE `idcommande`='"+idCommande+"';";
 
@@ -98,7 +98,7 @@ public class CommandeDao
     {
         try
         {
-            String req = "UPDATE `wshopdb`.`commande` SET "
+            String req = "UPDATE `wshop`.`commande` SET "
                     + "`etat`='2' "
                     + "WHERE `idcommande`='"+idCommande+"';";
 

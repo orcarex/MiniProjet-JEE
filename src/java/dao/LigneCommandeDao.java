@@ -24,7 +24,7 @@ public class LigneCommandeDao
     {
         try
         {
-            String req = "INSERT INTO `wshopdb`.`ligne_commande` (`idcmd`, `idart`, `nbr`) "
+            String req = "INSERT INTO `wshop`.`ligne_commande` (`idcmd`, `idart`, `nbr`) "
                     + "VALUES ('"+a.getIdCommande()+"', '"+a.getIdArticle()+"', '"+a.getNbr()+"');";
 
             Statement st = con.createStatement();
