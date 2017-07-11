@@ -9,7 +9,7 @@
 <%@include file="header.jsp" %>
 <!--henry 本頁面功能尚未程式化 僅有靜態呈現-->
 <div class="RightSide">
-    <div class="bredCrum">-
+    <div class="bredCrum">
         <p><a href="index.html"> 首頁</a>   >>   <a href="#" class="select">聯繫我們 </a> </p>
       </div>
    

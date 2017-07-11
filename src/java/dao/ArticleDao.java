@@ -25,8 +25,8 @@ public class ArticleDao
     {
         try
         {
-            String req = "INSERT INTO article(`idarticle`, `libelle`, `desc`, `prix`, `img`, `qte`)"
-                    + " VALUES (NULL , '" + a.getLibelle() + "', '" + a.getDesc() + "', '" + a.getPrix() + "', '" + a.getImg() + "', '" + a.getQte() + "');";
+            String req = "INSERT INTO article(`idarticle`, `libelle`, `desc`, `prix`, `img`, `qte`,dateajout)"
+                    + " VALUES (NULL , '" + a.getLibelle() + "', '" + a.getDesc() + "', '" + a.getPrix() + "', '" + a.getImg() + "', '" + a.getQte() + "', '" + a.getDateAjout() + "');";
 
             Statement st = con.createStatement();
 
@@ -72,13 +72,14 @@ public class ArticleDao
     public boolean update(Article a)
     {
         try
-        {
+        {   //vince 加了更新日期
             String req = "UPDATE `article` "
                     + "SET `libelle`='" + a.getLibelle() + "', "
                     + "`desc`='" + a.getDesc() + "', "
                     + "`prix`='" + a.getPrix() + "', "
                     + "`img`='" + a.getImg() + "', "
-                    + "`qte`='" + a.getQte() + "' "
+                    + "`qte`='" + a.getQte() + "', "
+                    + "`dateajout`='" + a.getDateAjout() + "' "
                     + "WHERE `idarticle`='" + a.getIdArticle() + "';";
 
             Statement st = con.createStatement();

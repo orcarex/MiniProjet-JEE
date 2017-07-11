@@ -40,8 +40,10 @@ public class ModifierMsgServlet extends HttpServlet {
             //henry 接收 request 各個參數
             int msgGuestId = Integer.parseInt(request.getParameter("msgGuestId"));
             String msgGuestName = request.getParameter("msgGuestName");
+            msgGuestName =  new String(msgGuestName.getBytes("ISO-8859-1"), "utf-8"); //vince 多這句可以直接在後台顯示(打)中文
             String guestGuestEmail = request.getParameter("guestGuestEmail");
             String guestGuestMsgContent = request.getParameter("guestGuestMsgContent");
+            guestGuestMsgContent =  new String(guestGuestMsgContent.getBytes("ISO-8859-1"), "utf-8");//vince 多這句可以直接在後台顯示(打)中文
 
             //建立新產品實體(帶入參數)
             Msg m = new Msg(msgGuestId, msgGuestName, guestGuestEmail, guestGuestMsgContent);

@@ -39,15 +39,17 @@ public class ModifierArticleServlet extends HttpServlet {
         {
             //henry 接收 request 各個參數
             String libelle = request.getParameter("libelle");
+            libelle =  new String(libelle.getBytes("ISO-8859-1"), "utf-8");//vince 多這句可以直接在後台顯示(打)中文
             double prix = Double.parseDouble(request.getParameter("prix"));
             int quantite = Integer.parseInt(request.getParameter("quantite"));
             
-            int a = Integer.parseInt(request.getParameter("date_a"));
+            int a = Integer.parseInt(request.getParameter("date_a"))-1900;//vince 輸出莫名都多1900年 於是在這減1900;
             int m = Integer.parseInt(request.getParameter("date_m"));;
             int j = Integer.parseInt(request.getParameter("date_j"));;
                 
-            Date dt = new Date(a, m, j);
-            
+            //vince 同訂單的時間顯示    
+            java.util.Date dt = new java.util.Date(a, m, j);
+            java.sql.Timestamp sqlDate = new java.sql.Timestamp(dt.getTime());
             String img = request.getParameter("urlImage");
             String desc = request.getParameter("desc");
             //henry 年齡西元格式化
@@ -55,7 +57,7 @@ public class ModifierArticleServlet extends HttpServlet {
             
             int id = Integer.parseInt(request.getParameter("id"));
             //建立新產品實體(帶入參數)
-            Article ar = new Article(id, libelle, desc, prix, img, quantite, dt);
+            Article ar = new Article(id, libelle, desc, prix, img, quantite, sqlDate);
             ArticleDao dao = new ArticleDao();
             
             if(dao.update(ar))

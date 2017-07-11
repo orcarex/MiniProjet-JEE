@@ -41,8 +41,10 @@ public class AddMsgServlet extends HttpServlet {
         {   
             //henry 取得接收request到的各參數 並分別給予變數
             String msgGuestName = request.getParameter("msgGuestName");
+            msgGuestName =  new String(msgGuestName.getBytes("ISO-8859-1"), "utf-8"); //vince 多這句可以直接在後台顯示(打)中文
             String guestGuestEmail = request.getParameter("guestGuestEmail");
             String guestGuestMsgContent = request.getParameter("guestGuestMsgContent");
+            guestGuestMsgContent =  new String(guestGuestMsgContent.getBytes("ISO-8859-1"), "utf-8");//vince 多這句可以直接在後台顯示(打)中文
           
         
             //henry 建立產品實體
