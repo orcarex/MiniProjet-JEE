@@ -23,9 +23,13 @@ public class CommandeDao
     public boolean add(Commande a)
     {
         try
-        {
-            String req = "INSERT INTO `wshop`.`commande` (`login`, `prixtotale`) "
-                    + "VALUES ('"+a.getLogin()+"', '"+a.getPrixTotale()+"');";
+        {   //vince 建立訂單時可以把當下時間顯示出來並寫入DB裡
+            java.util.Date now = new java.util.Date();
+            java.sql.Timestamp sqlDate = new java.sql.Timestamp(now.getTime());
+
+            
+            String req = "INSERT INTO wshop.commande (login,datecmd, prixtotale) "
+                    + "VALUES ('"+a.getLogin()+"', '"+sqlDate+"', '"+a.getPrixTotale()+"');";
 
             Statement st = con.createStatement();
 
