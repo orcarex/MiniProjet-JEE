@@ -10,9 +10,9 @@
 <%@include file="header.jsp" %>
 <!--henry 產品詳情區域-->
 <body>
-<div class="RightSide">
+<div class="RightSide"> 
     <%
-    request.setCharacterEncoding("UTF-8");
+    request.setCharacterEncoding("UTF-8");//orcarex BODY內設置ENCODING解決jsp:param中文亂碼問題
     %>
     <jsp:include page="bredCrum.jsp" flush="true">
         <jsp:param name="select" value="我們的產品"/>
