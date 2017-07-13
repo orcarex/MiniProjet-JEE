@@ -132,7 +132,7 @@ for(LignePanier lp : panier.getLignesPanier())
                       <a href="mescommandes.jsp"> 我的訂單 </a>
                   </li>
                   <li>
-                      <a href="DeconnexionServlet"> 註銷會員.. </a>
+                      <a href="DeconnexionServlet"> 登出 </a>
                   </li>
                   </ul>
 
