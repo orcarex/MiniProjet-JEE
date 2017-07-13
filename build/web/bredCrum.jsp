@@ -19,7 +19,7 @@
        String select = request.getParameter("select");
     %>
     <div class="bredCrum">
-        <p><a href="index.jsp"> 首頁</a>   >>   <a href="#" class="select"><%=select %> </a> </p>
+        <p><a href="index.jsp"> 首頁  </a>  >>     <%=select %>  </p>
     </div>
     </body>
 </html>
