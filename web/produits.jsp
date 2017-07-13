@@ -9,9 +9,11 @@
 <!--henry 引入header.jsp-->
 <%@include file="header.jsp" %>
 <!--henry 產品詳情區域-->
+<body>
 <div class="RightSide">
-    
-    
+    <%
+    request.setCharacterEncoding("UTF-8");
+    %>
     <jsp:include page="bredCrum.jsp" flush="true">
         <jsp:param name="select" value="我們的產品"/>
       </jsp:include>
@@ -150,6 +152,7 @@ init += 3 ;
         <div class="clr"></div>
       </div>
     </div>
+</body>
 
 
 

@@ -8,7 +8,7 @@
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入header.jsp-->
 <%@include file="header.jsp" %>
-
+<body>
 <%
 Client client = (Client)request.getSession().getAttribute("client");
 //henry 判斷是否登入 沒有登入則跳轉到前台首頁  並提示會員需登入才可以查看本頁面
@@ -22,9 +22,12 @@ if(client == null)
 %>
     <div class="RightSide" >
     
-        <div class="bredCrum">
-            <p><a href="index.html">首頁</a>   >>   <a href="#" class="select">我的帳戶 </a> </p>
-        </div>
+        <%
+        request.setCharacterEncoding("UTF-8");
+        %>
+          <jsp:include page="bredCrum.jsp" flush="true">
+          <jsp:param name="select" value="我的帳號"/>
+          </jsp:include>
         <form action="CompteServlet" method="GET" >
          <%if(request.getParameter("add") != null && request.getParameter("add").equals("success"))
          {
@@ -70,5 +73,6 @@ if(client == null)
     </form>
     
 </div>
+</body>
 <!--henry 引入 footer.jsp-->
 <%@include file="footer.jsp" %>

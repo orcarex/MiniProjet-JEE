@@ -8,7 +8,7 @@
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入header.jsp-->
 <%@include file="header.jsp" %>
-
+<body>
 <%
 Client client = (Client)request.getSession().getAttribute("client");
 if (client!=null)
@@ -21,7 +21,9 @@ return ;
 
 %>
     <div class="RightSide" >
-    
+        <%
+        request.setCharacterEncoding("UTF-8");
+        %>
         <jsp:include page="bredCrum.jsp" flush="true">
         <jsp:param name="select" value="加入會員"/>
         </jsp:include>
@@ -42,5 +44,6 @@ return ;
     </form>
     
 </div>
+</body>
 <!--henry 引入 footer.jsp-->
 <%@include file="footer.jsp" %>

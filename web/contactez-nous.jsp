@@ -8,7 +8,11 @@
 <%@page import="dao.MsgDao"%>
 <%@include file="header.jsp" %>
 <!--henry 本頁面功能尚未程式化 僅有靜態呈現-->
+<body>
 <div class="RightSide">
+    <%
+    request.setCharacterEncoding("UTF-8");
+    %>
     <jsp:include page="bredCrum.jsp" flush="true">
         <jsp:param name="select" value="聯絡我們"/>
     </jsp:include>
@@ -43,5 +47,6 @@
     
     
 </div>
+</body>
 <!--henry 引入footer頁面-->
 <%@include file="footer.jsp" %>
