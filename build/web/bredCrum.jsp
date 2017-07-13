@@ -5,10 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%
-    
-    String select = request.getParameter("select");
-%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +13,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-      
+    <%
+       request.setCharacterEncoding("UTF-8");
+       String select = request.getParameter("select");
+    %>
     <div class="bredCrum">
         <p><a href="index.jsp"> 首頁</a>   >>   <a href="#" class="select"><%=select %> </a> </p>
     </div>

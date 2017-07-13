@@ -220,6 +220,10 @@ img {
 	float:right;
 	width:695px;
 }
+.RightSide .rightDiv p{
+    display: block;
+    margin-bottom: 10px
+}
 .RightSide .bredCrum {
 	margin-bottom:15px;
 	padding-bottom:15px;

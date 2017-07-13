@@ -22,43 +22,22 @@ return ;
 %>
     <div class="RightSide" >
     
-        <div class="bredCrum">
-            <p><a href="index.html">首頁</a>   >>   <a href="#" class="select">加入會員 </a> </p>
-        </div>
+        <jsp:include page="bredCrum.jsp" flush="true">
+        <jsp:param name="select" value="加入會員"/>
+        </jsp:include>
         <form action="CompteServlet" method="GET" >
             
         <center>
-        <table style="padding-top: 100px;">
-            <tr>
-                <td>帳號 : </td>
-                <td> <input  type="text" name="login" /> </td>
-            </tr>
-
-            <tr>
-                <td>姓氏 : </td>
-                <td><input name="nom" />  </td>
-            </tr>
-            
-            <tr>
-                <td>名字 : </td>
-                <td><input name="prenom" ></td>
-            </tr>
-            
-            <tr>
-                <td>密碼 : </td>
-                <td><input type="password" name="mdp" /></td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <input type="submit" value="確認">
-                </td>
-                <td>
-                    <input type="reset" value="取消">
-                </td>
-            </tr>
-            
-    </table>
+        <div style="padding-top: 100px;">
+            <div class="rightDiv">
+                <p>帳號 : <input type="text" name="login" /></p>
+                <p>姓氏 : <input name="nom" /></p>
+                <p>名字 : <input name="prenom" ></p>
+                <p>密碼 : <input type="password" name="mdp" /></p>
+                <input type="submit" value="確認">
+                <input type="reset" value="取消">
+            </div>            
+        </div>
     </center>
     </form>
     

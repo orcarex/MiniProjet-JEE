@@ -12,9 +12,9 @@
 <div class="RightSide">
     
     
-      <div class="bredCrum" style="margin-bottom:38px;">
-        <p><a href="index.html"> 首頁 </a>   >>   <a href="#" class="select"> 產品介紹 </a> </p>
-      </div>
+    <jsp:include page="bredCrum.jsp" flush="true">
+        <jsp:param name="select" value="我們的產品"/>
+      </jsp:include>
     
     <% 
             int NB_PRODUIT_PAGE = 6 ;
