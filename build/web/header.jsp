@@ -108,7 +108,7 @@ for(LignePanier lp : panier.getLignesPanier())
                       密碼 : 	<input type="password" name="mdp" style="width:100%" />
                   </li>
                   </ul>
-                  <a href="#" style="margin:5px"> 忘記密碼...</a>
+                  <a href="nonMemberRegist.jsp" style="margin:5px"> 加入會員</a>
                  <input style="margin-left:20px;margin-right:-20px;" type="submit" value="登入" />
                       </form>
 

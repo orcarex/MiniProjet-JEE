@@ -31,12 +31,12 @@ return ;
         <table style="padding-top: 100px;">
             <tr>
                 <td>帳號 : </td>
-                <td> <input  type="text" name="login" /> ></td>
+                <td> <input  type="text" name="login" /> </td>
             </tr>
 
             <tr>
                 <td>姓氏 : </td>
-                <td><input name="nom" /> > </td>
+                <td><input name="nom" />  </td>
             </tr>
             
             <tr>

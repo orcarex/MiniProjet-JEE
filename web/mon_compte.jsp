@@ -18,6 +18,7 @@ if(client == null)
     return ;
 }
 
+
 %>
     <div class="RightSide" >
     
@@ -25,7 +26,10 @@ if(client == null)
             <p><a href="index.html">首頁</a>   >>   <a href="#" class="select">我的帳戶 </a> </p>
         </div>
         <form action="CompteServlet" method="GET" >
-            
+         <%if(request.getParameter("add") != null && request.getParameter("add").equals("success"))
+         {
+            %><p>註冊成功</p><%
+         } %>  
         <center>
         <table style="padding-top: 100px;">
             <tr>

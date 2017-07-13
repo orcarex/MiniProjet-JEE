@@ -41,7 +41,7 @@ public class CompteServlet extends HttpServlet
         String mdp = request.getParameter("mdp");
         //新增會員實體
         Client c = new Client(login, mdp, nom, prenom, null);
-
+        Client d = new Client(login, mdp, nom, prenom, null);
         ClientDao dao = new ClientDao();
         //henry定義執行更新動作後之後續處理方法
         if (dao.update(c))
@@ -50,11 +50,16 @@ public class CompteServlet extends HttpServlet
             response.sendRedirect("mon_compte.jsp?update=success");
             
             request.getSession().setAttribute("client", c);
-        } else
-        {
-           //henry 更新失敗後
-            response.sendRedirect("mon_compte.jsp?update=fail");
-        }
+        } else if(dao.add(d))
+                {
+                response.sendRedirect("mon_compte.jsp?add=success");
+            
+                request.getSession().setAttribute("client", d);    
+                }else
+                {
+                //henry 更新失敗後
+                response.sendRedirect("mon_compte.jsp?update=fail");
+                }
 
     }
 

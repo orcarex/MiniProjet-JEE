@@ -25,8 +25,8 @@ public class ClientDao
     {
         try
         {
-            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`, `dtnaissance`)"
-                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + a.getDtNaissance() + "');";
+            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`)"
+                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "');";
 
             Statement st = con.createStatement();
 
@@ -101,7 +101,7 @@ public class ClientDao
     //查找會員 (傳入帳號與密碼參數為查找條件)
     public Client findByAuthentification(String log, String pass)
     {
-        String req = "SELECT* " + " FROM client " + " WHERE login = '" + log + "' AND mdp = '" + pass + "';";
+        String req = "SELECT* " + " FROM client " + " WHERE binary login = '" + log + "' AND binary mdp = '" + pass + "';";
 
         try
         {
