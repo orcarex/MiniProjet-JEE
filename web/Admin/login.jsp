@@ -49,7 +49,7 @@ $(document).pngFix( );
 
 	<!-- start logo -->
         <div id="logo-login" >
-            <a href="index.html"><img style="margin-top: -20px" src="../images/logo-big-shopping.png" width="" height="75" alt="" /></a>
+            <a href="../index.jsp"><img style="margin-top: -20px" src="../images/logo-big-shopping.png" width="" height="75" alt="" /></a>
 	</div>
 	<!-- end logo -->
 	

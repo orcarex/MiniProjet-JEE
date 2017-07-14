@@ -4,10 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/teamProject/MiniProjet-JEE/web/index.jsp</file>
-            <file>file:/D:/teamProject/MiniProjet-JEE/web/css/style.css</file>
-            <file>file:/D:/teamProject/MiniProjet-JEE/web/bredCrum.jsp</file>
-            <file>file:/D:/teamProject/MiniProjet-JEE/web/nonMemberRegist.jsp</file>
-            <file>file:/D:/teamProject/MiniProjet-JEE/web/contactez-nous.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/Admin/ArticleAjouter.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/Admin/ClientModifier.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/Admin/ArticleModifier.jsp</file>
         </group>
     </open-files>
 </project-private>

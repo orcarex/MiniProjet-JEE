@@ -101,16 +101,12 @@ for(LignePanier lp : panier.getLignesPanier())
                <div class="leftBoxBody">
               <form method="GET" action="ConnexionServlet">
               <ul class="cat-link" style="margin-top:-20px">
-                  <li>
-                      帳號 : <input type="text" name="login" style=" width:100%" />
-                  </li>
-                  <li>
-                      密碼 : 	<input type="password" name="mdp" style="width:100%" />
-                  </li>
-                  </ul>
+                  <li> 帳號 : <input type="text" name="login" style=" width:100%" /></li>
+                  <li>密碼 : 	<input type="password" name="mdp" style="width:100%" /></li>
+              </ul>
                   <a href="nonMemberRegist.jsp" style="margin:5px"> 加入會員</a>
-                 <input style="margin-left:20px;margin-right:-20px;" type="submit" value="登入" />
-                      </form>
+                  <input style="margin-left:20px;margin-right:-20px;" type="submit" value="登入" />
+              </form>
 
               </div>
             </div>
@@ -121,21 +117,12 @@ for(LignePanier lp : panier.getLignesPanier())
               <div class="leftBoxBody">
                   <!-- henry 顯示登入帳號的名字 ((Client)session.getAttribute("client")).getNom()  -->
                   <p style="margin-top: -15px; margin-left: -10px ">哩厚~ <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
-              <ul class="cat-link" >
-                  <li>
-                      <a href="mon_compte.jsp"> 我的帳戶 </a>
-                  </li>
-                  <li>
-                      <a href="panier.jsp"> 購物車 </a>
-                  </li>
-                  <li>
-                      <a href="mescommandes.jsp"> 我的訂單 </a>
-                  </li>
-                  <li>
-                      <a href="DeconnexionServlet"> 登出 </a>
-                  </li>
-                  </ul>
-
+               <ul class="cat-link" >
+                  <li><a href="mon_compte.jsp"> 我的帳戶 </a></li>
+                  <li><a href="panier.jsp"> 購物車 </a></li>
+                  <li><a href="mescommandes.jsp"> 我的訂單 </a> </li>
+                  <li> <a href="DeconnexionServlet"> 登出 </a> </li>
+               </ul>
               </div>
             </div>
         <% } %>

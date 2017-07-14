@@ -25,14 +25,14 @@ return ;
         request.setCharacterEncoding("UTF-8");//orcarex BODY內設置ENCODING解決jsp:param中文亂碼問題
         %>
         <jsp:include page="bredCrum.jsp" flush="true">
-        <jsp:param name="select" value="加入會員"/>
+            <jsp:param name="select" value="加入會員" />
         </jsp:include>
        <!--orcarex 改寫table成ul li-->
     <form action="CompteServlet" method="GET" >     
         <center>
         <div style="padding-top: 100px;">
             <div class="rightDiv">
-                <ul  class="">
+                <ul  class="ul">
                     <li>帳號 : <input type="text" name="login" /></li>
                     <li>姓氏 : <input name="nom" /></</li>
                     <li>名字 : <input name="prenom" ></li>
