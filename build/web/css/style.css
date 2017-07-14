@@ -220,7 +220,7 @@ img {
 	float:right;
 	width:695px;
 }
-.RightSide .rightDiv p{
+.RightSide .rightDiv ul li{
     display: block;
     margin-bottom: 10px
 }

@@ -3,17 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/admin/AddMsgServlet.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/produits.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/entities/Article.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/admin/ModifierArticleServlet.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/article.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/admin/AjouterArticleServlet.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/Admin/ProduitListe.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/dao/ArticleDao.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/web/Admin/ArticleAjouter.jsp</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/admin/ModifierMsgServlet.java</file>
-            <file>file:/D:/project/MiniProjet-JEE/src/java/dao/CommandeDao.java</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/index.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/css/style.css</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/bredCrum.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/nonMemberRegist.jsp</file>
+            <file>file:/D:/teamProject/MiniProjet-JEE/web/contactez-nous.jsp</file>
         </group>
     </open-files>
 </project-private>

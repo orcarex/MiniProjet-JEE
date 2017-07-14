@@ -27,15 +27,17 @@ return ;
         <jsp:include page="bredCrum.jsp" flush="true">
         <jsp:param name="select" value="加入會員"/>
         </jsp:include>
-        <form action="CompteServlet" method="GET" >
-            
+       <!--orcarex 改寫table成ul li-->
+    <form action="CompteServlet" method="GET" >     
         <center>
         <div style="padding-top: 100px;">
             <div class="rightDiv">
-                <p>帳號 : <input type="text" name="login" /></p>
-                <p>姓氏 : <input name="nom" /></p>
-                <p>名字 : <input name="prenom" ></p>
-                <p>密碼 : <input type="password" name="mdp" /></p>
+                <ul  class="">
+                    <li>帳號 : <input type="text" name="login" /></li>
+                    <li>姓氏 : <input name="nom" /></</li>
+                    <li>名字 : <input name="prenom" ></li>
+                    <li>密碼 : <input type="password" name="mdp" /></li>
+                </ul>
                 <input type="submit" value="確認">
                 <input type="reset" value="取消">
             </div>            
