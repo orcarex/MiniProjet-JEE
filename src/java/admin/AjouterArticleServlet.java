@@ -16,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.oreilly.servlet.MultipartRequest;
 /**
  *
  * @author islem
@@ -36,26 +37,32 @@ public class AjouterArticleServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        //henry 上傳檔案開始
+        MultipartRequest multi = new MultipartRequest(request, "E:/project/MiniProjet-JEE/web/produitImages");
+            String fname = multi.getFilesystemName("fname");
+            fname="produitImages/"+fname;
+        //henry 上傳檔案結束   
         try
-        {   
-            //henry 取得接收request到的各參數 並分別給予變數
-            String libelle = request.getParameter("libelle");
-            libelle = new String(libelle.getBytes("ISO-8859-1"), "UTF-8");//vince 多這句可以直接在後台顯示(打)中文
-            String desc = request.getParameter("desc");
-            Double prix = Double.parseDouble(request.getParameter("prix"));
-            int quantite=Integer.parseInt(request.getParameter("quantite"));
+        {    
             
-            int a = Integer.parseInt(request.getParameter("date_a"))-1900;//vince 輸出莫名都多1900年 於是在這減1900
-            int m = Integer.parseInt(request.getParameter("date_m"));;
-            int j = Integer.parseInt(request.getParameter("date_j"));;
+            //henry 取得接收request到的各參數 並分別給予變數
+            String libelle = multi.getParameter("libelle");
+            libelle = new String(libelle.getBytes("ISO-8859-1"), "UTF-8");//vince 多這句可以直接在後台顯示(打)中文
+            String desc = multi.getParameter("desc");
+            Double prix = Double.parseDouble(multi.getParameter("prix"));
+            int quantite=Integer.parseInt(multi.getParameter("quantite"));
+            
+            int a = Integer.parseInt(multi.getParameter("date_a"))-1900;//vince 輸出莫名都多1900年 於是在這減1900
+            int m = Integer.parseInt(multi.getParameter("date_m"));;
+            int j = Integer.parseInt(multi.getParameter("date_j"));;
             //vince 同訂單的時間顯示    
             java.util.Date dt = new java.util.Date(a, m, j);
             java.sql.Timestamp sqlDate = new java.sql.Timestamp(dt.getTime());
-            String img = request.getParameter("urlImage");
+            //String img = multi.getParameter("urlImage");
             //henry 將年齡格式化為西元格式
             int age = 2014 - a ;
             //henry 建立產品實體
-            Article act = new Article(-1, libelle, desc, prix,img, quantite,sqlDate);
+            Article act = new Article(-1, libelle, desc, prix,fname, quantite,sqlDate);
             ArticleDao dao = new ArticleDao();
             //執行新增產品
             if(dao.add(act))

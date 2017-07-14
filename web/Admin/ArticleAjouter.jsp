@@ -51,7 +51,7 @@
 	
 		<!-- start id-form -->
                 <!--henry 表單送出後給 AjouterArticleServlet處理類處理 路徑對應可參考 專案中web.xml檔中servlet與url對應-->
-                <form method="GET" action="../AjouterArticleServlet">
+                <form method="POST" action="../AjouterArticleServlet" enctype="multipart/form-data">
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 		<!--
                 <tr>
@@ -181,9 +181,9 @@
         
 	<tr>
 	<th>圖片上傳 :</th>
-        <td><input name="urlImage" placeholder="" type="text" class=""  style="border-style: inset; width: 318px; height: 20px;"/></td>
+        <!--<td><input name="urlImage" placeholder="" type="text" class=""  style="border-style: inset; width: 318px; height: 20px;"/></td>-->
 	<td>
-	
+	選取檔案:<input type="file" name="fname"/>
 	</td>
 	</tr>
 	
