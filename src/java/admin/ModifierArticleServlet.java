@@ -44,8 +44,8 @@ public class ModifierArticleServlet extends HttpServlet {
             int quantite = Integer.parseInt(request.getParameter("quantite"));
             
             int a = Integer.parseInt(request.getParameter("date_a"))-1900;//vince 輸出莫名都多1900年 於是在這減1900;
-            int m = Integer.parseInt(request.getParameter("date_m"));;
-            int j = Integer.parseInt(request.getParameter("date_j"));;
+            int m = Integer.parseInt(request.getParameter("date_m"))-1;
+            int j = Integer.parseInt(request.getParameter("date_j"));
                 
             //vince 同訂單的時間顯示    
             java.util.Date dt = new java.util.Date(a, m, j);

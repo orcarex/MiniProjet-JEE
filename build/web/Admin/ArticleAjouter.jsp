@@ -48,7 +48,7 @@
 			
 		</div>
 		<!--  end step-holder -->
-	
+                   
 		<!-- start id-form -->
                 <!--henry 表單送出後給 AjouterArticleServlet處理類處理 路徑對應可參考 專案中web.xml檔中servlet與url對應-->
                 <form method="POST" action="../AjouterArticleServlet" enctype="multipart/form-data">
@@ -182,9 +182,12 @@
 	<tr>
 	<th>圖片上傳 :</th>
         <!--<td><input name="urlImage" placeholder="" type="text" class=""  style="border-style: inset; width: 318px; height: 20px;"/></td>-->
-	<td>
+        
+        
+        <td>
 	選取檔案:<input type="file" name="fname"/>
 	</td>
+        <div class="easyui-progressbar" style="width:400px"></div>
 	</tr>
 	
         <tr>
@@ -209,7 +212,7 @@
 	</table>
 	<!-- end id-form  -->
         </form>
-                
+             
 	</td>
 	<td>
 

@@ -38,10 +38,11 @@ public class AjouterArticleServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         //henry 上傳檔案開始
-        MultipartRequest multi = new MultipartRequest(request, "E:/project/MiniProjet-JEE/web/produitImages");
+        MultipartRequest multi = new MultipartRequest(request, "D:/project/MiniProjet-JEE/web/produitImages");
             String fname = multi.getFilesystemName("fname");
-            fname="produitImages/"+fname;
-        //henry 上傳檔案結束   
+            fname="produitImages/"+fname;            
+        //henry 上傳檔案結束
+        
         try
         {    
             
@@ -53,8 +54,8 @@ public class AjouterArticleServlet extends HttpServlet {
             int quantite=Integer.parseInt(multi.getParameter("quantite"));
             
             int a = Integer.parseInt(multi.getParameter("date_a"))-1900;//vince 輸出莫名都多1900年 於是在這減1900
-            int m = Integer.parseInt(multi.getParameter("date_m"));;
-            int j = Integer.parseInt(multi.getParameter("date_j"));;
+            int m = Integer.parseInt(multi.getParameter("date_m"))-1;
+            int j = Integer.parseInt(multi.getParameter("date_j"));
             //vince 同訂單的時間顯示    
             java.util.Date dt = new java.util.Date(a, m, j);
             java.sql.Timestamp sqlDate = new java.sql.Timestamp(dt.getTime());
@@ -66,7 +67,8 @@ public class AjouterArticleServlet extends HttpServlet {
             ArticleDao dao = new ArticleDao();
             //執行新增產品
             if(dao.add(act))
-            {
+            {   //vince 延遲2秒後跳頁
+                Thread.sleep(2000);
                 //如新增成功則跳轉成功頁面
                 response.sendRedirect("Admin/ProduitListe.jsp?add=success");
             }else
