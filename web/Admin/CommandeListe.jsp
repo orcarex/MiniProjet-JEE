@@ -92,6 +92,7 @@
                                     CommandeDao dao = new CommandeDao();
                                     String keyword ="";
                                     Vector<Commande> list = null;
+                                    //orcarex 有關鍵字則根據帳號搜尋用戶訂單 無則顯示未處理訂單
                                     if(request.getParameter("keyword")!=null){
                                         keyword = request.getParameter("keyword");
                                         list = dao.findByLogin(keyword);}
@@ -99,7 +100,8 @@
                                         list = dao.findEnAttente() ;
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
                                     
-                                    
+                                    //orcarex根據參數判斷訂單狀態
+                                    if (list!=null)
                                     for(int i = 0; i< list.size(); i++)
                                     {
                                         String etat = "待處理";

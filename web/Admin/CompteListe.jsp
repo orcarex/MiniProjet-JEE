@@ -106,6 +106,7 @@
                                         list = dao.findAll();
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
                                     
+                                    if(list!=null)
                                     for(int i = 0; i< list.size(); i++)
                                     {
                                         

@@ -256,6 +256,7 @@ public class CommandeDao
         return null;
     }
     
+    //orcarex 搜尋用 根據用戶帳號搜尋訂單資訊
     public Vector<Commande> findEnAttente(String key)
     {
         String req = "SELECT* " + " FROM commande where login like '%"+key+"%'";

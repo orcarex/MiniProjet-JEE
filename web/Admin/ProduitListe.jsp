@@ -98,13 +98,14 @@
                                     //henry 更新並顯示產品列表
                                     ArticleDao dao = new ArticleDao();
                                     String keyword ="";
-                                    
+                                    //orcarex 是否有關鍵字 有則根據關鍵字搜尋
                                     if(request.getParameter("keyword")!=null)
                                         keyword = request.getParameter("keyword"); 
                                         
                                     Vector<Article> list = dao.findAll(keyword);
                                     
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
+                                    if (list!=null)
                                     for(int i = 0; i< list.size(); i++)
                                     {
                                 %>
