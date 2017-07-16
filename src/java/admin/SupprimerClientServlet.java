@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 會員刪除servlet類
 public class SupprimerClientServlet extends HttpServlet {
 
     /**

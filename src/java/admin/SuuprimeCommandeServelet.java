@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 訂單刪除servlet類
 public class SuuprimeCommandeServelet extends HttpServlet {
 
     /**

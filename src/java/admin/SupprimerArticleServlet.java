@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 產品刪除servlet類
 public class SupprimerArticleServlet extends HttpServlet {
 
     /**

@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
+//henry 訂單更新servlet類
 public class ValiderCommandeServelet extends HttpServlet {
 
     /**
