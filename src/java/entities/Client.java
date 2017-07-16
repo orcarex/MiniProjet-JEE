@@ -24,7 +24,7 @@ public class Client
   private String nom ;
   //henry 會員姓
   private String prenom ;
-  //henry 生日
+  //henry 註冊日期
   private Date dtNaissance;
   //henry 狀態
   private int etat;
@@ -85,7 +85,7 @@ public class Client
     {
         return prenom;
     }
-    //henry 取得生日
+    //henry 取得註冊日期
     public Date getDtNaissance()
     {
         return dtNaissance;

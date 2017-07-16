@@ -9,6 +9,8 @@ import entities.Client;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Vector;
 
 /**
@@ -25,8 +27,10 @@ public class ClientDao
     {
         try
         {
-            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`)"
-                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "');";
+            Date dNow = new Date();
+             SimpleDateFormat fd = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`,`dtnaissance`)"
+                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + fd.format(dNow) + "');";
 
             Statement st = con.createStatement();
 
