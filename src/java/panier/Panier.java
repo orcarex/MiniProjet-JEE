@@ -39,7 +39,7 @@ public class Panier
     }
 
     
-    //henry 新增產品到購物車 +1
+    //henry 購物車新增 +1
     public void addArticle(Article art)
     {
         for (LignePanier lignePanier : lignesPanier)
@@ -53,7 +53,7 @@ public class Panier
         //henry 新增產品到購物車並新增各產品在購物車中的數量
         lignesPanier.add(new LignePanier(art, 1));
     }
-    //henry 新增產品到購物車 -1
+    //henry 購物車減少產品 -1
     public void sousArticle(Article art)
     {
         for (LignePanier lignePanier : lignesPanier)
