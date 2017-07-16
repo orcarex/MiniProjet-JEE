@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
-//henry 後台更新會員類
+//henry 後台更新會員servlet類
 public class ModifierClientServlet extends HttpServlet {
 
     /**
