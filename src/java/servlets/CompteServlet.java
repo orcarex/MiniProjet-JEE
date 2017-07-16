@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Walid
  */
-//henry 前台 個動作處理 servlet類
+//henry 前台 會員更新資料動作處理 servlet類
 public class CompteServlet extends HttpServlet
 {
 
