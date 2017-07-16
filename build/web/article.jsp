@@ -25,7 +25,8 @@
 <div class="RightSide">     
 <!--目前位置顯示 bar 俗稱麵包屑-->
     <div class="bredCrum">
-        <p><a href="index.html">首頁</a>   >>   
+        <p><a href="index.jsp">首頁</a>   >>   
+            <a href="produits.jsp">我們的產品</a>   >>   
             <!--取出並顯示產品名稱 article.getLibelle()-->
             <a href="#" class="select"> <%= article.getLibelle() %></a></p> 
     </div>
