@@ -24,7 +24,7 @@
 
         <!--  start page-heading -->
         <div id="page-heading">
-            <h1> 詳細訊息 <%= request.getParameter("login") %></h1>
+            <h1> 訂單明細 購買會員帳號: <%= request.getParameter("login") %></h1>
         </div>
         <!-- end page-heading -->
 
@@ -91,7 +91,7 @@
 
 
 
-                                        <th style="width: 120px" class="table-header-repeat line-left"><a >管理員說明</a></th>
+                                        <th style="width: 120px" class="table-header-repeat line-left"><a >訂單說明</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >數量</a></th>
 
@@ -137,12 +137,12 @@
                                     
                                         <form id="mainform" method="GET"  action="../ValiderCommandeServelet">
                                         <input name="id" type="hidden" value="<%= id %>"/>
-                                        <input type="submit" value="提交" class="form-submit" style="text-align: center" />
+                                        <input type="submit" value="訂單處理完畢" style="text-align: center" />
                                         </form>
                                         
                                         <form id="mainform" method="GET"  action="../RefuserCommandeServlet">
                                         <input name="id" type="hidden" value="<%= id%>"/>
-                                        <input type="submit" value="" class="form-reset"  style="text-align: center"/>
+                                        <input type="submit" value="訂單作廢"   style="text-align: center"/>
                                         </form>
                                         
                                     </td>

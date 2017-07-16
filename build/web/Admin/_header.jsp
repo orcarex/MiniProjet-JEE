@@ -198,7 +198,7 @@ $(document).pngFix( );
 		<select name="choix" class="styledselect">
 			<option  value="Films">商品</option>
 			<option value="Acteurs">帳號</option>
-			<option   value="Actualites">管理員</option>
+			<option   value="Actualites">訂單管理</option>
 			
 		</select> 
 		</td>
@@ -313,11 +313,11 @@ $(document).pngFix( );
 		</ul>
 		<div class="nav-divider">&nbsp;</div>
 		
-                <ul class="select"><li><a href="CommandeListe.jsp"><b>管理員</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                <ul class="select"><li><a href="CommandeListe.jsp"><b>訂單管理</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
 			<ul class="sub">
-				<li><a href="CommandeListe.jsp">管理員帳號</a></li>
+				<li><a href="CommandeListe.jsp">訂單管理</a></li>
 				
 			</ul>
 		</div>

@@ -19,7 +19,7 @@
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>管理員</h1>
+		<h1>訂單管理</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -48,7 +48,7 @@
 				<div id="message-green">
 				<table border="0" width="100%" cellpadding="0" cellspacing="0">
 				<tr>
-                                    <td class="green-left">m.a.j avec succes ! :D </td>
+                                    <td class="green-left">確認成功 ! :D </td>
 					<td class="green-right"><a class="close-green"><img src="images/table/icon_close_green.gif"   alt="" /></a></td>
 				</tr>
 				</table>
@@ -80,8 +80,8 @@
                                     <th  class="table-header-check"><a id="toggle-all" ></a></th>
 					
                                        
-					<th class="table-header-repeat line-left"><a >登入管理員</a></th>
-					 <th style="width: 120px"  class="table-header-repeat line-left"><a >登入日期</a></th>
+					<th class="table-header-repeat line-left"><a >購買會員</a></th>
+					 <th style="width: 120px"  class="table-header-repeat line-left"><a >購買日期</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
                                         
                                         <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>
@@ -106,7 +106,7 @@
                                         <td><%= list.get(i).getDateCmd() %></td>
                                         <td><%= list.get(i).getPrixTotale() %></td>
 					<td class="options-width">
-                                            <a href="CommandeAfficher.jsp?id=<%= list.get(i).getIdCommande() %>&login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
+                                            <a href="CommandeAfficher.jsp?id=<%= list.get(i).getIdCommande() %>&login=<%= list.get(i).getLogin() %>" title="訂單明細" class="icon-1 info-tooltip"></a>
                                             <a href="../SuuprimeCommandeServelet?id=<%= list.get(i).getIdCommande() %>" title="清除使用者" class="icon-2 info-tooltip"></a>
                                             </td>
                                 				
