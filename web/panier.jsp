@@ -15,11 +15,15 @@
 
 
 
-<div class="RightSide">     
-
-    <div class="bredCrum">
-        <p><a href="index.html">首頁</a>   >>  <a href="#" class="select">你的購物車 </a> </p>
-    </div>
+<div class="RightSide"> 
+    <body>    
+    <%
+        request.setCharacterEncoding("UTF-8"); //orcarex BODY內設置ENCODING解決jsp:param中文亂碼問題
+        %>
+    </body>
+    <jsp:include page="bredCrum.jsp" flush="true">
+        <jsp:param name="select" value="你的購物車"/>
+      </jsp:include>
     <div class="cartDetail">
         <div class="headings">
             <ul>
@@ -97,7 +101,8 @@ for(LignePanier lp : panier.getLignesPanier())
         <div class="pagingInfo"><h4><a href="produits.jsp" title="CONTINUE SHOPPING">繼續選購</a></h4></div>
         <div class="clr"></div> 
     </div>
-</div>    
+</div>
+
 
 
 
