@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Walid
  */
+//henry 訂單作廢servlet類
 public class RefuserCommandeServlet extends HttpServlet
 {
 
