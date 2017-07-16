@@ -97,8 +97,13 @@
                                 <% 
                                     //henry 更新並顯示產品列表
                                     ArticleDao dao = new ArticleDao();
+                                    String keyword ="";
                                     
-                                    Vector<Article> list = dao.findAll();
+                                    if(request.getParameter("keyword")!=null)
+                                        keyword = request.getParameter("keyword"); 
+                                        
+                                    Vector<Article> list = dao.findAll(keyword);
+                                    
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
                                     for(int i = 0; i< list.size(); i++)
                                     {

@@ -94,16 +94,20 @@
                                 
                                 <% 
                                     ClientDao dao = new ClientDao();
+                                    String keyword = "";
+                                    Vector<Client> list = null ;
                                     
-                                    Vector<Client> list = dao.findAll();
+                                    if(request.getParameter("keyword")!=null){
+                                        keyword = request.getParameter("keyword"); 
+                                        
+                                        list = dao.findByLogin(keyword);}
+                                    else
+                                        list = dao.findAll();
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
-                                    String etat;
+                                    
                                     for(int i = 0; i< list.size(); i++)
                                     {
-                                        if(list.get(i).getEtat()==0)
-                                            etat="Bloqué";
-                                        else
-                                            etat="Actif";
+                                        
                                 %>
                                 
                                 <tr style="font-weight: bold">
@@ -115,7 +119,7 @@
                                         <td><%= list.get(i).getLogin() %></td>
 					<td><%= list.get(i).getMdp() %> </td>
                                         <td><%= list.get(i).getDtNaissance() %> </td>
-                                        <td><%= etat %></td>
+                                        <td><%= list.get(i).getEtat()  %></td>
 					<td class="options-width">
                                             <a href="ClientModifier.jsp?login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
                                             <a href="../BloquerClientServlet?login=<%= list.get(i).getLogin() %>" title="區塊" class="icon-2 info-tooltip"></a>

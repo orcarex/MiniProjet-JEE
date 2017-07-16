@@ -83,19 +83,30 @@
 					<th class="table-header-repeat line-left"><a >購買會員</a></th>
 					 <th style="width: 120px"  class="table-header-repeat line-left"><a >購買日期</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
-                                        
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >訂單處理</a></th>
                                         <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>
 				</tr>
 				
                                 
                                 <% 
                                     CommandeDao dao = new CommandeDao();
-                                    
-                                    Vector<Commande> list = dao.findEnAttente();
+                                    String keyword ="";
+                                    Vector<Commande> list = null;
+                                    if(request.getParameter("keyword")!=null){
+                                        keyword = request.getParameter("keyword");
+                                        list = dao.findByLogin(keyword);}
+                                    else    
+                                        list = dao.findEnAttente() ;
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
-                                    String etat;
+                                    
+                                    
                                     for(int i = 0; i< list.size(); i++)
                                     {
+                                        String etat = "待處理";
+                                        if(list.get(i).getEtat()==1)
+                                            etat="已出貨";
+                                        if(list.get(i).getEtat()==2)
+                                            etat="訂單不成立";
                                          %>
                                 
                                 <tr style="font-weight: bold">
@@ -105,6 +116,7 @@
                                         <td><%= list.get(i).getLogin() %></td>
                                         <td><%= list.get(i).getDateCmd() %></td>
                                         <td><%= list.get(i).getPrixTotale() %></td>
+                                        <td><%= etat %></td>
 					<td class="options-width">
                                             <a href="CommandeAfficher.jsp?id=<%= list.get(i).getIdCommande() %>&login=<%= list.get(i).getLogin() %>" title="訂單明細" class="icon-1 info-tooltip"></a>
                                             <a href="../SuuprimeCommandeServelet?id=<%= list.get(i).getIdCommande() %>" title="清除使用者" class="icon-2 info-tooltip"></a>

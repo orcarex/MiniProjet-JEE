@@ -256,6 +256,41 @@ public class CommandeDao
         return null;
     }
     
+    public Vector<Commande> findEnAttente(String key)
+    {
+        String req = "SELECT* " + " FROM commande where login like '%"+key+"%'";
+
+        Vector<Commande> vect = null;
+
+        try
+        {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(req);
+
+            while (rs.next())
+            {
+
+                if (vect == null)
+                {
+                    vect = new Vector<>();
+                }
+
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                
+
+                vect.add(e);
+            }
+
+            return vect;
+        } catch (Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+    
     
     
 }

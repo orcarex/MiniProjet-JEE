@@ -223,25 +223,28 @@ public class ClientDao
 
     
     //henry查找 會員 (依照傳入的登入帳號參數做查找)
-        public Client findByLogin(String log)
+        public Vector<Client> findByLogin(String log)
     {
-        String req = "SELECT* " + " FROM client " + " WHERE login = '" + log + "';";
-
+        String req = "SELECT * " + " FROM client " + " Where login like '%"+log+"%'";
+        Vector<Client> vect = null;
+        
         try
         {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(req);
 
-            Client e = null;
-
-            if (rs.next())
+            while (rs.next())
             {
+                if (vect == null)
+                {
+                    vect = new Vector<>();
+                }
                 //public Client(String login, String mdp, String nom, String prenom, Date dtNaissance)
                 
-                e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
-                
+                Client e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
+                vect.add(e);
             }
-            return e;
+            return vect ;
 
         } catch (Exception e)
         {
