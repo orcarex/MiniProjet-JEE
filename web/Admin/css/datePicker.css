@@ -65,7 +65,7 @@ table.jCalendar td.unselectable.dp-hover	{
 div.dp-popup	{
 	background: url(../images/shared/cal_top_repeat.jpg) repeat-x;
 	border: 1px solid #c7c7c7;
-	font-family: arial, sans-serif;
+	font-family: arial,"微軟中黑體", sans-serif;
 	font-size: 10px;
 	line-height: 1.2em;
 	position: relative;
