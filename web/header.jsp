@@ -21,10 +21,10 @@
 <script src="js/cufon-yui.js" type="text/javascript"></script>
 <script src="js/Comfortaa_400.font.js" type="text/javascript"></script>
 <script type="text/javascript">
-			Cufon.replace('h1', { fontFamily: 'Comfortaa' });
-			Cufon.replace('h2', { fontFamily: 'Comfortaa' });
-			Cufon.replace('h3', { fontFamily: 'Comfortaa' });
-			Cufon.replace('h4', { fontFamily: 'Comfortaa' });
+			Cufon.replace('h1', { fontFamily: 'Comfortaa',"微軟中黑體" });
+			Cufon.replace('h2', { fontFamily: 'Comfortaa',"微軟中黑體" });
+			Cufon.replace('h3', { fontFamily: 'Comfortaa',"微軟中黑體" });
+			Cufon.replace('h4', { fontFamily: 'Comfortaa',"微軟中黑體" });
 		</script>
 <script type="text/javascript" src="assets/js/font-delicious.js"></script>
 
@@ -113,7 +113,7 @@ for(LignePanier lp : panier.getLignesPanier())
         <% }else{ %>
         <!-- henry 如果已登入就顯示下方區塊 -->
             <div class="leftBox">
-                <h3>哩厚~</h3>
+                <h3>哩後~</h3>
               <div class="leftBoxBody">
                   <!-- henry 顯示登入帳號的名字 ((Client)session.getAttribute("client")).getNom()  -->
                   <p style="margin-top: -15px; margin-left: -10px ">哩厚~ <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
