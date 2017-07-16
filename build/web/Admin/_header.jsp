@@ -208,7 +208,7 @@ $(document).pngFix( );
 		</select> 
 		</td>
 		<td>
-                    <input type="submit" style="padding: 0px;width: 65px;height: 30px;border-style: none ;background-image: url(images/shared/top_search_btn_1.gif)" src=""  />
+                    <input type="submit" style="padding: 0px;width: 65px;height: 30px;border-style: none ;background-image: url(images/shared/top_search_btn_1.gif)" src=""  value=""/>
 		</td>
 		</tr>
 		</table>
