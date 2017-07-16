@@ -20,7 +20,7 @@
 
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>商品明細</h1>
+		<h1>商品列表</h1>
 	</div>
 	<!-- end page-heading -->
 
