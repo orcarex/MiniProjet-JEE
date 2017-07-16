@@ -47,19 +47,23 @@
         <%
             for(Commande c : cmd)
             {
-                String etat = "En Attente";
-                if(c.getEtat() == 1)
-                    etat = "有效";
-                if(c.getEtat() == 2)
-                    etat = "無效";
-                
+                String etat = "待處理";
+                String color = "blue";
+                if(c.getEtat() == 1){
+                    etat = "訂單成立";
+                    color= "green";
+                }
+                if(c.getEtat() == 2){
+                    etat = "訂單未成立";
+                    color = "red";
+                }
         %>
         <tr style="text-align: left">
             <td colspan="2" style="background-color: #E6E6E6; font-size: larger; color: #000000">
                 <b>訂單編號 : </b><%= c.getIdCommande() %> <b> 建立日期 </b><%= c.getDateCmd() %>  
             </td>
         
-            <td colspan="1" style="background-color: #E6E6E6; font-size: larger; color: #000000; color: green">
+            <td colspan="1" style="background-color: #E6E6E6; font-size: larger; color: #000000; color: <%=color %>">
                 <center><b>(<%= etat %>)</b></center>
             </td>
             
