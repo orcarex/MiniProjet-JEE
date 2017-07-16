@@ -20,7 +20,7 @@ public class Article
     private String libelle ;
     //henry 產品描述   (對應資料表 article中的desc欄位) 
     private String desc ;
-    //henry 產品名稱   (對應資料表 article中的prix欄位) 
+    //henry 產品價格   (對應資料表 article中的prix欄位) 
     private double prix ; 
     //henry 產品圖片(路徑與圖片名)   (對應資料表 article中的img欄位) 
     private String img ;
