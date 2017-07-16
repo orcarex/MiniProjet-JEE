@@ -44,6 +44,7 @@
 
     <table  style="border-style:solid  ;width: 100%; text-align: center">
         <!--Vince 不知道無效 有效什麼-->
+        <!--Orcarex 訂單是否成立，根據狀態設定顏色-->
         <%
             for(Commande c : cmd)
             {
