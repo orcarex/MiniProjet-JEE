@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author islem
  */
-//henry後臺管理servelet (產品新增)  
+//henry後臺管理servlet (產品新增)  
 public class AddMsgServlet extends HttpServlet {
 
     /**

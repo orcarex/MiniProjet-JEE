@@ -21,7 +21,7 @@ import com.oreilly.servlet.MultipartRequest;
  *
  * @author islem
  */
-//henry後臺管理servelet (產品新增)  
+//henry後臺管理servlet (產品新增)  
 public class AjouterArticleServlet extends HttpServlet {
 
     /**
