@@ -20,9 +20,9 @@ public class Client
   private String login ;
   //henry 登入密碼
   private String mdp ;
-  //henry 會員名
-  private String nom ;
   //henry 會員姓
+  private String nom ;
+  //henry 會員名
   private String prenom ;
   //henry 註冊日期
   private Date dtNaissance;
@@ -32,7 +32,7 @@ public class Client
     public Client()
     {
     }
-    //henry 建構式(傳入參數:帳號,密碼,名,姓,生日)
+    //henry 建構式(傳入參數:帳號,密碼,姓,名,生日)
     public Client(String login, String mdp, String nom, String prenom, Date dtNaissance)
     {
         this.login = login;
