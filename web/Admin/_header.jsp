@@ -192,8 +192,6 @@ $(document).pngFix( );
         
         <%
             response.setCharacterEncoding("UTF-8");
-            String searchStr = "ProduitListe.jsp";
-            searchStr = request.getParameter("choice");
             
         %>
           

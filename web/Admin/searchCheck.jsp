@@ -18,6 +18,7 @@
             String strC = request.getParameter("choice");
 
         %>
+        <!-- orcarex 根據選單結果轉換頁面 並傳關鍵字參數-->
         <jsp:forward page="<%=strC%>">
         <jsp:param name="keyword" value="<%=str %>"/>
         </jsp:forward>

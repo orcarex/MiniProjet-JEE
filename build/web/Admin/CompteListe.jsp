@@ -97,6 +97,7 @@
                                     String keyword = "";
                                     Vector<Client> list = null ;
                                     
+                                    //orcarex 有關鍵字則根據帳號名稱搜尋 無則顯示所有帳號
                                     if(request.getParameter("keyword")!=null){
                                         keyword = request.getParameter("keyword"); 
                                         
