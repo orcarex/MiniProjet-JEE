@@ -31,9 +31,14 @@
 
 
 <div class="RightSide">
-    <div class="bredCrum">
-        <p><a href="index.html">首頁</a>   >>  <a href="#" class="select"> 我的訂單 </a> </p>
-    </div>    
+    <body>    
+    <%
+        request.setCharacterEncoding("UTF-8"); //orcarex BODY內設置ENCODING解決jsp:param中文亂碼問題
+        %>
+    </body>
+    <jsp:include page="bredCrum.jsp" flush="true">
+        <jsp:param name="select" value="我的訂單"/>
+      </jsp:include>  
 
 
 
@@ -88,18 +93,13 @@
             <td>
                 <%= l.getNbr() %>
             </td>
-            
-            
         </tr>
         <% } %>
-        
         <tr>
             <td colspan="5" style="text-align: right; padding-right: 20px; font-size: 20px;border-style: dashed; border-width: 1px">
               總價格 : <%= c.getPrixTotale() %>
-            </td>
-            
+            </td>    
         </tr>
-        
         <% } %>
     </table>    
 

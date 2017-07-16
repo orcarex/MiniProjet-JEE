@@ -22,7 +22,7 @@
         %>
     </body>
     <jsp:include page="bredCrum.jsp" flush="true">
-        <jsp:param name="select" value="你的購物車"/>
+        <jsp:param name="select" value="我的購物車"/>
       </jsp:include>
     <div class="cartDetail">
         <div class="headings">
