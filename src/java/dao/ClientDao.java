@@ -190,7 +190,7 @@ public class ClientDao
 
         return false;
     }
-    //henry 修改會員表個欄位值 並回傳成功會失敗
+    //henry 修改會員表各欄位值 並回傳成功或失敗
     public boolean modifier(Client a)
     {
         try
