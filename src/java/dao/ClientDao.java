@@ -164,6 +164,41 @@ public class ClientDao
 
         return null;
     }
+    
+//        orcarex 會員查詢用
+     public Vector<Client> findAll(String key)
+    {
+        String req = "SELECT* " + " FROM client where login like '%"+key+"%'";
+
+        Vector<Client> vect = null;
+
+        try
+        {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(req);
+
+            while (rs.next())
+            {
+
+                if (vect == null)
+                {
+                    vect = new Vector<>();
+                }
+
+                Client e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
+
+                vect.add(e);
+            }
+
+            return vect;
+        } catch (Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return null;
+    }
     //henry 更新會員帳號(傳入帳號資料參數)
     public boolean bloquer(String login)
     {
@@ -223,10 +258,11 @@ public class ClientDao
 
     
     //henry查找 會員 (依照傳入的登入帳號參數做查找)
-        public Vector<Client> findByLogin(String log)
+        
+         public Client findByLogin(String log)
     {
-        String req = "SELECT * " + " FROM client " + " Where login like '%"+log+"%'";
-        Vector<Client> vect = null;
+        String req = "SELECT * " + " FROM client " + " Where login = '"+log+"' ";
+       Client e = null;
         
         try
         {
@@ -235,20 +271,17 @@ public class ClientDao
 
             while (rs.next())
             {
-                if (vect == null)
-                {
-                    vect = new Vector<>();
-                }
+                
                 //public Client(String login, String mdp, String nom, String prenom, Date dtNaissance)
                 
-                Client e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
-                vect.add(e);
+                e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
+                
             }
-            return vect ;
+            return e ;
 
-        } catch (Exception e)
+        } catch (Exception ex)
         {
-            e.printStackTrace();
+            ex.printStackTrace();
         }
 
         return null;

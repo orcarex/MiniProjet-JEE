@@ -194,18 +194,19 @@ $(document).pngFix( );
             response.setCharacterEncoding("UTF-8");
             
         %>
-          
+        
         <form method="GET" action="searchCheck.jsp">>
 	<div id="top-search">
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
                     <td><input name="keyword" type="text" placeholder="search.." class="top-search-inp" /></td>
 		<td>
-		<select name="choice" class="styledselect">
+		<select id="selected"name="choice" class="styledselect">
 			<option value="ProduitListe.jsp">商品</option>
 			<option value="CompteListe.jsp">帳號</option>
 			<option value="CommandeListe.jsp">訂單管理</option>		
 		</select> 
+           
 		</td>
 		<td>
                     <input type="submit" style="padding: 0px;width: 65px;height: 30px;border-style: none ;background-image: url(images/shared/top_search_btn_1.gif)" src=""  value=""/>
