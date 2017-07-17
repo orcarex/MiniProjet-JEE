@@ -21,10 +21,10 @@
 <script src="js/cufon-yui.js" type="text/javascript"></script>
 <script src="js/Comfortaa_400.font.js" type="text/javascript"></script>
 <script type="text/javascript">
-			Cufon.replace('h1', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif" });
-			Cufon.replace('h2', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif" });
-			Cufon.replace('h3', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif" });
-			Cufon.replace('h4', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif" });
+			Cufon.replace('h1', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif"; });
+			Cufon.replace('h2', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif"; });
+			Cufon.replace('h3', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif"; });
+			Cufon.replace('h4', { fontFamily: 'Comfortaa',"微軟中黑體","sans-serif"; });
 		</script>
 <script type="text/javascript" src="assets/js/font-delicious.js"></script>
 
