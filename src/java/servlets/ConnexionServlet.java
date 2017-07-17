@@ -40,7 +40,7 @@ public class ConnexionServlet extends HttpServlet
         String mdp = request.getParameter("mdp");
         
         ClientDao dao = new ClientDao();
-        Client c = dao.findByAuthentification(login, mdp);
+        Client c = dao.findByAuthentification(login, mdp,"front");
         
         if(c == null)
         {

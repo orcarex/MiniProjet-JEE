@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: localhost
--- 產生日期: 2017 年 07 月 07 日 21:21
+-- 產生日期: 2017 �?07 ??17 ??13:42
 -- 伺服器版本: 5.5.53
--- PHP 版本: 5.3.29
+-- PHP 版本: 5.6.27
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `nom` varchar(100) DEFAULT NULL,
   `prenom` varchar(100) DEFAULT NULL,
   `dtnaissance` datetime DEFAULT NULL,
+  `level` int(3) NOT NULL DEFAULT '2',
   PRIMARY KEY (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -75,9 +76,9 @@ CREATE TABLE IF NOT EXISTS `client` (
 -- 轉存資料表中的資料 `client`
 --
 
-INSERT INTO `client` (`login`, `mdp`, `nom`, `prenom`, `dtnaissance`) VALUES
-('ali', '123', 'Ali', 'ila', '1988-10-12 00:00:00'),
-('test', 'E', 'Z', 'sakZhana2', '1988-10-12 00:00:00');
+INSERT INTO `client` (`login`, `mdp`, `nom`, `prenom`, `dtnaissance`, `level`) VALUES
+('ali', '123', 'Ali', 'ila', '1988-10-12 00:00:00', 1),
+('test', 'E', 'Z', 'sakZhana2', '1988-10-12 00:00:00', 2);
 
 -- --------------------------------------------------------
 

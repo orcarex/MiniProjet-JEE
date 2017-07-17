@@ -103,10 +103,17 @@ public class ClientDao
         return false;
     }
     //查找會員 (傳入帳號與密碼參數為查找條件)
-    public Client findByAuthentification(String log, String pass)
+    public Client findByAuthentification(String log, String pass,String agent)
     {
-        String req = "SELECT* " + " FROM client " + " WHERE binary login = '" + log + "' AND binary mdp = '" + pass + "';";
-
+        String req;
+      //henry 加入判斷用的字串參數  agent 如果agent傳入的字串為 back則為後台驗證
+      //如果 agent為 front 則為前台驗證
+        if(agent.toString().equals("front")){
+    req = "SELECT* " + " FROM client " + " WHERE binary login = '" + log + "' AND binary mdp = '" + pass + "' AND level=2;";
+        }else{
+    req = "SELECT* " + " FROM client " + " WHERE binary login = '" + log + "' AND binary mdp = '" + pass + "' AND level=1;";
+                }
+       
         try
         {
             Statement st = con.createStatement();
