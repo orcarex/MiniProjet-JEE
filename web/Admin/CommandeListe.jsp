@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.Commande"%>
 <%@page import="java.util.Vector"%>
@@ -92,13 +93,38 @@
                                     CommandeDao dao = new CommandeDao();
                                     String keyword ="";
                                     Vector<Commande> list = null;
+//                                     orderState = 99;
+//                                    
+//                                    if(request.getParameter("state")!=null){
+//                                        if(request.getParameter("state").equals("訂單不成立"))
+//                                            orderState = 2;
+//                                        if(request.getParameter("state").equals("已出貨"))
+//                                            orderState = 1;
+//                                        if(request.getParameter("state").equals("待處理"))
+//                                            orderState = 0;
+//                                    }
+//                                    
                                     //orcarex 有關鍵字則根據帳號搜尋用戶訂單 無則顯示未處理訂單
+                                    //orcarex 並根據訂單狀態呼叫搜尋訂單
                                     if(request.getParameter("keyword")!=null){
+                                        if(request.getParameter("state")!=null){
+                                            int orderState = Integer.parseInt(request.getParameter("state"));
+                                            list = dao.findEnAttente(keyword, orderState);
+                                        }
+                                        else{
                                         keyword = request.getParameter("keyword");
                                         list = dao.findByLogin(keyword);}
+                                    }
+                                    
+                                    if(request.getParameter("state")!=null){
+                                        int orderState = Integer.parseInt(request.getParameter("state"));
+                                        list = dao.findEnAttente(orderState);
+                                    }   
                                     else    
                                         list = dao.findEnAttente() ;
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
+                                    
+                                    
                                     
                                     //orcarex根據參數判斷訂單狀態
                                     if (list!=null)

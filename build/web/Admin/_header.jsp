@@ -192,7 +192,7 @@ $(document).pngFix( );
         
         <%
             response.setCharacterEncoding("UTF-8");
-            
+            request.setCharacterEncoding("UTF-8");
         %>
           
         <form method="GET" action="searchCheck.jsp">>
@@ -203,7 +203,7 @@ $(document).pngFix( );
 		<td>
 		<select name="choice" class="styledselect">
 			<option value="ProduitListe.jsp">商品</option>
-			<option value="CompteListe.jsp">帳號</option>
+			<option value="CompteListe.jsp" >帳號</option>
 			<option value="CommandeListe.jsp">訂單管理</option>		
 		</select> 
 		</td>
@@ -318,18 +318,34 @@ $(document).pngFix( );
 		</ul>
 		<div class="nav-divider">&nbsp;</div>
 		
-                <ul class="select"><li><a href="CommandeListe.jsp"><b>訂單管理</b><!--[if IE 7]><!--></a><!--<![endif]-->
+                <ul class="select"><li><a href="CommandeListe.jsp" ><b>訂單管理</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
-			<ul class="sub">
-				<li><a href="CommandeListe.jsp">訂單管理</a></li>
-				
-			</ul>
+                    <form action="CommandeListe.jsp" >
+			   <ul class="sub">
+                               <li><input TYPE="HIDDEN" NAME="state" VaLUE="0"></input>
+                               <input class="order-submit"  type="submit" value="待處理"></input></li> <!--待處理-->
+                           </ul>
+                    </form>
+                     <form action="CommandeListe.jsp" >
+                         <ul class="sub">
+                               <li><input TYPE="HIDDEN" NAME="state" VaLUE="1"></input>
+                               <input class="order-submit"  type="submit" value="已出貨"></input></li> <!--已出貨-->
+                               </ul>
+                     </form>
+                     <form action="CommandeListe.jsp" >          
+                        <ul class="sub">
+                               <li><input TYPE="HIDDEN" NAME="state" VaLUE="2"></input>
+                               <input class="order-submit" type="submit"  value="訂單不成立"></input></li> <!--訂單不成立-->
+                        </ul>  
+                    </form>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</li>
 		</ul>
-		
+            
+                    
+                
 		
 		
 		<div class="clear"></div>
@@ -342,4 +358,5 @@ $(document).pngFix( );
 <div class="clear"></div>
 <!--  start nav-outer -->
 </div>
+</body>
 <!--  start nav-outer-repeat................................................... END -->

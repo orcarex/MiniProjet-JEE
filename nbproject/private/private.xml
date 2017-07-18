@@ -3,20 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/mescommandes.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/panier/LignePanier.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/_header.jsp</file>
             <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/ProduitListe.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/panier.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/js/Comfortaa_400.font.js</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/slideshow.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/nonMemberRegist.jsp</file>
             <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/index.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/css/style.css</file>
             <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/produits.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/bredCrum.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/CompteListe.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/servlets/DeconnexionServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/servlets/CommanderServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/MsgModifier.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/servlets/CompteServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/dao/CommandeDao.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/admin/AddMsgServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/admin/RefuserCommandeServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/dao/ClientDao.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/mescommandes.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/entities/Commande.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/servlets/PanierServlet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/CommandeListe.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/admin/ValiderCommandeServelet.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/MsgList.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/dao/ArticleDao.java</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/Admin/searchCheck.jsp</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/panier/Panier.java</file>
             <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/mon_compte.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/footer.jsp</file>
             <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/header.jsp</file>
-            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/web/css/slideshow.css</file>
+            <file>file:/D:/teamproject/MiniProjet-JEE/MiniProjet-JEE/src/java/admin/LoginServelet.java</file>
         </group>
     </open-files>
 </project-private>
