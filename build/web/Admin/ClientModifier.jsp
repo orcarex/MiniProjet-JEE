@@ -21,7 +21,7 @@
         }
         
         
-        Client f = (new ClientDao()).findByLogin(log);
+        Client f = new ClientDao().findByLogin(log);
         
         if(f == null)
             f = new Client();

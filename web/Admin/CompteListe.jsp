@@ -98,12 +98,11 @@
                                     Vector<Client> list = null ;
                                     
                                     //orcarex 有關鍵字則根據帳號名稱搜尋 無則顯示所有帳號
-                                    if(request.getParameter("keyword")!=null){
+                                    if(request.getParameter("keyword")!=null)
                                         keyword = request.getParameter("keyword"); 
                                         
-                                        list = dao.findByLogin(keyword);}
-                                    else
-                                        list = dao.findAll();
+                                     
+                                        list = dao.findAll(keyword);
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
                                     
                                     if(list!=null)

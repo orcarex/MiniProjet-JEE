@@ -124,10 +124,10 @@ public class CommandeDao
         return false;
     }
 
-     
+//     orcarex 根據帳號名稱搜尋訂單
     public Vector<Commande> findByLogin(String login)
     {
-        String req = "SELECT* " + " FROM commande WHERE login = '" +login+"';";
+        String req = "SELECT* " + " FROM commande WHERE login like '%" +login+"%'";
 
         Vector<Commande> vect = null;
 
@@ -259,7 +259,7 @@ public class CommandeDao
     //orcarex 搜尋用 根據用戶帳號搜尋訂單資訊
     public Vector<Commande> findEnAttente(String key)
     {
-        String req = "SELECT* " + " FROM commande where login like '%"+key+"%'";
+        String req = "SELECT * " + " FROM commande where login like '%"+key+"%'";
 
         Vector<Commande> vect = null;
 
