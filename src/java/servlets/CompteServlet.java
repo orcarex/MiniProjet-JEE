@@ -39,6 +39,12 @@ public class CompteServlet extends HttpServlet
         String nom = request.getParameter("nom");
         String prenom = request.getParameter("prenom");
         String mdp = request.getParameter("mdp");
+        String checkmdp = request.getParameter("checkmdp");
+        //vince 判斷密碼和密碼確認有沒有相同
+        if(!(mdp.equals(checkmdp)))
+        {
+        response.sendRedirect("nonMemberRegist.jsp?update=mdpfail");
+        }else{
         //新增會員實體
         Client c = new Client(login, mdp, nom, prenom, null);
         Client d = new Client(login, mdp, nom, prenom, null);
@@ -60,7 +66,7 @@ public class CompteServlet extends HttpServlet
                 //henry 更新失敗後
                 response.sendRedirect("mon_compte.jsp?update=fail");
                 }
-
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

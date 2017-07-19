@@ -112,4 +112,20 @@ public class Panier
         }
                
     }
+    
+    public void directBuyArticle(Article art,int qte)
+    {
+        for (LignePanier lignePanier : lignesPanier)
+        {
+            if (lignePanier.getArticle().getIdArticle() == art.getIdArticle())
+            {
+                lignePanier.setQuantite(lignePanier.getQuantite() + qte);
+                return;
+            }
+        }
+        //henry 新增產品到購物車並新增各產品在購物車中的數量
+        lignesPanier.add(new LignePanier(art, qte));
+    }
+    
+    
 }

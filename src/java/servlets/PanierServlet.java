@@ -72,6 +72,14 @@ public class PanierServlet extends HttpServlet
             p.removeArticle(a);
             response.sendRedirect(request.getParameter("sender") + "?id="+id+"&succes");
         }
+        //vince 直接購買產品的方法
+        if(request.getParameter("op").equals("directBuy"))
+        {
+            int qte = Integer.parseInt(request.getParameter("qte"));
+            p.directBuyArticle(a,qte);
+            response.sendRedirect("panier.jsp");
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

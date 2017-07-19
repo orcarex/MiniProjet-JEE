@@ -41,10 +41,12 @@
             <div class="thumb marRight"><img src="images/product-small.gif" alt=""/></div>
             <div class="thumb"><img src="images/product-small.gif" alt=""/></div>
             -->
+            <%if(article.getQte()!=0){%>
             <div class="cartBtn fl">
                 <!--vince 看不懂的連結-->
                 <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>" title="ADD to Cart" class="addToCart"></a>
             </div>
+            <%}%>
             <div class="clr"></div>	
         </div>
     </div>
@@ -56,17 +58,35 @@
         <!--取得產品新增時間(欄位)的值 article.getDateAjout()-->    
         <p class="add">產品上架日期 <%= article.getDateAjout()  %></p>
     </div>
-
+    <!--vince 新增 直接購買 (要搭配下拉數量鍵) -->
     <div class="clr"></div>
+    <form method="GET" action="PanierServlet">
     <div class="paging">
+        <!--vince 判斷庫存-->
+        <%if(article.getQte()==0){%>
+        庫存量不足！！！
+        <%}else{%>
+        目前庫存量： <%=article.getQte()%>
          <!--取得產品價格(欄位)的值 article.getPrix()-->    
         <div class="pagingDiv price">$ <%= article.getPrix() %></div>
-        
+        <div class="pagingInfo">
+        <!--vince 依庫存量而變的數量選單-->    
+        <select name="qte">
+            <%for(int i=1;i<=article.getQte();i++){%>
+		<option value="<%=i%>"><%=i%></option>
+            <%}%>
+        </select>
+        <!--vince 為了傳送qte 其他id 和op 只好靠 隱藏 <input type="hidden"  來一起傳值-->
+        <input type="hidden" name="id" value="<%=id%>"/>
+        <input type="hidden" name="op" value="directBuy"/>
+        <input type="submit"  value="直接購買"/>
+        </div>
         <div class="pagingInfo">
             <img src="images/plus.gif" alt=""/>
             <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>">加入購物車</a>
         </div>
-        
+        <%}%>
+    </form>
         <div class="clr"></div> 
     </div>
 </div>    
