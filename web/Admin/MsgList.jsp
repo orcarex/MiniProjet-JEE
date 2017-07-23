@@ -116,7 +116,7 @@
                                        
 					<td class="options-width">
                                             <a href="MsgModifier.jsp?msgGuestId=<%= list.get(i).getMsgGuestId() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
-                                            <a href="../DeleteMsgServlet?msgGuestId=<%= list.get(i).getMsgGuestId() %>" title="詳細訊息" class="icon-2 info-tooltip"></a>
+                                            <a href="../DeleteMsgServlet?msgGuestId=<%= list.get(i).getMsgGuestId() %>" title="刪除留言" class="icon-2 info-tooltip"></a>
 					</td>
                                 				
                                 </tr>
