@@ -26,12 +26,14 @@ public class LigneCommandeDao
         {
             String req = "INSERT INTO `wshop`.`ligne_commande` (`idcmd`, `idart`, `nbr`) "
                     + "VALUES ('"+a.getIdCommande()+"', '"+a.getIdArticle()+"', '"+a.getNbr()+"');";
-
+            String req1 = "UPDATE `article` "
+                    + "SET qte=qte-'" + a.getNbr() + "'"
+                    + "WHERE `idarticle`='" + a.getIdArticle() + "';";
             Statement st = con.createStatement();
 
             int rs = st.executeUpdate(req);
-
-            if (rs > 0)
+            int rs1 = st.executeUpdate(req1);
+            if (rs > 0&&rs1>0)
             {
                 return true;
             }

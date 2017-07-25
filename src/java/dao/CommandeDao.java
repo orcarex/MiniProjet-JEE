@@ -30,7 +30,7 @@ public class CommandeDao
             
             String req = "INSERT INTO wshop.commande (login,datecmd, prixtotale) "
                     + "VALUES ('"+a.getLogin()+"', '"+sqlDate+"', '"+a.getPrixTotale()+"');";
-
+            
             Statement st = con.createStatement();
 
             int rs = st.executeUpdate(req);
