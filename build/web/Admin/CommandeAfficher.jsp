@@ -1,6 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="entities.LigneCommande"%>
 <%@page import="dao.LigneCommandeDao"%>
+<%@page import="entities.Commande"%>
+<%@page import="dao.CommandeDao"%>
 <%@page import="entities.Client"%>
 <%@page import="java.util.Vector"%>
 <%@page import="dao.ClientDao"%>
@@ -94,7 +96,8 @@
                                         <th style="width: 120px" class="table-header-repeat line-left"><a >訂單說明</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >總價</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >數量</a></th>
-
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >電話</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >地址</a></th>
                                     </tr>
 
 
@@ -106,6 +109,8 @@
                                         LigneCommandeDao dao = new LigneCommandeDao();
                                         Vector<LigneCommande> list = dao.findById(id);
                                         //for(int j = 0; j< 50; j++)//Test liste longue :p 
+                                         CommandeDao dao1 = new CommandeDao();//為了呼叫客戶訂單內的資料而宣告的
+                                        Vector<Commande> list1 = dao1.findByIdCommande(list.get(0).getIdCommande());
                                         
                                         String etat;
                                     if(list != null)
@@ -120,7 +125,8 @@
                                         <td><%= libelle%></td>
                                         <td><%= prix%></td>
                                         <td><%= list.get(i).getNbr()%></td>
-
+                                        <td><%=list1.get(0).getaddress()%></td>
+                                        <td><%=list1.get(0).getphone_number()%></td>
 
                                     </tr>
                                     <% }
@@ -133,7 +139,7 @@
                                     %>
                                     <tr>
 
-                                    <td colspan="3" valign="top" >
+                                    <td colspan="5" valign="top" >
                                     
                                         <form id="mainform" method="GET"  action="../ValiderCommandeServelet">
                                         <input name="id" type="hidden" value="<%= id %>"/>

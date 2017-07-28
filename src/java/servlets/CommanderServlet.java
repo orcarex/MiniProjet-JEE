@@ -49,7 +49,9 @@ public class CommanderServlet extends HttpServlet
 
             Panier p = (Panier) request.getSession().getAttribute("panier");
             Client c = (Client) request.getSession().getAttribute("client");
-
+            String address=request.getParameter("address");
+            address = new String(address.getBytes("ISO-8859-1"),"UTF-8"); //如果出現亂碼中文加這句
+            String phone_number=request.getParameter("phone_number");
             double prixT = 0;
 
             for (LignePanier lp : p.getLignesPanier())
@@ -58,7 +60,7 @@ public class CommanderServlet extends HttpServlet
             }
 
             CommandeDao daoc = new CommandeDao();
-            daoc.add(new Commande(c.getLogin(), prixT));
+            daoc.add(new Commande(c.getLogin(), prixT),address,phone_number);
 
             LigneCommandeDao daolc = new LigneCommandeDao();
 

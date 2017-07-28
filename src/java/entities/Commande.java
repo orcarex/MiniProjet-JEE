@@ -17,15 +17,19 @@ public class Commande
     private String login ;
     private Date dateCmd ;
     private double prixTotale ;
+    private String address;
+    private String phone_number;
     private int etat ;
 
-    public Commande(int idCommande, String login, Date dateCmd, double prixTotale, int etat)
+    public Commande(int idCommande, String login, Date dateCmd, double prixTotale, int etat,String address,String phone_number)
     {
         this.idCommande = idCommande;
         this.login = login;
         this.dateCmd = dateCmd;
         this.prixTotale = prixTotale;
         this.etat = etat;
+        this.address = address;
+        this.phone_number = phone_number;
     }
 
     public Commande(String login, double prixTotale)
@@ -34,6 +38,8 @@ public class Commande
         this.dateCmd = dateCmd;
         this.prixTotale = prixTotale;
         this.etat = etat;
+        this.address = address;
+        this.phone_number = phone_number;
     }
 
     
@@ -57,11 +63,19 @@ public class Commande
     {
         return prixTotale;
     }
-
+  
     public int getEtat()
     {
         return etat;
     }
+      public String getaddress()
+    {
+        return address;
+    }         
+   public String getphone_number()
+    {
+        return phone_number;
+    }         
 
     public void setIdCommande(int idCommande)
     {
@@ -87,7 +101,15 @@ public class Commande
     {
         this.etat = etat;
     }
-    
+       public void setaddress(String address)
+    {
+        this.address = address;
+    }         
+       
+   public void setphone_number(String phone_number)
+    {
+        this.phone_number =phone_number;
+    }         
     
     
     

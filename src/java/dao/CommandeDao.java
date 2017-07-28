@@ -20,7 +20,7 @@ public class CommandeDao
 
     Connection con = DBConnexion.getInstance();
 
-    public boolean add(Commande a)
+    public boolean add(Commande a,String address,String phone_number)
     {
         try
         {   //vince 建立訂單時可以把當下時間顯示出來並寫入DB裡
@@ -28,8 +28,8 @@ public class CommandeDao
             java.sql.Timestamp sqlDate = new java.sql.Timestamp(now.getTime());
 
             
-            String req = "INSERT INTO wshop.commande (login,datecmd, prixtotale) "
-                    + "VALUES ('"+a.getLogin()+"', '"+sqlDate+"', '"+a.getPrixTotale()+"');";
+            String req = "INSERT INTO wshop.commande (login,datecmd, prixtotale,address,phone_number) "
+                    + "VALUES ('"+a.getLogin()+"', '"+sqlDate+"', '"+a.getPrixTotale()+"', '"+address+"', '"+phone_number+"');";
             
             Statement st = con.createStatement();
 
@@ -144,7 +144,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -179,7 +180,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -240,7 +242,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -276,7 +279,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -310,7 +314,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -345,7 +350,8 @@ public class CommandeDao
                     vect = new Vector<>();
                 }
 
-                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5));
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
                 
 
                 vect.add(e);
@@ -360,5 +366,40 @@ public class CommandeDao
 
         return null;
     }
-    
+    //vince 透過訂單編號搜尋客戶訂單
+    public Vector<Commande> findByIdCommande(int id)
+    {
+        String req = "SELECT* " + " FROM commande WHERE idcommande=" +id;
+
+        Vector<Commande> vect = null;
+
+        try
+        {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(req);
+
+            while (rs.next())
+            {
+
+                if (vect == null)
+                {
+                    vect = new Vector<>();
+                }
+
+                Commande e = new Commande(rs.getInt(1), rs.getString(2), rs.getDate(3), rs.getDouble(4), rs.getInt(5),
+					  rs.getString(6),rs.getString(7));
+                
+
+                vect.add(e);
+            }
+
+            return vect;
+        } catch (Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }

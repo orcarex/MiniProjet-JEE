@@ -317,6 +317,14 @@ img {
 	text-align:center;
 	float:right;
 }
+.pagingDiv1 {
+        
+	height:37px;
+	width:168px;
+        text-align:center;
+    float:right;
+    
+}
 .pagingDiv .label {
 	position:relative;
 	top:-3px;

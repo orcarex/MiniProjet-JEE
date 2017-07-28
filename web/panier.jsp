@@ -86,7 +86,16 @@ for(LignePanier lp : panier.getLignesPanier())
         </div>
         <div class="clr"></div>
     </div>
-
+<div class="information"> 
+       <form action="CommanderServlet" method="get">  
+           <label for="address">地址 :</label><br />
+		<input id="address" class="input" name="address" type="text" value="" size="30" /><br />
+                <label for="phone_number">電話 :</label><br />
+		<input id="phone_number" class="input" name="phone_number" type="text" value="" size="30" /><br />
+                <br />
+                <input id="submit_button" name="client_information" type="submit" value="發送" />
+      </form>
+   </div>
 
     <div class="clr"></div>
     <div class="paging">
@@ -95,6 +104,7 @@ for(LignePanier lp : panier.getLignesPanier())
         if(panier.getLignesPanier().size() > 0)
         {
         %>
+        
         <div class="pagingDiv"><a href="CommanderServlet" title="Check Out"><img src="images/checkOutBtn.gif" alt="Check Out"/></a></div>
         <%}%>
         
