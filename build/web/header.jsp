@@ -36,7 +36,7 @@
     <div id="Logo">
       <h1><a href="index.jsp">
               <!--henry 網站LOGO圖片引入-->
-              <img height="79" src="images/logo-big-shopping.png" alt="OXO" /></a>
+              <img height="147"  src="images/Welife.png" alt="OXO" /></a>
       </h1>
     </div>
     <!-- end div #Logo -->
@@ -156,11 +156,11 @@ for(LignePanier lp : panier.getLignesPanier())
       </div>
       
       
-      <div class="cards">
+      <div>
         <ul>
-          <li><a href="#"><img src="images/paypal.gif" alt="" /></a></li>
-          <li><a href="#"><img src="images/card-visia.gif" alt="" /></a></li>
-          <li><a href="#"><img src="images/card-master.gif" alt="" /></a></li>
+          <div class="h2"><a href="contactez-nous.jsp"><img src="images/LINE_icon01.png" alt="" width="80" /></a></div>
+         <div class="h1"> <a target="_blank" href="https://www.facebook.com/welife2017/"><img src="images/facebook-icon.png" alt="" width="90"  /></a></div>
+          <!--<li><a href="#"><img src="images/card-master.gif" alt="" /></a></li>-->
         </ul>
       </div>
     </div>

@@ -40,10 +40,15 @@
 		<label for="message">留言內容 : </label><br />
 		<textarea id="message" class="input" name="guestGuestMsgContent" rows="7" cols="30"></textarea><br />
 	</div>
-	<input id="submit_button" type="submit" value="發送" />
+	<input id="submit_button" type="submit" value="發送" /><br /><br /><br />
+         <div class="linemaster"> 
+        <div class="line1">  <img src="images/addfriends_zh-Hant.png" height="80px"  ></div><br />
+         <div class="line2">  <img src="images/line_id_uprite.png" height="90px"  ></div>
+        </div>
+        
 </form>				
         
-        
+       
     
     
     
