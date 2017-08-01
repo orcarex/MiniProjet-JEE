@@ -58,7 +58,14 @@ if(client == null)
                 <td>密碼 : </td>
                 <td><input type="password" name="mdp" value="<%= client.getMdp() %>"></td>
             </tr>
-            
+            <tr>
+                <td>電話 : </td>
+                <td><input  name="phone_number" value="<%= client.getphone_number() %>"></td>
+            </tr>
+            <tr>
+                <td>地址 : </td>
+                <td><input  name="address" value="<%= client.getaddress() %>"></td>
+            </tr>
             <tr>
                 <td>
                     <input type="submit" value="變更">
