@@ -39,9 +39,11 @@ return ;
             
             <div class="rightDiv">
                 <ul  class="ul">
-                    <li>帳號 : <input type="text" name="login" /></li>
                     <li>姓氏 : <input name="nom" /></</li>
                     <li>名字 : <input name="prenom" ></li>
+                    <li>電話 : <input type="text" name="phone_number" /></li>
+                    <li>地址 : <input type="text" name="address" /></li>
+                    <li>帳號 : <input type="text" name="login" /></li>
                     <li>密碼 : <input type="password" name="mdp" /></li>
                     <li>密碼確認 : <input type="password" name="checkmdp" /></li>
                 </ul>

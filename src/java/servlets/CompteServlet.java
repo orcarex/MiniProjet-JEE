@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 //henry 前台 會員更新資料動作處理 servlet類
 public class CompteServlet extends HttpServlet
 {
-
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,10 +34,13 @@ public class CompteServlet extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        request.setCharacterEncoding("UTF-8");
         //henry 取得個接收request 參數
-        String login = request.getParameter("login");
         String nom = request.getParameter("nom");
         String prenom = request.getParameter("prenom");
+        String address = request.getParameter("address");
+        String phone_number = request.getParameter("phone_number");
+        String login = request.getParameter("login");
         String mdp = request.getParameter("mdp");
         String checkmdp = request.getParameter("checkmdp");
         //vince 判斷密碼和密碼確認有沒有相同
@@ -47,7 +50,7 @@ public class CompteServlet extends HttpServlet
         }else{
         //新增會員實體
         Client c = new Client(login, mdp, nom, prenom, null);
-        Client d = new Client(login, mdp, nom, prenom, null);
+        Client d = new Client(login, mdp, nom, prenom, null,address,phone_number);
         ClientDao dao = new ClientDao();
         //henry定義執行更新動作後之後續處理方法
         if (dao.update(c))

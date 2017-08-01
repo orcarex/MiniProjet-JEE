@@ -29,8 +29,8 @@ public class ClientDao
         {
             Date dNow = new Date();
              SimpleDateFormat fd = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
-            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`,`dtnaissance`)"
-                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + fd.format(dNow) + "');";
+            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`,`dtnaissance`,address,phone_number)"
+                    + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + fd.format(dNow) + "', '" + a.getaddress() + "', '" + a.getphone_number() + "');";
 
             Statement st = con.createStatement();
 
@@ -281,7 +281,8 @@ public class ClientDao
                 
                 //public Client(String login, String mdp, String nom, String prenom, Date dtNaissance)
                 
-                e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5));
+                e = new Client(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5),
+                                rs.getString(6),rs.getString(7));
                 
             }
             return e ;

@@ -36,7 +36,7 @@
 <div id="content">
 
 
-<div id="page-heading"><h1>Ajout de Client</h1></div>
+<div id="page-heading"><h1>會員資料修改</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -61,10 +61,10 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no"> - </div>
-			<div class="step-dark-left"><a href="">Détails du Client</a></div>
+			<div class="step-dark-left"><a href="">會員詳細資料</a></div>
 			<div class="step-dark-right">&nbsp;</div>
 			<div class="step-no-off"> # </div>
-			<div class="step-light-left">Veillez saisir les détails </div>
+			<div class="step-light-left">請填寫詳細內容 </div>
 			<div class="step-light-right">&nbsp;</div>
 			
 		</div>
@@ -93,7 +93,7 @@
             
                 
 		<tr>
-			<th valign="top">nom</th>
+			<th valign="top">姓氏</th>
                         <td><input name="nom" value="<%= f.getNom() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -103,7 +103,7 @@
 		</tr>
                 
 		<tr>
-			<th valign="top">prenom</th>
+			<th valign="top">名字</th>
                         <td><input name="prenom" value="<%= f.getPrenom() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -112,7 +112,7 @@
 			</td>-->
 		</tr>
                 <tr>
-			<th valign="top">Login</th>
+			<th valign="top">帳號</th>
                         <td><input name="login" value="<%= f.getLogin() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -124,7 +124,7 @@
 		  
 		
 		   <tr>
-			<th valign="top">mot de passe</th>
+			<th valign="top">密碼</th>
                         <td><input name="mdp" value="<%= f.getMdp() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
@@ -134,8 +134,17 @@
 		</tr>
                 
                  <tr>
-			<th valign="top">Etat</th>
-                        <td><input name="etat" value="<%=etatf %>" required type="text" class="inp-form"  /></td>
+			<th valign="top">電話</th>
+                        <td><input name="etat" value="<%=f.getphone_number() %>" required type="text" class="inp-form"  /></td>
+<!--			-error
+                        <td>
+			<div class="error-left"></div>
+			<div class="error-inner">This field is required.</div>
+			</td>-->
+		</tr>
+                <tr>
+			<th valign="top">地址</th>
+                        <td><input name="etat" value="<%=f.getaddress() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
 			<div class="error-left"></div>

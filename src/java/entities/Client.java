@@ -28,6 +28,10 @@ public class Client
   private Date dtNaissance;
   //henry 狀態
   private int etat;
+  //vince 連絡地址
+  private String address;
+  //vince 連絡電話
+  private String phone_number;
     //henry 建構式(無參)
     public Client()
     {
@@ -51,6 +55,17 @@ public class Client
         this.prenom = prenom;
         this.dtNaissance = dtNaissance;
         this.etat=etat;
+    }
+          public Client(String login, String mdp, String nom, String prenom, Date dtNaissance,String phone_number,String address)
+    {
+        this.login = login;
+        this.mdp = mdp;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dtNaissance = dtNaissance;
+        this.etat=etat;
+        this.phone_number = phone_number;
+        this.address = address;
     }
 
     //henry 取得狀態      
@@ -90,6 +105,14 @@ public class Client
     {
         return dtNaissance;
     }
+     public String getaddress()
+    {
+        return address;
+    }         
+    public String getphone_number()
+    {
+        return phone_number;
+    }
     //henry 設定帳號
     public void setLogin(String login)
     {
@@ -115,6 +138,15 @@ public class Client
     {
         this.dtNaissance = dtNaissance;
     }
+    public void setaddress(String address)
+    {
+        this.address = address;
+    }         
+       
+    public void setphone_number(String phone_number)
+    {
+        this.phone_number =phone_number;
+    }  
     //henry 覆寫java原生方法 設定帳號密碼加密並回傳
     @Override
     public int hashCode()
