@@ -11,8 +11,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>各種品牌手機全新上架 </title>
+<meta name="keywords" content="We Life 久易立實業有限公司 袋子 包包 露營 帳篷" />
+<meta name="description" content="We Life 久易立實業有限公司 袋子 包包 露營 帳篷" />
+<title>We Life 久易立實業有限公司 </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
