@@ -9,6 +9,7 @@
 <%@page import="entities.Article"%>
 <%@page import="java.util.Vector"%>
 <%@page import="dao.ArticleDao"%>
+<%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
 
 <%    Client client = (Client) request.getSession().getAttribute("client");
@@ -114,3 +115,4 @@
 
 
 <%@include file="footer.jsp" %>
+<%@include file="FooterBottom.jsp" %>

@@ -37,39 +37,13 @@
     <div id="Logo">
       <h1><a href="index.jsp">
               <!--henry 網站LOGO圖片引入-->
-              <img height="147"  src="images/Welife.png" alt="OXO" /></a>
+              <img  width="100%" height="350px" src="images/cover1.jpg" alt="OXO" /></a>
       </h1>
     </div>
     <!-- end div #Logo -->
-    <div id="TopContent">
-      <ul>
-<% 
-    //henry 判斷是否已存在 購物車的session 沒有就建立購物車session
-if(session.getAttribute("panier") == null )
-{
-    session.setAttribute("panier", new Panier());
-}
- //henry 取得購物車session中的資料
-Panier panier = (Panier)session.getAttribute("panier");
-//henry 宣告 總價變數 prixT
-double prixT = 0 ;
-//henry 宣告一變數 lp 並將 panier.getLignesPanier() 回傳的購物車資料賦予給lp
-for(LignePanier lp : panier.getLignesPanier())
-    //henry 計算總價 pritX 購物車產品數量乘上產品單價
-    prixT += lp.getQuantite()*lp.getArticle().getPrix();
-
-
-%>
-
-        <li class="cart"><a href="panier.jsp">購物車</a></li>
-        <li class="cart-value">
-            <span class="blue"><a href="panier.jsp">
-                    <!--henry 取得並顯示購物車產品數量 panier.getNumberArticle() -->
-                    <%= panier.getNumberArticle() %> 項產品</a></span> | <span>$<%= prixT %> </span></li>
-      </ul>
-    </div>
+   
     <!-- end div #TopContent -->
-    <div id="Nav">
+    <!--<div id="Nav">
       <div class="NavBody">
         <ul>
             <li> <a href="index.jsp">首頁</a></li>
@@ -84,7 +58,7 @@ for(LignePanier lp : panier.getLignesPanier())
           </li>
         </ul>
       </div>
-    </div>
+    </div>-->
     <!-- end div #Nav -->
   </div>
   <!-- end div #Top -->
@@ -97,7 +71,7 @@ for(LignePanier lp : panier.getLignesPanier())
         <!-- henry 判斷是否已登入帳號(會員)如果未登入就顯示下方區塊 -->
         <% if(session.getAttribute("client") == null){ %>
             <div class="leftBox">
-               <h3>member login</h3>
+               <h3>會員登入</h3>
                
                <div class="leftBoxBody">
               <form method="GET" action="ConnexionServlet">
@@ -132,7 +106,7 @@ for(LignePanier lp : panier.getLignesPanier())
       
       
       <div class="leftBox">
-        <p>隨機產品</p>
+        <h3>隨機產品</h3>
         <div class="leftBoxBody">
           <ul class="sellerlist">
             <%
@@ -157,7 +131,7 @@ for(LignePanier lp : panier.getLignesPanier())
       </div>
       
       
-      <div>
+      <div class="h">
         <ul>
           <div class="h2"><a href="contactez-nous.jsp"><img src="images/LINE_icon01.png" alt="" width="80" /></a></div>
          <div class="h1"> <a target="_blank" href="https://www.facebook.com/welife2017/"><img src="images/facebook-icon.png" alt="" width="90"  /></a></div>

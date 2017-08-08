@@ -11,6 +11,7 @@
 <!--henry 引入產品控制類-->
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入header.jsp頁-->
+<%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
 
 
@@ -117,3 +118,4 @@ for(LignePanier lp : panier.getLignesPanier())
 
 
 <%@include file="footer.jsp" %>
+<%@include file="FooterBottom.jsp" %>

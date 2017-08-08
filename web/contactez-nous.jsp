@@ -6,6 +6,7 @@
 <%@page import="java.util.Vector"%>
 <!--henry 引入商品控制類-->
 <%@page import="dao.MsgDao"%>
+<%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
 <!--henry 本頁面功能尚未程式化 僅有靜態呈現-->
 
@@ -56,3 +57,4 @@
 </body>
 <!--henry 引入footer頁面-->
 <%@include file="footer.jsp" %>
+<%@include file="FooterBottom.jsp" %>

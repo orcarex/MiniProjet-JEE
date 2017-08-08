@@ -7,6 +7,7 @@
 <!--henry 引入 產品控制類->
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入 header.jsp-->
+<%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
 
 
@@ -161,3 +162,4 @@ init += 3 ;
 
 <!--henry 引入 底部footer.jsp-->
 <%@include file="footer.jsp" %>
+<%@include file="FooterBottom.jsp" %>
