@@ -53,7 +53,7 @@ for(LignePanier lp : panier.getLignesPanier())
                           <li class="search">
                              <form action="produits.jsp" method="GET">
                                  <input class="action" type="image"  src="images/search-action.jpg" />
-                                 <input class="searchfeild" name="keyword" type="text"  />
+                                 <input class="searchfeild" name="keyword" type="text" placeholder="search....."  />
                              </form>
                           </li>
                           </ul>
@@ -61,23 +61,27 @@ for(LignePanier lp : panier.getLignesPanier())
               </div>
               </div>   
              <div id="NewTop">
-               <div class="NewTopBody">
+             
                     
         <ul>
-          <a href="index.jsp"><img height="75"src="images/Welife.png"/></a>
-            <li> <a href="index.jsp">首頁</a></li>
-            <li> <a href="produits.jsp">我們的產品</a></li>
+       
+          <li> <a href="index.jsp">首頁</a> </li>
+            <li> <a href="produits.jsp">我們的產品</a>
+            <ol><li><a href="produits.jsp?x=0&y=0&keyword=nac+nac">nac nac</a></li>
+                <li><a href="produits.jsp?x=0&y=0&keyword=野餐">野餐用品</a></li>
+                <li><a href="produits.jsp?x=0&y=0&keyword=收納">收納用品</a></li>
+                <li><a href="produits.jsp?x=0&y=0&keyword=背">背包 背袋</a></li>
+            </ol>  
+            </li>   
             <li> <a href="mon_compte.jsp">會員專區</a></li>
           <li> <a href="contactez-nous.jsp">聯繫我們</a></li>
       
        
         </ul>
                </div>
-             </div>
-              <div id="NewSearch">
-                 
-                          
-                      </ul>
+  <div class="imagebody">
+       <div class="image"><a href="index.jsp"><img height="75"src="images/Welife.png"/></a></div>
+ </div>          
                   </div>
               </div>         
              </div>

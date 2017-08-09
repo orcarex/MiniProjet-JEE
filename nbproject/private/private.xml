@@ -2,6 +2,20 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/panier/LignePanier.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/dao/CommandeDao.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/panier/Panier.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/Admin/CommandeListe.jsp</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/entities/Commande.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/panier.jsp</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/headerTop.jsp</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/header.jsp</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/servlets/PanierServlet.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/css/style.css</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/admin/SuuprimeCommandeServelet.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/src/java/dao/ArticleDao.java</file>
+            <file>file:/D:/Project/MiniProjet-JEE/web/contactez-nous.jsp</file>
+        </group>
     </open-files>
 </project-private>
