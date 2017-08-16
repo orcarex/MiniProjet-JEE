@@ -11,6 +11,8 @@
 <%@page import="dao.ArticleDao"%>
 <%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 <%    Client client = (Client) request.getSession().getAttribute("client");
 

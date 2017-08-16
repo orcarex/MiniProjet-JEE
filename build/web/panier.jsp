@@ -11,9 +11,11 @@
 <!--henry 引入產品控制類-->
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入header.jsp頁-->
+
 <%@include file="headerTop.jsp" %>
 <%@include file="header.jsp" %>
-
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 
 <div class="RightSide"> 
@@ -87,7 +89,7 @@ for(LignePanier lp : panier.getLignesPanier())
         </div>
         <div class="clr"></div>
     </div>
-<div class="information"> 
+<!--<div class="information"> 
        <form action="CommanderServlet" method="get">  
            <label for="address">地址 :</label><br />
 		<input id="address" class="input" name="address" type="text" value="" size="30" /><br />
@@ -96,26 +98,50 @@ for(LignePanier lp : panier.getLignesPanier())
                 <br />
                 <input id="submit_button" name="client_information" type="submit" value="發送" />
       </form>
-   </div>
-
-    <div class="clr"></div>
+   </div>-->
+   <div class="bs-example">
+    <form class="form-horizontal" role="form" action="CommanderServlet" method="get">
+      <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">地址<!--Email--></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="address" id="address" placeholder="請輸入地址">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone_number" class="col-sm-2 control-label">電話<!--Password--></label>
+        <div class="col-sm-10">
+          <input name="phone_number" type="text" class="form-control" id="inputPassword3" placeholder="請輸入電話">
+        </div>
+      </div>   
+        <div class="clr"></div>
     <div class="paging">
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button style="margin-left:640px; margin-top:-15px;  " type="submit" class="btn btn-default">送出<!--Sign in--></button>
+        </div>
+          <div class="pagingInfo" style="margin-top:-50px;"><h4><a  " href="produits.jsp" title="CONTINUE SHOPPING">繼續選購</a></h4></div>
+      </div>
+    </div>
+    </form>
+  </div><!-- /.bs-example -->
+    
         
         <% 
         if(panier.getLignesPanier().size() > 0)
         {
         %>
         
-        <div class="pagingDiv"><a href="CommanderServlet" title="Check Out"><img src="images/checkOutBtn.gif" alt="Check Out"/></a></div>
+        
         <%}%>
         
-        <div class="pagingInfo"><h4><a href="produits.jsp" title="CONTINUE SHOPPING">繼續選購</a></h4></div>
+      
         <div class="clr"></div> 
     </div>
 </div>
 
 
 
-
+<script src="js/jquery-3.2.1.min.js" />
+<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <%@include file="footer.jsp" %>
 <%@include file="FooterBottom.jsp" %>

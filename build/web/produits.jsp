@@ -7,8 +7,19 @@
 <!--henry 引入產品控制類-->
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入header.jsp-->
+
 <%@include file="headerTop.jsp" %>
+<%@include file="SlideShowtest.jsp" %>
 <%@include file="header.jsp" %>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">   
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="~/Scripts/AssetsBS3/ie8-responsive-file-warning.js"></script><![endif]-->
+
+
 <!--henry 產品詳情區域-->
 <body>
 <div class="RightSide"> 
@@ -91,7 +102,7 @@ while(t < NB_PRODUIT_PAGE/3 )
               
               <div class="catThum">
                   <a href="article.jsp?id=<%= articles.get(i).getIdArticle() %>">
-                      <img width="203" height="186" src="<%= articles.get(i).getImg() %>" alt="" />
+                      <img width="303" height="286" src="<%= articles.get(i).getImg() %>" alt="" />
                   </a>
 <%
 if(articles.get(i).getDateAjout()!=null)    //vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
@@ -153,6 +164,9 @@ init += 3 ;
         <div class="clr"></div>
       </div>
     </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/Scripts/AssetsBS3/docs.min.js"></script>
 </body>
 
 

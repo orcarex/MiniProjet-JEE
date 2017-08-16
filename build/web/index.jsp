@@ -8,8 +8,11 @@
 <%@page import="dao.ArticleDao"%>
 <!--henry 引入 header.jsp-->
 <%@include file="headerTop.jsp" %>
+<%@include file="SlideShowtest.jsp" %>
 <%@include file="header.jsp" %>
-
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link href="css/carousel.css" rel="stylesheet">
 
 <div class="RightSide">
     
@@ -26,7 +29,7 @@
     
     
     <!--henry 引入 幻燈片 slideshow -->
-    <%@include file="slideshow.jsp" %>
+   
     
     
       <!--<div class="bredCrum" style="margin-bottom:38px;">-->
@@ -36,7 +39,7 @@
     
     <% 
         //henry 產品分頁
-            int NB_PRODUIT_PAGE = 3 ;//vince 產品要每幾項產品為一頁
+            int NB_PRODUIT_PAGE = 6 ;//vince 產品要每幾項產品為一頁
             
             int pageCourante = 1;
             if(request.getParameter("page") != null)
@@ -95,7 +98,7 @@ while(t  < NB_PRODUIT_PAGE/3 )
               
               <div class="catThum">
                   <a href="article.jsp?id=<%= articles.get(i).getIdArticle() %>">
-                      <img width="203" height="186" src="<%= articles.get(i).getImg() %>" alt="" />
+                      <img width="303" height="286" src="<%= articles.get(i).getImg() %>" alt="" />
                   </a>
 <%
     if(articles.get(i).getDateAjout()!=null)    //vince 修正網頁無法顯示沒上傳日期的產品(有這種產品的頁面就會跳出 500 ERROR)
@@ -108,8 +111,8 @@ while(t  < NB_PRODUIT_PAGE/3 )
 <%}%>
             </div>
             <div class="catDetail">
-              <h4><a href="article.jsp?id=<%= articles.get(i).getIdArticle() %>"><%= articles.get(i).getLibelle() %> </a></h4>
-              <p><%= articles.get(i).getPrix() %>$</p>
+                <h4 style="width:250px;"><a href="article.jsp?id=<%= articles.get(i).getIdArticle() %>"><%= articles.get(i).getLibelle() %> </a></h4>
+              <p style="width:250px;"><%= articles.get(i).getPrix() %>$</p>
             </div>
               
           </li>
@@ -158,7 +161,9 @@ init += 3 ;
         <div class="clr"></div>
       </div>
     </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/Scripts/AssetsBS3/docs.min.js"></script>
 
 <!--henry 引入 底部footer.jsp-->
 <%@include file="footer.jsp" %>

@@ -34,12 +34,7 @@
 <div id="Layout">
   <!-- BEGIN HEADER -->
   <div id="Top">
-    <div id="Logo">
-      <h1><a href="index.jsp">
-              <!--henry 網站LOGO圖片引入-->
-              <img  width="100%" height="350px" src="images/cover1.jpg" alt="OXO" /></a>
-      </h1>
-    </div>
+    
     <!-- end div #Logo -->
    
     <!-- end div #TopContent -->
@@ -69,38 +64,7 @@
         
         <!-- Connexion DIV -->
         <!-- henry 判斷是否已登入帳號(會員)如果未登入就顯示下方區塊 -->
-        <% if(session.getAttribute("client") == null){ %>
-            <div class="leftBox">
-               <h3>會員登入</h3>
-               
-               <div class="leftBoxBody">
-              <form method="GET" action="ConnexionServlet">
-              <ul class="cat-link" style="margin-top:-20px">
-                  <li> 帳號 : <input type="text" name="login" style=" width:100%" /></li>
-                  <li>密碼 : 	<input type="password" name="mdp" style="width:100%" /></li>
-              </ul>
-                  <a href="nonMemberRegist.jsp" style="margin:5px"> 加入會員</a>
-                  <input style="margin-left:20px;margin-right:-20px;" type="submit" value="登入" />
-              </form>
-
-              </div>
-            </div>
-        <% }else{ %>
-        <!-- henry 如果已登入就顯示下方區塊 -->
-            <div class="leftBox">
-                <h3>哩後~</h3>
-              <div class="leftBoxBody">
-                  <!-- henry 顯示登入帳號的名字 ((Client)session.getAttribute("client")).getNom()  -->
-                  <p style="margin-top: -15px; margin-left: -10px ">哩厚~ <b> <%= ((Client)session.getAttribute("client")).getNom()  %></b></p>
-               <ul class="cat-link" >
-                  <li><a href="mon_compte.jsp"> 我的帳戶 </a></li>
-                  <li><a href="panier.jsp"> 購物車 </a></li>
-                  <li><a href="mescommandes.jsp"> 我的訂單 </a> </li>
-                  <li> <a href="DeconnexionServlet"> 登出 </a> </li>
-               </ul>
-              </div>
-            </div>
-        <% } %>
+       
       
       
       
@@ -130,14 +94,7 @@
         </div>
       </div>
       
-      
-      <div class="h">
-        <ul>
-          <div class="h2"><a href="contactez-nous.jsp"><img src="images/LINE_icon01.png" alt="" width="80" /></a></div>
-         <div class="h1"> <a target="_blank" href="https://www.facebook.com/welife2017/"><img src="images/facebook-icon.png" alt="" width="90"  /></a></div>
-          <!--<li><a href="#"><img src="images/card-master.gif" alt="" /></a></li>-->
-        </ul>
-      </div>
+     
     </div>
     <!-- end div #LeftSide -->
     

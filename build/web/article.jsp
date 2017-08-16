@@ -35,7 +35,7 @@
     <div class="productDetial">
         <div class="mainThumb">
             <!--取出並顯示產品圖片(路徑與圖檔名) article.getImg()-->
-            <img src="<%= article.getImg()%>" alt="" width="471" height="260"/></div>
+            <img src="<%= article.getImg()%>" alt="" width="750" height="400"/></div>
         <div class="rightProduct">
             <!--<div class="thumb marRight"><img src="images/product-small.gif" alt=""/></div>
             <div class="thumb"><img src="images/product-small.gif" alt=""/></div>
