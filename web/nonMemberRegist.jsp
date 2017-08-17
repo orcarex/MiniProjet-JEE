@@ -42,6 +42,11 @@ $(document).ready(function(){
             result = false;
            }
          }
+         
+         if($("#mdp").val() != $("#checkmdp").val()){
+              $("#checkmdp").after("<b style='color:red'>請再次確認密碼是否相符</b>");
+             result = false;
+         }
        return result;
     })
  })
@@ -65,8 +70,8 @@ $(document).ready(function(){
                     <li><input  class="form-control chk2" type="text" name="phone_number" placeholder="電話" /></li>
                     <li><input  class="form-control chk2" type="text" name="address" placeholder="地址" /></li>
                     <li><input  class="form-control chk2" type="text" name="login" placeholder="帳號" /></li>
-                    <li><input  class="form-control chk2" type="password" name="mdp"placeholder="密碼"  /></li>
-                    <li><input class="form-control chk2" type="password" name="checkmdp" placeholder="密碼確認" /></li>
+                    <li><input  class="form-control chk2" type="password" id="mdp" name="mdp"placeholder="密碼"  /></li>
+                    <li><input class="form-control chk2" type="password" id="checkmdp" name="checkmdp" placeholder="密碼確認" /></li>
                 </ul>
                 <button class="btn btn-lg btn-info btn-block" id="send" type="submit" >確認</button>
                 <button class="btn btn-lg btn-warning btn-block" type="reset" >取消</button>
