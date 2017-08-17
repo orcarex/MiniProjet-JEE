@@ -16,7 +16,7 @@
 <title>We Life 久易立實業有限公司 </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle.js"></script>
 <script type="text/javascript" src="js/jquery.functions.js"></script>
 <script src="js/cufon-yui.js" type="text/javascript"></script>

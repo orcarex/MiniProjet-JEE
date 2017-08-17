@@ -161,4 +161,5 @@ for(LignePanier lp : panier.getLignesPanier())
     <script src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51a4af6623d99fb3" async></script>
     <script src="/Scripts/AssetsBS3/BS3JS.min.js?kkbruce=201501130444"></script>
+    
 </html>
