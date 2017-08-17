@@ -143,6 +143,9 @@ init += 3 ;
                     }
                     %>
                 </b>
+                 <b>
+                    <a style="color:grey;" href="produits.jsp?page=2">2</a>
+                </b>   
             </span>
                 <% if(pageCourante<=nbTotalePages&& pageCourante!=1){ %>    <!--vince 原始碼!(pageCourante <= 1)-->
                 <span class="back">
@@ -156,6 +159,7 @@ init += 3 ;
                 </span>
                 <% } %>
                <% } %>
+               
         </div>
                 
         <div class="clr"></div>

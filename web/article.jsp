@@ -45,7 +45,7 @@
             <%if(article.getQte()!=0){%>
             <div class="cartBtn fl">
                 <!--vince 看不懂的連結-->
-                <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>" title="ADD to Cart" class="addToCart"></a>
+               <!-- <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>" title="ADD to Cart" class="addToCart"></a>-->
             </div>
             <%}%>
             <div class="clr"></div>	
@@ -82,7 +82,7 @@
         <input type="hidden" name="op" value="directBuy"/>
         <input type="submit"  value="直接購買"/>
         </div>
-        <div class="pagingInfo">
+        <div class="pagingInfo1">
             <img src="images/plus.gif" alt=""/>
             <a href="PanierServlet?op=add&sender=article.jsp&id=<%= id %>">加入購物車</a>
         </div>

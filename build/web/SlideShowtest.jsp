@@ -35,9 +35,9 @@
           <div class="aa"><img src="images/2.jpg" alt="First slide" ></div>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <h1><a style="text-decoration:none; color:white;background-color: rgba(105, 105, 105, .3);" href="produits.jsp?x=0&y=0&keyword=背">We Life潮流背袋、包包現正熱售中!!!</a></h1>
+               
+             
             </div>
           </div>
         </div>
@@ -45,9 +45,9 @@
           <div class="aa"><img src="images/3(1).jpg" alt="Second slide"></div>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1><a style="text-decoration:none; color:yellow; background-color: rgba(105, 105, 105, .2);"  href="produits.jsp?x=0&y=0&keyword=野餐墊">各式野餐墊現正特價中!!!</a></h1>
+              
+              
             </div>
           </div>
         </div>
@@ -55,9 +55,8 @@
             <div class="aa"><img src="images/1.jpg" alt="Second slide"></div>
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1><a style="text-decoration:none; color:white;background-color: rgba(105, 105, 105, .1);" href="produits.jsp?x=0&y=0&keyword=幾米">Nac nac 擁抱幾米杯好評熱銷中!!!</a></h1>
+             
             </div>
           </div>
         </div>

@@ -83,7 +83,7 @@ for(LignePanier lp : panier.getLignesPanier())
             </ol>  
             </li>   
           <li> <a href="contactez-nous.jsp">聯繫我們</a>
-          <ol><li><a href="produits.jsp?x=0&y=0&keyword=nac+nac">關於本站</a></li></ol>
+          <ol><li><a href="AboutUs.jsp">關於本站</a></li></ol>
              </li>
               <% if(session.getAttribute("client") == null){ %>
           <ul class="nav navbar-nav navbar-right" style="margin-left:300px;padding:12.7px 0px 15px 0px;margin-top:-14px;  " >
@@ -149,7 +149,7 @@ for(LignePanier lp : panier.getLignesPanier())
                </div>
     
   <div class="imagebody">
-       <div class="image"><a href="index.jsp"><img height="75"src="images/Welife.png"/></a></div>
+       <div class="image"><a href="index.jsp"><img height="55"src="images/Welife.png"/></a></div>
  </div>    
    
                   </div>

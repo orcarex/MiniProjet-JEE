@@ -146,7 +146,7 @@ img {
 /* BEGIN CONTENT */
 #Content {
         background:url(../images/concrete-texture.png)  repeat; 
-        height:930px;
+        height:1130px;
         width:1190px;
         margin:0 auto; 
 	padding-top:25px;
@@ -323,20 +323,25 @@ img {
 	border-top:#E6E6E6 solid 1px;
 	padding-top:30px;
 	margin-bottom:50px;
-}
+       position:relative; 
+}     
 .pagingInfo {
 	float:right;
-	padding-top:13px;
+	padding-top:0px;
 	font-size:11px;
-	padding-right:20px;
+	padding-right:0px;
 	font-weight:bold;
-        
+        position:absolute;
+        right:180px;
+        bottom:0px;
 	color:#999999;
 }
 .pagingInfo a {
-	margin:0px 5px;
+	
 	text-decoration:none;
 	color:#999999;
+      
+       
 }
 .pagingInfo a:hover {
 	text-decoration: underline;
@@ -346,9 +351,12 @@ img {
 	height:37px;
 	width:168px;
 	text-align:center;
-	float:right;
+	margin:0 auto;
+        margin-top:0px; 
         color:#999999;
+        position:relative;
 }
+.pagingInfo1{margin-left:580px; margin-top:-20px;  }
 .pagingDiv1 {
         
 	height:37px;
@@ -583,14 +591,14 @@ width: 100% ; height: 30px;background-color: beige; margin: 5px 0px; border-radi
 }
 .line1{
     position:absolute;
-    right:30px;
+    left:-70px;
     
 }
 .line2{
     
    position:absolute;
     top:90px;
-    right:90px;
+    left:-35px;
     
 }
 
@@ -639,7 +647,7 @@ padding:12.7px 0px 12.9px 0px; text-decoration:none;color:#808080;
 
 
 .imagebody{position:relative;}
-.image{position:absolute; left:28px;top:-13px;}
+.image{position:absolute; left:22px;top:-4px;}
 
 #NewPanier{position:relative;}
 #NewPanierBody{float:right;}
@@ -717,7 +725,6 @@ position:absolute;
 
 
 .input-group{position:relative;  left:600px;  }
-
 
 
 

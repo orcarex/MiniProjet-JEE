@@ -147,6 +147,9 @@ init += 3 ;
                     }
                     %>
                 </b>
+                <b>
+                    <a style="color:grey;" href="produits.jsp?page=2">2</a>
+                </b>   
             </span>
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">
