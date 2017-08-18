@@ -54,17 +54,17 @@ public class AddMsgServlet extends HttpServlet {
             if(dao.add(act))
             {
                 //如新增成功則跳轉成功頁面
-                response.sendRedirect("http://localhost:8080/MiniProjet-JEE/contactez-nous.jsp?MsgAddStatus=success");
+                response.sendRedirect("contactez-nous.jsp?MsgAddStatus=success");
             }else
             {
                 //如新增成功則跳轉失敗頁面
-                response.sendRedirect("http://localhost:8080/MiniProjet-JEE/contactez-nous.jsp?MsgAddStatus=failed");
+                response.sendRedirect("contactez-nous.jsp?MsgAddStatus=failed");
             }
             
         }catch( Exception ex)
         {
             //henry 如捕獲異常則跳轉到錯誤頁面
-            response.sendRedirect("http://localhost:8080/MiniProjet-JEE/");
+            response.sendRedirect("MiniProjet-JEE/");
         }
     }
 

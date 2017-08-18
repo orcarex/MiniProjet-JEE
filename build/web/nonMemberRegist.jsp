@@ -48,8 +48,27 @@ $(document).ready(function(){
               $("#checkmdp").after("<b style='color:red'>請再次確認密碼是否相符</b>");
              result = false;
          }
-   
-             
+         if($("#phone_number").val().length < 8)
+         {
+             $("#phone_number").after("<b style='color:red'>請再次確認電話長度(不可小於8位數)</b>");
+             result = false;
+         }
+         if($("#address").val().length < 8)
+         {
+             $("#address").after("<b style='color:red'>請再次確認地址(長度需大於8)</b>");
+             result = false;
+         }
+         if($("#login").val().length < 5)
+         {
+             $("#login").after("<b style='color:red'>請再次確認帳號(長度需大於5)</b>");
+             result = false;
+         }
+         if($("#mdp").val().length < 5)
+         {
+             $("#mdp").after("<b style='color:red'>請再次確認密碼(長度需大於5)</b>");
+             result = false;
+         }
+       
        return result;
     })
  })
@@ -70,10 +89,10 @@ $(document).ready(function(){
                 <ul  class="ul">
                     <li><input  class="form-control chk2" name="nom" id="nom" placeholder="姓氏"  autofocus /></</li>
                     <li><input  class="form-control chk2" name="prenom" id="prenom" placeholder="名字" /> </li>
-                    <li><input  class="form-control chk2" type="text" name="phone_number" placeholder="電話" /></li>
-                    <li><input  class="form-control chk2" type="text" name="address" placeholder="地址" /></li>
-                    <li><input  class="form-control chk2" type="text" name="login" placeholder="帳號" /></li>
-                    <li><input  class="form-control chk2" type="password" id="mdp" name="mdp"placeholder="密碼"  /></li>
+                    <li><input  class="form-control chk2" type="text" id="phone_number" name="phone_number" placeholder="電話" /></li>
+                    <li><input  class="form-control chk2" type="text" id="address" name="address" placeholder="地址" /></li>
+                    <li><input  class="form-control chk2" type="text" id="login" name="login" placeholder="帳號" /></li>
+                    <li><input  class="form-control chk2" type="password" id="mdp" id="mdp" name="mdp"placeholder="密碼"  /></li>
                     <li><input class="form-control chk2" type="password" id="checkmdp" name="checkmdp" placeholder="密碼確認" /></li>
                 </ul>
                 <button class="btn btn-lg btn-info btn-block" id="send" type="submit" >確認</button>

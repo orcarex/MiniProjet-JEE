@@ -31,7 +31,7 @@
 <p class="success_msg">新增留言成功</p>
 <%}%>
         
-   <form style=" padding: 95px; padding-top:50px;" id="contact_form" action="./AddMsgServlet" method="get">
+   <form style=" padding: 95px; padding-top:50px;" id="contact_form" action="AddMsgServlet" method="get">
 	<div class="row">
 		<label for="name">姓名 :</label><br />
 		<input id="name" class="input" name="msgGuestName" type="text" value="" size="33" /><br />

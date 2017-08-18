@@ -155,7 +155,7 @@ init += 3 ;
                 </span>
                  <% } %>   
                  <!--<% //if((pageCourante>=1&& pageCourante < articles.size() / NB_PRODUIT_PAGE)){ %>-->
-                  <% if((pageCourante>=1&& pageCourante < nbTotalePages)){ %>
+                  <% if((pageCourante>=1&& pageCourante <(nbTotalePages-1))){ %>
                 <span class="next">
                     <a href="?page=<%= pageCourante + 1 %>"><img src="images/next.gif" alt="" /></a>
                 </span>

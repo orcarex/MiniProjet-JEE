@@ -85,7 +85,7 @@
 					<th style="width: 120px" class="table-header-repeat line-left"><a >名子</a></th>
 					<th style="width: 120px"  class="table-header-repeat line-left"><a >帳號</a></th>
 					<th style="width: 120px"  class="table-header-repeat line-left"><a >密碼</a></th>
-                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >出生日期</a></th>
+                                        <th style="width: 120px"  class="table-header-repeat line-left"><a >註冊日期</a></th>
                                         <th style="width: 120px"  class="table-header-repeat line-left"><a >狀態</a></th>
                                         
                                         <th style="width: 90px" class="table-header-options line-left"><a >功能選項</a></th>

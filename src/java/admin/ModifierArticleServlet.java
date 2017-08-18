@@ -52,6 +52,7 @@ public class ModifierArticleServlet extends HttpServlet {
             java.sql.Timestamp sqlDate = new java.sql.Timestamp(dt.getTime());
             String img = request.getParameter("urlImage");
             String desc = request.getParameter("desc");
+            desc =  new String(desc.getBytes("ISO-8859-1"), "utf-8");
             //henry 年齡西元格式化
             int age = 2014 - a ;
             
