@@ -42,34 +42,33 @@ public class CompteServlet extends HttpServlet
         String phone_number = request.getParameter("phone_number");
         String login = request.getParameter("login");
         String mdp = request.getParameter("mdp");
-        String checkmdp = request.getParameter("checkmdp");
-        //vince 判斷密碼和密碼確認有沒有相同
-        if(!(mdp.equals(checkmdp)))
-        {
-        response.sendRedirect("nonMemberRegist.jsp?update=mdpfail");
-        }else{
-        //新增會員實體
-        Client c = new Client(login, mdp, nom, prenom, null);
+        
         Client d = new Client(login, mdp, nom, prenom, null,address,phone_number);
         ClientDao dao = new ClientDao();
-        //henry定義執行更新動作後之後續處理方法
-        if (dao.update(c))
+        if(request.getParameter("msg").equals("update")){
+        if (dao.update(d))
         {   
             //henry 更新成功後
             response.sendRedirect("mon_compte.jsp?update=success");
             
-            request.getSession().setAttribute("client", c);
-        } else if(dao.add(d))
+            request.getSession().setAttribute("client", d);
+        }
+        }
+        
+        else if(request.getParameter("msg").equals("add"))
+        {
+            if(dao.add(d))
                 {
                 response.sendRedirect("mon_compte.jsp?add=success");
             
                 request.getSession().setAttribute("client", d);    
-                }else
+                }
+        }else
                 {
                 //henry 更新失敗後
                 response.sendRedirect("mon_compte.jsp?update=fail");
                 }
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

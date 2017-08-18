@@ -122,8 +122,7 @@
                                         <td><%= list.get(i).getDtNaissance() %> </td>
                                         <td><%= list.get(i).getEtat()  %></td>
 					<td class="options-width">
-                                            <a href="ClientModifier.jsp?login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>
-                                            <a href="../BloquerClientServlet?login=<%= list.get(i).getLogin() %>" title="區塊" class="icon-2 info-tooltip"></a>
+                                            <a href="ClientModifier.jsp?login=<%= list.get(i).getLogin() %>" title="詳細訊息" class="icon-1 info-tooltip"></a>                                    
                                             <a href="../SupprimerClientServlet?login=<%= list.get(i).getLogin() %>" title="清除" class="icon-2 info-tooltip"></a>
 					</td>
                                 				

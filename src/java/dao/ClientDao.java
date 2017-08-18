@@ -29,7 +29,7 @@ public class ClientDao
         {
             Date dNow = new Date();
              SimpleDateFormat fd = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
-            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`,`dtnaissance`,address,phone_number)"
+            String req = "INSERT INTO `wshop`.`client` (`login`, `mdp`, `nom`, `prenom`,`dtnaissance`,`address`,`phone_number`)"
                     + " VALUES ('" + a.getLogin() + "', '" + a.getMdp() + "', '" + a.getNom() + "', '" + a.getPrenom() + "', '" + fd.format(dNow) + "', '" + a.getaddress() + "', '" + a.getphone_number() + "');";
 
             Statement st = con.createStatement();
@@ -54,7 +54,7 @@ public class ClientDao
     {
         try
         {
-            String req = "DELETE FROM client " + "WHERE login = " + login;
+            String req = "DELETE FROM client " + "WHERE login = '" + login + "'";
 
             Statement st = con.createStatement();
 
@@ -77,13 +77,18 @@ public class ClientDao
     {
         try
         {
-            String req = "UPDATE `wshop`.`client` "
+            Date dNow = new Date();
+            SimpleDateFormat fd = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+            String req = "UPDATE `client` "
                     + "SET `mdp`='" + a.getMdp() + "', "
                     + "`nom`='" + a.getNom() + "', "
-                    + "`prenom`='" + a.getPrenom() + "' "
+                    + "`prenom`='" + a.getPrenom() + "', "
+                    + "`dtnaissance`='" + fd.format(dNow) + "', "
+                    + "`address`='" + a.getaddress() + "', "
+                    + "`phone_number`='" + a.getphone_number() + "' "
                     + "WHERE `login`='" + a.getLogin() + "';";
 
-            System.out.println(req);
+            //System.out.println(req);
 
             Statement st = con.createStatement();
 
@@ -237,13 +242,18 @@ public class ClientDao
     {
         try
         {
-            String req = "UPDATE `wshop`.`client` SET "
+            Date dNow = new Date();
+            SimpleDateFormat fd = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+            String req = "UPDATE `client` "
+                    + "SET `login`='" + a.getLogin() + "', "
                     + "`mdp`='" + a.getMdp() + "', "
                     + "`nom`='" + a.getNom() + "', "
                     + "`prenom`='" + a.getPrenom() + "', "
-                    + "`dtnaissance`='" + a.getDtNaissance() + "', "
-                    + "`etat`=" + a.getEtat() + "  "
+                    + "`dtnaissance`='" + fd.format(dNow) + "', "
+                    + "`address`='" + a.getaddress() + "', "
+                    + "`phone_number`='" + a.getphone_number() + "' "
                     + "WHERE `login`='" + a.getLogin() + "';";
+
 
             Statement st = con.createStatement();
 

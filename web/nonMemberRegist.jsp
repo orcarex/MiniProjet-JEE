@@ -60,7 +60,7 @@ $(document).ready(function(){
         <p>密碼或密碼確認輸入錯誤!!!</p>
         <%}%>
         <center>
-            
+        <input type="hidden" name="msg" value="add" >    
         <div >
             
             <div class="rightDiv"style="width: 200px">

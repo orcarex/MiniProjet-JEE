@@ -35,20 +35,16 @@ public class ModifierClientServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-         try
-        {
+        request.setCharacterEncoding("UTF-8");
+         
             //henry 接收 request 各參數
             String nom = request.getParameter("nom");
             String prenom = request.getParameter("prenom");
             String login = request.getParameter("login");
             String mdp = request.getParameter("mdp");
-            String etat=request.getParameter("etat");
-            int etatf=0;
-            if(etat.equals(""))
-                etatf=0;
-            else
-                etatf=1;
+            String address = request.getParameter("address");
+            String phone_number = request.getParameter("phone_number");
+            
             int a = Integer.parseInt(request.getParameter("date_a"));
             int m = Integer.parseInt(request.getParameter("date_m"));;
             int j = Integer.parseInt(request.getParameter("date_j"));;
@@ -59,28 +55,24 @@ public class ModifierClientServlet extends HttpServlet {
             int age = 2014 - a ;
             
             
-            Client ar = new Client(login,mdp,nom,prenom,null,etatf);
-            System.out.println("CLIENT");
-            ClientDao dao = new ClientDao();
-            System.out.println("CLIENTDAO");
+            Client d = new Client(login, mdp, nom, prenom, null,address,phone_number);
             
-            if(dao.modifier(ar))
+            ClientDao dao = new ClientDao();
+            
+            
+            if(dao.modifier(d))
             {
                 //henry更新成功後跳轉
-                System.out.println("sucess");
+                
                 response.sendRedirect("Admin/CompteListe.jsp?add=success");
             }else
             {
                 //henry更新失敗後跳轉
-                System.out.println("fail");
+                
                 response.sendRedirect("Admin/CompteListe.jsp?add=fail");
             }
             
-        }catch( Exception ex)
-        {
-            System.out.println("excep");
-            response.sendRedirect("Admin/CompteListe.jsp?add=fail");
-        }
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

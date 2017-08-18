@@ -135,7 +135,7 @@
                 
                  <tr>
 			<th valign="top">電話</th>
-                        <td><input name="etat" value="<%=f.getphone_number() %>" required type="text" class="inp-form"  /></td>
+                        <td><input name="phone_number" value="<%=f.getphone_number() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
 			<div class="error-left"></div>
@@ -144,7 +144,7 @@
 		</tr>
                 <tr>
 			<th valign="top">地址</th>
-                        <td><input name="etat" value="<%=f.getaddress() %>" required type="text" class="inp-form"  /></td>
+                        <td><input name="address" value="<%=f.getaddress() %>" required type="text" class="inp-form"  /></td>
 <!--			-error
                         <td>
 			<div class="error-left"></div>
@@ -215,7 +215,7 @@
 				<td>
 					<select name="date_a" id="y"  class="styledselect-year">
                                                 <% 
-                                                    for(int i = 1900; i < 2015; i ++)
+                                                    for(int i = 1900; i < 2030; i ++)
                                                     {
                                                 %>    
                                                     <option value="<%= i %>"><%= i %></option>
