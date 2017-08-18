@@ -38,7 +38,7 @@ public class AjouterArticleServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         //henry 上傳檔案開始
-        MultipartRequest multi = new MultipartRequest(request, "D:/project/MiniProjet-JEE/web/produitImages");
+        MultipartRequest multi = new MultipartRequest(request, "D:/teamProject/MiniProjet-JEE/web/produitImages");
             String fname = multi.getFilesystemName("fname");
             fname="produitImages/"+fname;            
         //henry 上傳檔案結束

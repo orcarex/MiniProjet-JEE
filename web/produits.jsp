@@ -51,7 +51,7 @@
             //henry 查詢後的產品顯示分頁處理
             int nbTotalePages = 0;
             if(articles != null)
-                nbTotalePages = articles.size() / NB_PRODUIT_PAGE + 1;
+                nbTotalePages =(int)Math.ceil(articles.size() / NB_PRODUIT_PAGE /1.0)+2;
             
             int init = ((pageCourante - 1) * NB_PRODUIT_PAGE);
             
@@ -138,26 +138,24 @@ init += 3 ;
         <div class="pagingDiv">
             <span class="label">Page 
                 <!--vince 頁數顯示方法先改成這樣喔!有更好的方式可以直接改喔!-->
-                <b>
+                <b><!--articles.size()/ NB_PRODUIT_PAGE-->
                     <%
-                    for(int i=1;i<=articles.size()/ NB_PRODUIT_PAGE;i++)
+                    for(int i=1;i<nbTotalePages;i++)
                     {    
                         if(i==pageCourante){%> <a style="color:blue" href="?page=<%= pageCourante %>"><%= pageCourante %> </a><%}
                         else{%><a href="?page=<%= i %>"> <%=i%> </a><%}
                     }
                     %>
                 </b>
-                <b>
-                    <a style="color:grey;" href="produits.jsp?page=2">2</a>
-                </b>   
+                   
             </span>
                 <% if(!(pageCourante <= 1) ){ %>
                 <span class="back">
                     <a href="?page=<%= pageCourante - 1 %>"><img src="images/back.gif" alt="" /></a>
                 </span>
                  <% } %>   
-                 
-                  <% if((pageCourante>=1&& pageCourante<articles.size() / NB_PRODUIT_PAGE)){ %>
+                 <!--<% //if((pageCourante>=1&& pageCourante < articles.size() / NB_PRODUIT_PAGE)){ %>-->
+                  <% if((pageCourante>=1&& pageCourante < nbTotalePages)){ %>
                 <span class="next">
                     <a href="?page=<%= pageCourante + 1 %>"><img src="images/next.gif" alt="" /></a>
                 </span>

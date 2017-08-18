@@ -32,6 +32,7 @@ return ;
 <script>
 $(document).ready(function(){
     $("#form1").submit(function(){ 
+        
     	var result = true;
         var N = $("input.chk2").length ; 
         $("#form1").children().find("b").remove();
@@ -47,6 +48,8 @@ $(document).ready(function(){
               $("#checkmdp").after("<b style='color:red'>請再次確認密碼是否相符</b>");
              result = false;
          }
+   
+             
        return result;
     })
  })

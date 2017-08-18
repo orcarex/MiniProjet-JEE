@@ -51,7 +51,7 @@
             //henry取得所有產品
             Vector<Article> articles = dao.findAll();
             //henry 定義總頁數
-            int nbTotalePages = articles.size() / NB_PRODUIT_PAGE + 1;
+            int nbTotalePages = (int)Math.ceil(articles.size() / NB_PRODUIT_PAGE /1.0)+1;
             //henry 初始頁
             int init = ((pageCourante - 1) * NB_PRODUIT_PAGE);
             
@@ -136,24 +136,22 @@ init += 3 ;
                 <!--vince 首頁顯示頁數方法先改成這樣喔!有更好的方式可以直接改喔!像是用slideshow那樣更好-->
                 <b>
                     <%if(true){
-                    for(int i=1;i<=articles.size()/ NB_PRODUIT_PAGE;i++)
+                    for(int i=1;i<=nbTotalePages;i++)
                     {    
                         if(i==pageCourante){%> <a style="color:blue" href="?page=<%= pageCourante %>"><%= i %> </a><%}
                         else{%><a href="?page=<%= i %>"> <%=i%> </a><%}
                     }
                     %>
                 </b>
-                 <b>
-                    <a style="color:grey;" href="produits.jsp?page=2">2</a>
-                </b>   
+               
             </span>
-                <% if(pageCourante<=nbTotalePages&& pageCourante!=1){ %>    <!--vince 原始碼!(pageCourante <= 1)-->
+                <% if(!(pageCourante <= 1) ){ %>    <!--vince 原始碼!(pageCourante <= 1)-->
                 <span class="back">
                     <a href="?page=<%= pageCourante - 1 %>"><img src="images/back.gif" alt="" /></a>
                 </span>
                  <% } %>   
                  
-                  <% if(pageCourante>=1&& pageCourante<articles.size() / NB_PRODUIT_PAGE){ %>      <!--vince 原始碼 !(pageCourante >= nbTotalePages) -->
+                  <% if(pageCourante>=1&& pageCourante<nbTotalePages){ %>      <!--vince 原始碼 !(pageCourante >= nbTotalePages) -->
                 <span class="next">
                     <a href="?page=<%= pageCourante + 1 %>"><img src="images/next.gif" alt="" /></a>
                 </span>
