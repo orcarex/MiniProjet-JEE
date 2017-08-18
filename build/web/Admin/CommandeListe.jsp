@@ -111,9 +111,9 @@
                                             int orderState = Integer.parseInt(request.getParameter("state"));
                                             list = dao.findEnAttente(keyword, orderState);
                                         }
-                                        else{
+                                        
                                         keyword = request.getParameter("keyword");
-                                        list = dao.findByLogin(keyword);}
+                                        list = dao.findByLogin(keyword);
                                     }
                                     
                                     if(request.getParameter("state")!=null){
@@ -121,7 +121,7 @@
                                         list = dao.findEnAttente(orderState);
                                     }   
                                     else    
-                                        list = dao.findEnAttente() ;
+                                        list = dao.findEnAttente(keyword) ;
                                     //for(int j = 0; j< 50; j++)//Test liste longue :p 
                                     
                                     

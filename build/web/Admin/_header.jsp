@@ -201,7 +201,7 @@ $(document).pngFix( );
 		<tr>
                     <td><input name="keyword" type="text" placeholder="search.." class="top-search-inp" /></td>
 		<td>
-		<select id="selected"name="choice" class="styledselect">
+		<select id="selected" name="choice" class="styledselect">
 			<option value="ProduitListe.jsp">商品</option>
 			<option value="CompteListe.jsp" >帳號</option>
 			<option value="CommandeListe.jsp">訂單管理</option>		
