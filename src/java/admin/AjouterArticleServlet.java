@@ -49,7 +49,7 @@ public class AjouterArticleServlet extends HttpServlet {
             //henry 取得接收request到的各參數 並分別給予變數
             String libelle = multi.getParameter("libelle");
             libelle = new String(libelle.getBytes("ISO-8859-1"), "UTF-8");//vince 多這句可以直接在後台顯示(打)中文
-            String desc = multi.getParameter("desc");
+            String desc = new String(multi.getParameter("desc").getBytes("ISO-8859-1"),"UTF-8");
             Double prix = Double.parseDouble(multi.getParameter("prix"));
             int quantite=Integer.parseInt(multi.getParameter("quantite"));
             

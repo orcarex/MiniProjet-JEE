@@ -64,14 +64,15 @@
     <form method="GET" action="PanierServlet">
     <div class="paging">
         <!--vince 判斷庫存-->
-        <%if(article.getQte()==0){%>
+        <%if(article.getQte()<1){%>
         庫存量不足！！！
         <%}else{%>
         目前庫存量： <%=article.getQte()%>
          <!--取得產品價格(欄位)的值 article.getPrix()-->    
         <div class="pagingDiv price">$ <%= article.getPrix() %></div>
         <div class="pagingInfo">
-        <!--vince 依庫存量而變的數量選單-->    
+        <!--vince 依庫存量而變的數量選單-->
+        <% if(article.getQte()>0){%>
         <select name="qte">
             <%for(int i=1;i<=article.getQte();i++){%>
 		<option value="<%=i%>"><%=i%></option>
@@ -79,8 +80,9 @@
         </select>
         <!--vince 為了傳送qte 其他id 和op 只好靠 隱藏 <input type="hidden"  來一起傳值-->
         <input type="hidden" name="id" value="<%=id%>"/>
-        <input type="hidden" name="op" value="directBuy"/>
+        <input type="hidden" name="op" value="directBuy"/>   
         <input type="submit"  value="直接購買"/>
+        <% }%>
         </div>
         <div class="pagingInfo1">
             <img src="images/plus.gif" alt=""/>
